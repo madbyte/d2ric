@@ -4,7 +4,7 @@ DotA 2 Recommended Items Customizer
 --- TODO ---
 - Add the possibility to reorder items in a better way
 - More than one itembuild for each hero
-- Autoupdater, because Google won't allow new download after 14.01.2014
+- Autoupdater (need some testing)
 
 *If you miss something in the tool, write on the issue tracker.*
 
@@ -63,8 +63,11 @@ Version 1.4.0:
 - Added new item icons
 - Change the Backup behavior
 - Delete the Pictureboxes and use Listviews instead
+
   -> Stop getting the item name while compare two images (was the only possibility with pictureboxes)
+  
   -> The export and save should work faster now
+  
   -> You are now able to swap items between the 4 slots (start, early, core, luxury)
 
 Version 1.3.8:
@@ -75,10 +78,15 @@ Version 1.3.7:
 - Some changes to the import function
 - Just show the costs for the starting items (label become red, if costs are higher than 603gold)
 - Rename some heroes:
+
 	Dirge -> Undying
+	
 	Guardian Wisp -> Wisp
+	
 	Lanaya -> Templar Assassin
+	
 	Nerubian Assassin -> Nyx Assassin
+	
 	Mortred -> Phantom Assassin
 
 Version 1.3.6:
@@ -178,8 +186,8 @@ Version 1.1.3:
 - Added an Option to "Search" Items
 
 Version 1.1.2:
--Added Multi Changes
--Added TabPages
+- Added Multi Changes
+- Added TabPages
 
 Version 1.1.0:
 - Added Drag&Drop
