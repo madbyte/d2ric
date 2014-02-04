@@ -1,7 +1,10 @@
 DotA 2 Recommended Items Customizer
 =====
 
---- TODO ---
+###Download
+- https://dl.dropboxusercontent.com/u/15746440/D2RIC/release.exe
+
+###--- TODO ---
 - Add the possibility to reorder items in a better way
 - More than one itembuild for each hero
 - Autoupdater (need some testing)
@@ -9,7 +12,7 @@ DotA 2 Recommended Items Customizer
 *If you miss something in the tool, write on the issue tracker.*
 
 
---- CHANGELOG ---
+###--- CHANGELOG ---
 
 (old files can be found here https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old)
 
@@ -140,11 +143,9 @@ Version 1.2.0:
 - Fixed dont delete default builds with the delete backup button
 
 Version 1.1.9:
-- Create a backup of the itembuild (if it doesn't exist) when you edit an
-itembuild
+- Create a backup of the itembuild (if it doesn't exist) when you edit an itembuild
 - Added the function to get the itembuild backup
-- Added the option to hide not implemented heros (should it hide the heros
-without itembuilds or the heros that are not in the game???)
+- Added the option to hide not implemented heros (should it hide the heros without itembuilds or the heros that are not in the game???)
 - Change some hero roles
 
 Version 1.1.8:
@@ -161,8 +162,7 @@ Version 1.1.7:
 - Delete Multi Change
 - Change Tooltips (Tooltips now should be work after you selected a hero)
 - Fix Lanaya & Harbinger
-- Hopefully speed the save procces up (make the picture diff inexact, but still
-working)
+- Hopefully speed the save procces up (make the picture diff inexact, but still working)
 - Change some Hero roles
 - Start with item order option
 - Added a tab for 'autoexec.cfg'
