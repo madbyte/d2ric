@@ -186,24 +186,23 @@ Public Class ItembuildClass
             Dim item157 As New ListViewItem(New String() {"Crystalys (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
             Dim item158 As New ListViewItem(New String() {"Daedalus (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
             Dim item159 As New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item160 As New ListViewItem(New String() {"Shadow Blade (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item161 As New ListViewItem(New String() {"Radiance (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item162 As New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item163 As New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item164 As New ListViewItem(New String() {"Manta Style (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item165 As New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item166 As New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item167 As New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item168 As New ListViewItem(New String() {"Desolator (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item169 As New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item170 As New ListViewItem(New String() {"Satanic (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item171 As New ListViewItem(New String() {"Yasha (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item172 As New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item173 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item174 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item175 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item176 As New ListViewItem(New String() {"Shadow Amulet", "Arcane", "PLACEHOLDER"}, 135)
-            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175, item176})
+            Dim item160 As New ListViewItem(New String() {"Radiance (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item161 As New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item162 As New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item163 As New ListViewItem(New String() {"Manta Style (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item164 As New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item165 As New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item166 As New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item167 As New ListViewItem(New String() {"Desolator (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item168 As New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item169 As New ListViewItem(New String() {"Satanic (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item170 As New ListViewItem(New String() {"Yasha (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item171 As New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item172 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item173 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item174 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item175 As New ListViewItem(New String() {"Shadow Amulet", "Arcane", "PLACEHOLDER"}, 135)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175})
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -1915,7 +1914,7 @@ Public Class ItembuildClass
             Case "Animal Courier"
                 Return 150
             Case "Arcane Boots"
-                Return 1500
+                Return 1450
             Case "Armlet"
                 Return 2600
             Case "Assault Cuirass"
@@ -1941,7 +1940,7 @@ Public Class ItembuildClass
             Case "Boots of Speed"
                 Return 450
             Case "Boots of Travel"
-                Return 2500
+                Return 2450
             Case "Bottle"
                 Return 650
             Case "Bracer"
@@ -1949,7 +1948,7 @@ Public Class ItembuildClass
             Case "Broadsword"
                 Return 1200
             Case "Buckler"
-                Return 803
+                Return 800
             Case "Butterfly"
                 Return 6000
             Case "Chainmail"
@@ -1965,17 +1964,17 @@ Public Class ItembuildClass
             Case "Crystalys"
                 Return 2150
             Case "Daedalus"
-                Return 5750
+                Return 5550
             Case "Dagon 1"
-                Return 2805
+                Return 2720
             Case "Dagon 2"
-                Return 2805 + 1300
+                Return 2720 + 1250
             Case "Dagon 3"
-                Return 2805 + 1300 + 1300
+                Return 2720 + 1250 + 1250
             Case "Dagon 4"
-                Return 2805 + 1300 + 1300 + 1300
+                Return 2720 + 1250 + 1250 + 1250
             Case "Dagon 5"
-                Return 2805 + 1300 + 1300 + 1300 + 1300
+                Return 2720 + 1250 + 1250 + 1250 + 1250
             Case "Demon Edge"
                 Return 2400
             Case "Desolator"
@@ -1987,7 +1986,7 @@ Public Class ItembuildClass
             Case "Divine Rapier"
                 Return 6200
             Case "Drum of Endurance"
-                Return 1725
+                Return 1850
             Case "Dust of Appearance"
                 Return 180
             Case "Eaglesong"
@@ -2001,9 +2000,9 @@ Public Class ItembuildClass
             Case "Eye of Skadi"
                 Return 5675
             Case "Flying Courier"
-                Return 390
+                Return 370
             Case "Force Staff"
-                Return 2350
+                Return 2250
             Case "Gauntlets of Strength"
                 Return 150
             Case "Gem of True Sight"
@@ -2013,15 +2012,15 @@ Public Class ItembuildClass
             Case "Gloves of Haste"
                 Return 500
             Case "Hand of Midas"
-                Return 1900
+                Return 2050
             Case "Headdress"
-                Return 603
+                Return 600
             Case "Healing Salve"
                 Return 115
             Case "Heart of Tarrasque"
                 Return 5500
             Case "Heaven's Halberd"
-                Return 3950
+                Return 3850
             Case "Helm of Iron Will"
                 Return 950
             Case "Helm of the Dominator"
@@ -2031,7 +2030,7 @@ Public Class ItembuildClass
             Case "Hyperstone"
                 Return 2000
             Case "Iron Branch"
-                Return 53
+                Return 50
             Case "Javelin"
                 Return 1500
             Case "Linken's Sphere"
@@ -2041,7 +2040,7 @@ Public Class ItembuildClass
             Case "Magic Stick"
                 Return 200
             Case "Magic Wand"
-                Return 509
+                Return 500
             Case "Manta Style"
                 Return 5050
             Case "Mantle of Intelligence"
@@ -2051,7 +2050,7 @@ Public Class ItembuildClass
             Case "Medallion of Courage"
                 Return 1075
             Case "Mekansm"
-                Return 2306
+                Return 2300
             Case "Mithril Hammer"
                 Return 1600
             Case "Mjollnir"
@@ -2069,7 +2068,7 @@ Public Class ItembuildClass
             Case "Necronomicon 3"
                 Return 2700 + 1250 + 1250
             Case "Null Talisman"
-                Return 490
+                Return 470
             Case "Oblivion Staff"
                 Return 1675
             Case "Observer Ward"
@@ -2083,9 +2082,9 @@ Public Class ItembuildClass
             Case "Perseverance"
                 Return 1750
             Case "Phase Boots"
-                Return 1400
+                Return 1350
             Case "Pipe of Insight"
-                Return 3628
+                Return 3625
             Case "Platemail"
                 Return 1400
             Case "Point Booster"
@@ -2093,7 +2092,7 @@ Public Class ItembuildClass
             Case "Poor Man's Shield"
                 Return 550
             Case "Power Treads"
-                Return 1450
+                Return 1400
             Case "Quarterstaff"
                 Return 900
             Case "Quelling Blade"
@@ -2103,7 +2102,7 @@ Public Class ItembuildClass
             Case "Reaver"
                 Return 3200
             Case "Refresher Orb"
-                Return 5300
+                Return 5225
             Case "Ring of Aquila"
                 Return 985
             Case "Ring of Basilius"
@@ -2157,7 +2156,7 @@ Public Class ItembuildClass
             Case "Town Portal Scroll"
                 Return 135
             Case "Tranquil Boots"
-                Return 1025
+                Return 975
             Case "Ultimate Orb"
                 Return 2100
             Case "Urn of Shadows"
@@ -2165,7 +2164,7 @@ Public Class ItembuildClass
             Case "Vanguard"
                 Return 2225
             Case "Veil of Discord"
-                Return 2650
+                Return 2670
             Case "Vitality Booster"
                 Return 1100
             Case "Vladmir's Offering"
@@ -2181,11 +2180,11 @@ Public Class ItembuildClass
             Case "Bracer (Recipe)"
                 Return 190
             Case "Null Talisman (Recipe)"
-                Return 145
+                Return 135
             Case "Magic Wand (Recipe)"
                 Return 150
             Case "Hand of Midas (Recipe)"
-                Return 1400
+                Return 1550
             Case "Soul Ring (Recipe)"
                 Return 125
             Case "Boots of Travel (Recipe)"
@@ -2205,30 +2204,28 @@ Public Class ItembuildClass
             Case "Pipe of Insight (Recipe)"
                 Return 900
             Case "Drum of Endurance (Recipe)"
-                Return 750
+                Return 875
             Case "Necronomicon (Recipe)"
                 Return 1250
             Case "Eul's Scepter of Divinity (Recipe)"
                 Return 500
             Case "Dagon (Recipe)"
-                Return 1300
+                Return 1250
             Case "Veil of Discord (Recipe)"
                 Return 1250
             Case "Orchid Malevolence (Recipe)"
                 Return 775
             Case "Refresher Orb (Recipe)"
-                Return 1875
+                Return 1800
             Case "Force Staff (Recipe)"
-                Return 1000
+                Return 900
             Case "Armlet (Recipe)"
                 Return 700
             Case "Crystalys (Recipe)"
                 Return 500
             Case "Daedalus (Recipe)"
-                Return 1200
-            Case "Skull Basher (Recipe)"
                 Return 1000
-            Case "Shadow Blade (Recipe)"
+            Case "Skull Basher (Recipe)"
                 Return 1000
             Case "Radiance (Recipe)"
                 Return 1350
