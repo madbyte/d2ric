@@ -797,15 +797,15 @@ Public Class ItembuildClass
                 hero = "Legion Commander"
             Case hero Like "npc_dota_hero_skywrath_mage"
                 hero = "Skywrath Mage"
+            Case hero Like "npc_dota_hero_phoenix"
+                hero = "Phoenix"
+            Case hero Like "npc_dota_hero_terrorblade"
+                hero = "Terrorblade"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
-            Case hero Like "npc_dota_hero_phoenix"
-                hero = "Phoenix"
             Case hero Like "npc_dota_hero_abyssal_underlord"
                 hero = "Abyssal Underlord"
-            Case hero Like "npc_dota_hero_soul_keeper"
-                hero = "Soul Keeper"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -916,10 +916,6 @@ Public Class ItembuildClass
                 Selected_Hero = "goblin_techies"
             Case "Abyssal Underlord"
                 Selected_Hero = "abyssal_underlord"
-            Case "Soul Keeper"
-                Selected_Hero = "soul_keeper"
-            Case "Tauren Chieftain"
-                Selected_Hero = "tauren_chieftain"
             Case Else
                 Selected_Hero = hero
         End Select
@@ -1027,7 +1023,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Slardar")
                 lb.Items.Add("Slark")
                 lb.Items.Add("Sniper")
-                lb.Items.Add("Soul Keeper")
+                lb.Items.Add("Terrorblade")
                 lb.Items.Add("Spectre")
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Storm Spirit")
@@ -1119,7 +1115,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Shadow Fiend")
                 lb.Items.Add("Slark")
                 lb.Items.Add("Sniper")
-                lb.Items.Add("Soul Keeper")
+                lb.Items.Add("Terrorblade")
                 lb.Items.Add("Spectre")
                 lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Troll Warlord")
@@ -1214,7 +1210,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Skywrath Mage")
                 lb.Items.Add("Slardar")
                 lb.Items.Add("Sniper")
-                lb.Items.Add("Soul Keeper")
+                lb.Items.Add("Terrorblade")
                 lb.Items.Add("Spectre")
                 lb.Items.Add("Storm Spirit")
                 lb.Items.Add("Sven")
@@ -1449,7 +1445,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Slardar")
                 lb.Items.Add("Slark")
                 lb.Items.Add("Sniper")
-                lb.Items.Add("Soul Keeper")
+                lb.Items.Add("Terrorblade")
                 lb.Items.Add("Spectre")
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Storm Spirit")
@@ -1484,8 +1480,6 @@ Public Class ItembuildClass
             .Items.Remove("Arc Warden")
             .Items.Remove("Goblin Techies")
             .Items.Remove("Oracle")
-            .Items.Remove("Phoenix")
-            .Items.Remove("Soul Keeper")
             .Items.Remove("Winter Wyvern")
         End With
     End Sub
