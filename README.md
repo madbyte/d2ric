@@ -16,6 +16,10 @@ DotA 2 Recommended Items Customizer
 
 (old files can be found here https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old)
 
+Version 1.5 (beta5):
+- Update Heroes
+- Update Items
+
 Version 1.5 (beta4):
 - Added an autoupdater (beta)
 - Fix a Bug with drag&drop and the starting items

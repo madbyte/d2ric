@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("DotA 2 Recommended Items Customizer")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("D2RIC")> 
-<Assembly: AssemblyCopyright("Copyright © maddy  2013")> 
+<Assembly: AssemblyCopyright("Copyright © maddy  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)> 

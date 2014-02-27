@@ -7,11 +7,10 @@ Public Class FormMain
     Friend WithEvents Options As New OptionsClass
     Friend WithEvents Itembuild As New ItembuildClass
     Private WithEvents WebClient1 As New WebClient
-    Dim cursor_image As Icon
-    Dim Selected_Item As String
     Public IntPrice As Integer
     Dim Unsaved As Boolean = False
     Public ImportHero As Boolean = False
+    Dim active_itmebox As Integer = 0
     ' Declare a Resource Manager instance.
     Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
@@ -40,13 +39,6 @@ Public Class FormMain
         Itembuild.InitializeListbox()
 
         Options.InitializeLang()
-
-        Me.ListView2.AllowDrop = True
-        Me.ListView3.AllowDrop = True
-        Me.ListView4.AllowDrop = True
-        Me.ListView5.AllowDrop = True
-        Me.ListView6.AllowDrop = True
-        Me.ListView7.AllowDrop = True
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -60,6 +52,7 @@ Public Class FormMain
                         Itembuild.Clear()
                         Label1.Text = ListBox1.SelectedItem.ToString
                         Itembuild.CheckFile(ItembuildClass.Selected_Hero)
+                        resetItemboxes()
                         Unsaved = False
                     End If
                 End If
@@ -73,6 +66,7 @@ Public Class FormMain
                     Itembuild.Clear()
                     Label1.Text = ListBox1.SelectedItem.ToString
                     Itembuild.CheckFile(ItembuildClass.Selected_Hero)
+                    resetItemboxes()
                 End If
             End If
         End If
@@ -94,6 +88,41 @@ Public Class FormMain
         ElseIf TabControl1.SelectedTab Is TabPage3 Then
             'Focus on TextBox2
             TextBox2.Select()
+        End If
+    End Sub
+
+    'Allow ctrl+a to select all text in this textbox
+    Private Sub TextBox2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
+        If (e.KeyChar = vb.Chr(1)) Then
+            TextBox2.SelectAll()
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub ListView1_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView1.MouseClick
+        If e.Button = MouseButtons.Right Then
+            If active_itmebox = 0 Then
+                ListView2.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView2.Items(ListView2.Items.Count - 1).SubItems(1).Text = ListView2.Items(ListView2.Items.Count - 1).Text
+                Label15.Text = GetStartCosts()
+                CheckCosts(CInt(Label15.Text))
+            ElseIf active_itmebox = 1 Then
+                ListView3.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView3.Items(ListView3.Items.Count - 1).SubItems(1).Text = ListView3.Items(ListView3.Items.Count - 1).Text
+            ElseIf active_itmebox = 2 Then
+                ListView4.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView4.Items(ListView4.Items.Count - 1).SubItems(1).Text = ListView4.Items(ListView4.Items.Count - 1).Text
+            ElseIf active_itmebox = 3 Then
+                ListView5.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView5.Items(ListView5.Items.Count - 1).SubItems(1).Text = ListView5.Items(ListView5.Items.Count - 1).Text
+            ElseIf active_itmebox = 4 Then
+                ListView6.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView6.Items(ListView6.Items.Count - 1).SubItems(1).Text = ListView6.Items(ListView6.Items.Count - 1).Text
+            ElseIf active_itmebox = 5 Then
+                ListView7.Items.Add(ListView1.SelectedItems.Item(0).Clone)
+                ListView7.Items(ListView7.Items.Count - 1).SubItems(1).Text = ListView7.Items(ListView7.Items.Count - 1).Text
+            End If
+            Unsaved = True
         End If
     End Sub
 
@@ -323,6 +352,7 @@ Public Class FormMain
     End Sub
 #End Region
 
+#Region "HeroList"
     Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
         Options.ChangeLang()
         If Not FirstLangChange Then
@@ -337,413 +367,6 @@ Public Class FormMain
         Itembuild.ChangeHeroList(ComboBox3, ListBox1)
         Itembuild.ClearNotImplemented()
     End Sub
-
-#Region "Itembox"
-    Private Sub TextBoxItemsearch_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBoxItemsearch.TextChanged
-        Timer1.Stop()
-        Timer1.Start()
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-        Timer2.Stop()
-        Timer2.Start()
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        Timer2.Stop()
-        Timer2.Start()
-    End Sub
-
-    Private Sub CheckBoxRecipes_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxRecipes.CheckedChanged
-        Timer2.Stop()
-        Timer2.Start()
-    End Sub
-
-    Private Sub Searchitem(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick, Timer2.Tick
-        Timer1.Stop()
-        Timer2.Stop()
-        Itembuild.InitializeListbox()
-
-
-        If CheckBoxRecipes.Checked Then
-            For Each item As ListViewItem In ListView1.Items
-                If item.Text.ToLower.Contains("recipe") Then
-                    item.Remove()
-                End If
-            Next
-        End If
-
-        For Each item As ListViewItem In ListView1.Items
-            If Not item.Text.ToLower.Contains(TextBoxItemsearch.Text.ToLower) Then
-                item.Remove()
-            End If
-        Next
-        Dim cb1 As String = ""
-        Select Case ComboBox1.SelectedIndex
-            Case 1
-                cb1 = "Agility"
-            Case 2
-                cb1 = "All Attributes"
-            Case 3
-                cb1 = "Armor"
-            Case 4
-                cb1 = "Attack Speed"
-            Case 5
-                cb1 = "Aura"
-            Case 6
-                cb1 = "Damage"
-            Case 7
-                cb1 = "Evasion"
-            Case 8
-                cb1 = "HP"
-            Case 9
-                cb1 = "HP/sec Regeneration"
-            Case 10
-                cb1 = "Intelligence"
-            Case 11
-                cb1 = "Lifesteal"
-            Case 12
-                cb1 = " Magic Resistance"
-            Case 13
-                cb1 = "Mana"
-            Case 14
-                cb1 = "Mana Regeneration"
-            Case 15
-                cb1 = "Movement Speed"
-            Case 16
-                cb1 = "Recipe"
-            Case 17
-                cb1 = "Strength"
-            Case Else
-                cb1 = ""
-        End Select
-
-        If cb1 <> "" Then
-            For Each item As ListViewItem In ListView1.Items
-                If Not item.ToolTipText.ToLower.Contains(cb1.ToLower) Then
-                    item.Remove()
-                End If
-            Next
-        End If
-
-        Dim cb2 As String = ""
-        Select Case ComboBox2.SelectedIndex
-            Case 0
-                cb2 = "All"
-            Case 1
-                cb2 = "Arcane"
-            Case 2
-                cb2 = "Armaments"
-            Case 3
-                cb2 = "Armor"
-            Case 4
-                cb2 = "Artifacts"
-            Case 5
-                cb2 = "Attributes"
-            Case 6
-                cb2 = "Caster"
-            Case 7
-                cb2 = "Common"
-            Case 8
-                cb2 = "Consumables"
-            Case 9
-                cb2 = "Secret Shop"
-            Case 10
-                cb2 = "Side Lane Shop"
-            Case 11
-                cb2 = "Support"
-            Case 12
-                cb2 = "Weapons"
-            Case Else
-                cb2 = "All"
-        End Select
-
-        If cb2 <> "All" Then
-            For Each item As ListViewItem In ListView1.Items
-                If Not item.SubItems(1).Text.ToLower.Contains(cb2.ToLower) Then
-                    item.Remove()
-                End If
-            Next
-        End If
-    End Sub
-
-    'Return the pictureID (ImageList1) for each Item
-    Public Function GetPicture(ByVal item_name As String) As Integer
-        Select Case item_name
-            Case "Abyssal Blade"
-                Return 0
-            Case "Aghanim's Scepter"
-                Return 1
-            Case "Animal Courier"
-                Return 2
-            Case "Arcane Boots"
-                Return 3
-            Case "Armlet"
-                Return 4
-            Case "Assault Cuirass"
-                Return 5
-            Case "Battle Fury"
-                Return 6
-            Case "Belt of Strength"
-                Return 7
-            Case "Black King Bar"
-                Return 8
-            Case "Blade Mail"
-                Return 9
-            Case "Blade of Alacrity"
-                Return 10
-            Case "Blades of Attack"
-                Return 11
-            Case "Blink Dagger"
-                Return 12
-            Case "Bloodstone"
-                Return 13
-            Case "Boots of Elvenskin"
-                Return 14
-            Case "Boots of Speed"
-                Return 15
-            Case "Boots of Travel"
-                Return 16
-            Case "Bottle"
-                Return 17
-            Case "Bracer"
-                Return 18
-            Case "Broadsword"
-                Return 19
-            Case "Buckler"
-                Return 20
-            Case "Butterfly"
-                Return 21
-            Case "Chainmail"
-                Return 22
-            Case "Circlet"
-                Return 23
-            Case "Clarity"
-                Return 24
-            Case "Claymore"
-                Return 25
-            Case "Cloak"
-                Return 26
-            Case "Crystalys"
-                Return 27
-            Case "Daedalus"
-                Return 28
-            Case "Dagon 1"
-                Return 29
-            Case "Dagon 2"
-                Return 30
-            Case "Dagon 3"
-                Return 31
-            Case "Dagon 4"
-                Return 32
-            Case "Dagon 5"
-                Return 33
-            Case "Demon Edge"
-                Return 34
-            Case "Desolator"
-                Return 35
-            Case "Diffusal Blade 1"
-                Return 36
-            Case "Diffusal Blade 2"
-                Return 37
-            Case "Divine Rapier"
-                Return 38
-            Case "Drum of Endurance"
-                Return 39
-            Case "Dust of Appearance"
-                Return 40
-            Case "Eaglesong"
-                Return 41
-            Case "Energy Booster"
-                Return 42
-            Case "Ethereal Blade"
-                Return 43
-            Case "Eul's Scepter of Divinity"
-                Return 44
-            Case "Eye of Skadi"
-                Return 45
-            Case "Flying Courier"
-                Return 46
-            Case "Force Staff"
-                Return 47
-            Case "Gauntlets of Strength"
-                Return 48
-            Case "Gem of True Sight"
-                Return 49
-            Case "Ghost Scepter"
-                Return 50
-            Case "Gloves of Haste"
-                Return 51
-            Case "Hand of Midas"
-                Return 52
-            Case "Headdress"
-                Return 53
-            Case "Healing Salve"
-                Return 54
-            Case "Heart of Tarrasque"
-                Return 55
-            Case "Heaven's Halberd"
-                Return 56
-            Case "Helm of Iron Will"
-                Return 57
-            Case "Helm of the Dominator"
-                Return 58
-            Case "Hood of Defiance"
-                Return 59
-            Case "Hyperstone"
-                Return 60
-            Case "Iron Branch"
-                Return 61
-            Case "Javelin"
-                Return 62
-            Case "Linken's Sphere"
-                Return 63
-            Case "Maelstrom"
-                Return 64
-            Case "Magic Stick"
-                Return 65
-            Case "Magic Wand"
-                Return 66
-            Case "Manta Style"
-                Return 67
-            Case "Mantle of Intelligence"
-                Return 68
-            Case "Mask of Madness"
-                Return 69
-            Case "Medallion of Courage"
-                Return 70
-            Case "Mekansm"
-                Return 71
-            Case "Mithril Hammer"
-                Return 72
-            Case "Mjollnir"
-                Return 73
-            Case "Monkey King Bar"
-                Return 74
-            Case "Morbid Mask"
-                Return 75
-            Case "Mystic Staff"
-                Return 76
-            Case "Necronomicon 1"
-                Return 77
-            Case "Necronomicon 2"
-                Return 78
-            Case "Necronomicon 3"
-                Return 79
-            Case "Null Talisman"
-                Return 80
-            Case "Oblivion Staff"
-                Return 81
-            Case "Observer Ward"
-                Return 82
-            Case "Ogre Club"
-                Return 83
-            Case "Orb of Venom"
-                Return 84
-            Case "Orchid Malevolence"
-                Return 85
-            Case "Perseverance"
-                Return 86
-            Case "Phase Boots"
-                Return 87
-            Case "Pipe of Insight"
-                Return 88
-            Case "Platemail"
-                Return 89
-            Case "Point Booster"
-                Return 90
-            Case "Poor Man's Shield"
-                Return 91
-            Case "Power Treads"
-                Return 92
-            Case "Quarterstaff"
-                Return 93
-            Case "Quelling Blade"
-                Return 94
-            Case "Radiance"
-                Return 95
-            Case "Reaver"
-                Return 96
-            Case "Refresher Orb"
-                Return 97
-            Case "Ring of Aquila"
-                Return 98
-            Case "Ring of Basilius"
-                Return 99
-            Case "Ring of Health"
-                Return 100
-            Case "Ring of Protection"
-                Return 101
-            Case "Ring of Regen"
-                Return 102
-            Case "Robe of the Magi"
-                Return 103
-            Case "Rod of Atos"
-                Return 104
-            Case "Sacred Relic"
-                Return 105
-            Case "Sage's Mask"
-                Return 106
-            Case "Sange"
-                Return 107
-            Case "Sange and Yasha"
-                Return 108
-            Case "Satanic"
-                Return 109
-            Case "Scythe of Vyse"
-                Return 110
-            Case "Sentry Ward"
-                Return 111
-            Case "Shadow Blade"
-                Return 112
-            Case "Shiva's Guard"
-                Return 113
-            Case "Skull Basher"
-                Return 114
-            Case "Slippers of Agility"
-                Return 115
-            Case "Smoke of Deceit"
-                Return 116
-            Case "Soul Booster"
-                Return 117
-            Case "Soul Ring"
-                Return 118
-            Case "Staff of Wizardry"
-                Return 119
-            Case "Stout Shield"
-                Return 120
-            Case "Talisman of Evasion"
-                Return 121
-            Case "Tango"
-                Return 122
-            Case "Town Portal Scroll"
-                Return 123
-            Case "Tranquil Boots"
-                Return 124
-            Case "Ultimate Orb"
-                Return 125
-            Case "Urn of Shadows"
-                Return 126
-            Case "Vanguard"
-                Return 127
-            Case "Veil of Discord"
-                Return 128
-            Case "Vitality Booster"
-                Return 129
-            Case "Vladmir's Offering"
-                Return 130
-            Case "Void Stone"
-                Return 131
-            Case "Wraith Band"
-                Return 132
-            Case "Yasha"
-                Return 133
-            Case "Shadow Amulet"
-                Return 135
-            Case Else
-                Return 134
-        End Select
-    End Function
 #End Region
 
 #Region "Items"
@@ -755,6 +378,15 @@ Public Class FormMain
             Label15.ForeColor = Color.Black
         End If
     End Sub
+
+    'Calculate the item costs for the starting items
+    Private Function GetStartCosts() As String
+        IntPrice = 0
+        For i = 0 To ListView2.Items.Count - 1
+            IntPrice += (Itembuild.GetPrice(ListView2.Items(i).SubItems(1).Text))
+        Next
+        Return IntPrice.ToString
+    End Function
 
     'Return the normal itemname, needs the itemname of the itembuild file
     Public Function RenameItem(ByVal item_name As String) As String
@@ -1617,244 +1249,287 @@ Public Class FormMain
                 Return "Error! Itemname: " + item_name
         End Select
     End Function
+
+    'Return the pictureID (ImageList1) for each Item
+    Public Function GetPicture(ByVal item_name As String) As Integer
+        Select Case item_name
+            Case "Abyssal Blade"
+                Return 0
+            Case "Aghanim's Scepter"
+                Return 1
+            Case "Animal Courier"
+                Return 2
+            Case "Arcane Boots"
+                Return 3
+            Case "Armlet"
+                Return 4
+            Case "Assault Cuirass"
+                Return 5
+            Case "Battle Fury"
+                Return 6
+            Case "Belt of Strength"
+                Return 7
+            Case "Black King Bar"
+                Return 8
+            Case "Blade Mail"
+                Return 9
+            Case "Blade of Alacrity"
+                Return 10
+            Case "Blades of Attack"
+                Return 11
+            Case "Blink Dagger"
+                Return 12
+            Case "Bloodstone"
+                Return 13
+            Case "Boots of Elvenskin"
+                Return 14
+            Case "Boots of Speed"
+                Return 15
+            Case "Boots of Travel"
+                Return 16
+            Case "Bottle"
+                Return 17
+            Case "Bracer"
+                Return 18
+            Case "Broadsword"
+                Return 19
+            Case "Buckler"
+                Return 20
+            Case "Butterfly"
+                Return 21
+            Case "Chainmail"
+                Return 22
+            Case "Circlet"
+                Return 23
+            Case "Clarity"
+                Return 24
+            Case "Claymore"
+                Return 25
+            Case "Cloak"
+                Return 26
+            Case "Crystalys"
+                Return 27
+            Case "Daedalus"
+                Return 28
+            Case "Dagon 1"
+                Return 29
+            Case "Dagon 2"
+                Return 30
+            Case "Dagon 3"
+                Return 31
+            Case "Dagon 4"
+                Return 32
+            Case "Dagon 5"
+                Return 33
+            Case "Demon Edge"
+                Return 34
+            Case "Desolator"
+                Return 35
+            Case "Diffusal Blade 1"
+                Return 36
+            Case "Diffusal Blade 2"
+                Return 37
+            Case "Divine Rapier"
+                Return 38
+            Case "Drum of Endurance"
+                Return 39
+            Case "Dust of Appearance"
+                Return 40
+            Case "Eaglesong"
+                Return 41
+            Case "Energy Booster"
+                Return 42
+            Case "Ethereal Blade"
+                Return 43
+            Case "Eul's Scepter of Divinity"
+                Return 44
+            Case "Eye of Skadi"
+                Return 45
+            Case "Flying Courier"
+                Return 46
+            Case "Force Staff"
+                Return 47
+            Case "Gauntlets of Strength"
+                Return 48
+            Case "Gem of True Sight"
+                Return 49
+            Case "Ghost Scepter"
+                Return 50
+            Case "Gloves of Haste"
+                Return 51
+            Case "Hand of Midas"
+                Return 52
+            Case "Headdress"
+                Return 53
+            Case "Healing Salve"
+                Return 54
+            Case "Heart of Tarrasque"
+                Return 55
+            Case "Heaven's Halberd"
+                Return 56
+            Case "Helm of Iron Will"
+                Return 57
+            Case "Helm of the Dominator"
+                Return 58
+            Case "Hood of Defiance"
+                Return 59
+            Case "Hyperstone"
+                Return 60
+            Case "Iron Branch"
+                Return 61
+            Case "Javelin"
+                Return 62
+            Case "Linken's Sphere"
+                Return 63
+            Case "Maelstrom"
+                Return 64
+            Case "Magic Stick"
+                Return 65
+            Case "Magic Wand"
+                Return 66
+            Case "Manta Style"
+                Return 67
+            Case "Mantle of Intelligence"
+                Return 68
+            Case "Mask of Madness"
+                Return 69
+            Case "Medallion of Courage"
+                Return 70
+            Case "Mekansm"
+                Return 71
+            Case "Mithril Hammer"
+                Return 72
+            Case "Mjollnir"
+                Return 73
+            Case "Monkey King Bar"
+                Return 74
+            Case "Morbid Mask"
+                Return 75
+            Case "Mystic Staff"
+                Return 76
+            Case "Necronomicon 1"
+                Return 77
+            Case "Necronomicon 2"
+                Return 78
+            Case "Necronomicon 3"
+                Return 79
+            Case "Null Talisman"
+                Return 80
+            Case "Oblivion Staff"
+                Return 81
+            Case "Observer Ward"
+                Return 82
+            Case "Ogre Club"
+                Return 83
+            Case "Orb of Venom"
+                Return 84
+            Case "Orchid Malevolence"
+                Return 85
+            Case "Perseverance"
+                Return 86
+            Case "Phase Boots"
+                Return 87
+            Case "Pipe of Insight"
+                Return 88
+            Case "Platemail"
+                Return 89
+            Case "Point Booster"
+                Return 90
+            Case "Poor Man's Shield"
+                Return 91
+            Case "Power Treads"
+                Return 92
+            Case "Quarterstaff"
+                Return 93
+            Case "Quelling Blade"
+                Return 94
+            Case "Radiance"
+                Return 95
+            Case "Reaver"
+                Return 96
+            Case "Refresher Orb"
+                Return 97
+            Case "Ring of Aquila"
+                Return 98
+            Case "Ring of Basilius"
+                Return 99
+            Case "Ring of Health"
+                Return 100
+            Case "Ring of Protection"
+                Return 101
+            Case "Ring of Regen"
+                Return 102
+            Case "Robe of the Magi"
+                Return 103
+            Case "Rod of Atos"
+                Return 104
+            Case "Sacred Relic"
+                Return 105
+            Case "Sage's Mask"
+                Return 106
+            Case "Sange"
+                Return 107
+            Case "Sange and Yasha"
+                Return 108
+            Case "Satanic"
+                Return 109
+            Case "Scythe of Vyse"
+                Return 110
+            Case "Sentry Ward"
+                Return 111
+            Case "Shadow Blade"
+                Return 112
+            Case "Shiva's Guard"
+                Return 113
+            Case "Skull Basher"
+                Return 114
+            Case "Slippers of Agility"
+                Return 115
+            Case "Smoke of Deceit"
+                Return 116
+            Case "Soul Booster"
+                Return 117
+            Case "Soul Ring"
+                Return 118
+            Case "Staff of Wizardry"
+                Return 119
+            Case "Stout Shield"
+                Return 120
+            Case "Talisman of Evasion"
+                Return 121
+            Case "Tango"
+                Return 122
+            Case "Town Portal Scroll"
+                Return 123
+            Case "Tranquil Boots"
+                Return 124
+            Case "Ultimate Orb"
+                Return 125
+            Case "Urn of Shadows"
+                Return 126
+            Case "Vanguard"
+                Return 127
+            Case "Veil of Discord"
+                Return 128
+            Case "Vitality Booster"
+                Return 129
+            Case "Vladmir's Offering"
+                Return 130
+            Case "Void Stone"
+                Return 131
+            Case "Wraith Band"
+                Return 132
+            Case "Yasha"
+                Return 133
+            Case "Shadow Amulet"
+                Return 135
+            Case Else
+                Return 134
+        End Select
+    End Function
 #End Region
 
-#Region "Drag&Drop"
-    'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
-    Private Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
-        Dim ImgAttr As New Imaging.ImageAttributes()
-
-        'Standard-ColorMatrix für Transparenz
-        Dim ColorMatrix As New Imaging.ColorMatrix(New Single()() {New Single() {1, 0, 0, 0, 0}, New Single() {0, 1, 0, 0, 0}, New Single() {0, 0, 1, 0, 0}, New Single() {0, 0, 0, CSng(Alpha / 100), 0}, New Single() {0, 0, 0, 0, 1}})
-
-        'ColorMatrix an ImageAttribute-Objekt übergeben
-        ImgAttr.SetColorMatrix(ColorMatrix)
-
-        'Neue 32bit Bitmap erstellen
-        Dim NewBitmap = New Bitmap(Image.Width, Image.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
-
-        'Resolution (DPI) vom Quellbitmap auf Zielbitmap übertragen
-        NewBitmap.SetResolution(Image.HorizontalResolution, Image.VerticalResolution)
-
-        'Graphicsobjekt von NewBitmap erstellen
-        Dim NewGraphics As Graphics = Graphics.FromImage(NewBitmap)
-
-        'NewBitmap auf NewGraphics zeichnen
-        NewGraphics.DrawImage(Image, New Rectangle(0, 0, NewBitmap.Width, NewBitmap.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, ImgAttr)
-
-        'Ressource freigeben
-        NewGraphics.Dispose()
-        ImgAttr.Dispose()
-        Return NewBitmap
-    End Function
-
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
-        Dim Index As Integer
-        Dim itemImage As Bitmap
-
-        If ListView1.SelectedItems.Count > 0 Then
-            Dim lvi As ListViewItem = ListView1.SelectedItems.Item(0)
-            If lvi.Selected Then
-                Index = lvi.Index
-            Else
-                Index = -1
-            End If
-        End If
-
-        If Index > -1 Then
-            Selected_Item = ListView1.Items(Index).Text
-            itemImage = SetImageAlpha(ImageList1.Images(GetPicture(Selected_Item)), 75)
-            cursor_image = Icon.FromHandle(itemImage.GetHicon())
-        End If
-    End Sub
-
-    'Change the cursor while dragging an item
-    Private Sub ListView1_GiveFeedback(ByVal sender As System.Object, ByVal e As System.Windows.Forms.GiveFeedbackEventArgs) Handles ListView1.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(cursor_image.Handle)
-        End If
-    End Sub
-
-    'LISTVIEW DRAG&DROP
-    Private Sub ListView1_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView1.ItemDrag
-        ListView1.DoDragDrop(Selected_Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Function GetStartCosts() As String
-        IntPrice = 0
-        For i = 0 To ListView2.Items.Count - 1
-            IntPrice += (Itembuild.GetPrice(ListView2.Items(i).SubItems(1).Text))
-        Next
-        Return IntPrice.ToString
-    End Function
-    Private Sub ListView2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView2.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-            Label15.Text = GetStartCosts()
-            CheckCosts(CInt(Label15.Text))
-            Unsaved = True
-        Else
-            With ListView2
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView2.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-            Label15.Text = GetStartCosts()
-            CheckCosts(CInt(Label15.Text))
-            Unsaved = True
-        End If
-    End Sub
-    Private Sub ListView2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView2.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView2_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView2.ItemDrag
-        Label15.Text = (CInt(Label15.Text) - Itembuild.GetPrice(ListView2.SelectedItems(0).SubItems(1).Text)).ToString
-        CheckCosts(CInt(Label15.Text))
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Sub ListView3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView3.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-        Else
-            With ListView3
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView3.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-        End If
-    End Sub
-    Private Sub ListView3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView3.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView3_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView3.ItemDrag
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Sub ListView4_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView4.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-        Else
-            With ListView4
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView4.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-        End If
-    End Sub
-    Private Sub ListView4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView4.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView4_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView4.ItemDrag
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Sub ListView5_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView5.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-        Else
-            With ListView5
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView5.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-        End If
-    End Sub
-    Private Sub ListView5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView5.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView5_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView5.ItemDrag
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Sub ListView6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView6.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-        Else
-            With ListView6
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView6.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-        End If
-    End Sub
-    Private Sub ListView6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView6.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView6_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView6.ItemDrag
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    Private Sub ListView7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView7.DragDrop
-        Dim lvi As ListViewItem = Nothing
-        Dim lv As ListView = CType(sender, ListView)
-        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
-            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
-            With lvi
-                .ListView.Items.Remove(lvi)
-                With lv
-                    .Items.Add(lvi)
-                End With
-            End With
-        Else
-            With ListView7
-                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
-                .Items.AddRange(New ListViewItem() {item})
-                .Items(ListView7.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
-            End With
-        End If
-    End Sub
-    Private Sub ListView7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView7.DragEnter
-        e.Effect = DragDropEffects.Copy
-    End Sub
-    Private Sub ListView7_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView7.ItemDrag
-        DoDragDrop(e.Item, DragDropEffects.Copy)
-    End Sub
-
-    ' RIGHTCLICK DELTE
+#Region "Itemboxes"
     Private Sub ListView2_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView2.MouseClick
         If e.Button = MouseButtons.Right Then
             IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(ListView2.SelectedItems.Item(0).SubItems(1).Text))
@@ -1899,22 +1574,47 @@ Public Class FormMain
             Unsaved = True
         End If
     End Sub
+
+    Private Sub resetItemboxes()
+        active_itmebox = 0
+        ListView2.BackColor = Color.White
+        ListView3.BackColor = Color.White
+        ListView4.BackColor = Color.White
+        ListView5.BackColor = Color.White
+        ListView6.BackColor = Color.White
+        ListView7.BackColor = Color.White
+    End Sub
+
+    Private Sub ListView2_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView2.MouseDown
+        resetItemboxes()
+        active_itmebox = 0
+        ListView2.BackColor = Color.LightGreen
+    End Sub
+    Private Sub ListView3_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView3.MouseDown
+        resetItemboxes()
+        active_itmebox = 1
+        ListView3.BackColor = Color.LightGreen
+    End Sub
+    Private Sub ListView4_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView4.MouseDown
+        resetItemboxes()
+        active_itmebox = 2
+        ListView4.BackColor = Color.LightGreen
+    End Sub
+    Private Sub ListView5_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView5.MouseDown
+        resetItemboxes()
+        active_itmebox = 3
+        ListView5.BackColor = Color.LightGreen
+    End Sub
+    Private Sub ListView6_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView6.MouseDown
+        resetItemboxes()
+        active_itmebox = 4
+        ListView6.BackColor = Color.LightGreen
+    End Sub
+    Private Sub ListView7_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView7.MouseDown
+        resetItemboxes()
+        active_itmebox = 5
+        ListView7.BackColor = Color.LightGreen
+    End Sub
 #End Region
-
-    'Allow ctrl+a to select all text in this textbox
-    Private Sub TextBox2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
-        If (e.KeyChar = vb.Chr(1)) Then
-            TextBox2.SelectAll()
-            e.Handled = True
-        End If
-    End Sub
-
-    'Reset the itemfilter on click
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        TextBoxItemsearch.Text = ""
-        ComboBox1.Text = ""
-        ComboBox2.Text = "All"
-        CheckBoxRecipes.Checked = True
-    End Sub
 
 End Class

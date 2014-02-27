@@ -12,7 +12,6 @@ Public Class ItembuildClass
         FormMain.ButtonSave.Enabled = False
 
         'PRESELECT THE BOX
-        FormMain.ComboBox2.SelectedIndex = 0
         FormMain.ComboBox3.SelectedIndex = 0
 
         ClearNotImplemented()

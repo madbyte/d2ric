@@ -26,7 +26,6 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.CheckBoxRecipes = New System.Windows.Forms.CheckBox()
         Me.Itemslot6 = New System.Windows.Forms.TextBox()
         Me.Itemslot5 = New System.Windows.Forms.TextBox()
         Me.Itemslot4 = New System.Windows.Forms.TextBox()
@@ -36,19 +35,12 @@ Partial Class FormMain
         Me.ListView7 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListView6 = New System.Windows.Forms.ListView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView5 = New System.Windows.Forms.ListView()
         Me.ListView4 = New System.Windows.Forms.ListView()
         Me.ListView3 = New System.Windows.Forms.ListView()
         Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBoxItemsearch = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -77,11 +69,8 @@ Partial Class FormMain
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ButtonBackup = New System.Windows.Forms.Button()
         Me.ButtonDeleteBackup = New System.Windows.Forms.Button()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -102,7 +91,6 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
-        Me.TabPage1.Controls.Add(Me.CheckBoxRecipes)
         Me.TabPage1.Controls.Add(Me.Itemslot6)
         Me.TabPage1.Controls.Add(Me.Itemslot5)
         Me.TabPage1.Controls.Add(Me.Itemslot4)
@@ -111,19 +99,12 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.Itemslot1)
         Me.TabPage1.Controls.Add(Me.ListView7)
         Me.TabPage1.Controls.Add(Me.ListView6)
-        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.ListView5)
         Me.TabPage1.Controls.Add(Me.ListView4)
         Me.TabPage1.Controls.Add(Me.ListView3)
         Me.TabPage1.Controls.Add(Me.ListView2)
-        Me.TabPage1.Controls.Add(Me.Label22)
-        Me.TabPage1.Controls.Add(Me.ComboBox2)
         Me.TabPage1.Controls.Add(Me.Label15)
         Me.TabPage1.Controls.Add(Me.Label14)
-        Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Controls.Add(Me.ComboBox1)
-        Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.TextBoxItemsearch)
         Me.TabPage1.Controls.Add(Me.ListView1)
         Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
         Me.TabPage1.Controls.Add(Me.Label24)
@@ -139,12 +120,6 @@ Partial Class FormMain
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'CheckBoxRecipes
-        '
-        resources.ApplyResources(Me.CheckBoxRecipes, "CheckBoxRecipes")
-        Me.CheckBoxRecipes.Name = "CheckBoxRecipes"
-        Me.CheckBoxRecipes.UseVisualStyleBackColor = True
         '
         'Itemslot6
         '
@@ -343,12 +318,6 @@ Partial Class FormMain
         Me.ListView6.UseCompatibleStateImageBehavior = False
         Me.ListView6.View = System.Windows.Forms.View.Tile
         '
-        'Button1
-        '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'ListView5
         '
         Me.ListView5.LargeImageList = Me.ImageList1
@@ -390,6 +359,7 @@ Partial Class FormMain
         '
         'ListView2
         '
+        Me.ListView2.BackColor = System.Drawing.SystemColors.Window
         Me.ListView2.LargeImageList = Me.ImageList1
         resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.MultiSelect = False
@@ -401,19 +371,6 @@ Partial Class FormMain
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Tile
         '
-        'Label22
-        '
-        resources.ApplyResources(Me.Label22, "Label22")
-        Me.Label22.Name = "Label22"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {resources.GetString("ComboBox2.Items"), resources.GetString("ComboBox2.Items1"), resources.GetString("ComboBox2.Items2"), resources.GetString("ComboBox2.Items3"), resources.GetString("ComboBox2.Items4"), resources.GetString("ComboBox2.Items5"), resources.GetString("ComboBox2.Items6"), resources.GetString("ComboBox2.Items7"), resources.GetString("ComboBox2.Items8"), resources.GetString("ComboBox2.Items9"), resources.GetString("ComboBox2.Items10"), resources.GetString("ComboBox2.Items11"), resources.GetString("ComboBox2.Items12")})
-        resources.ApplyResources(Me.ComboBox2, "ComboBox2")
-        Me.ComboBox2.Name = "ComboBox2"
-        '
         'Label15
         '
         resources.ApplyResources(Me.Label15, "Label15")
@@ -423,29 +380,6 @@ Partial Class FormMain
         '
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.Name = "Label13"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1"), resources.GetString("ComboBox1.Items2"), resources.GetString("ComboBox1.Items3"), resources.GetString("ComboBox1.Items4"), resources.GetString("ComboBox1.Items5"), resources.GetString("ComboBox1.Items6"), resources.GetString("ComboBox1.Items7"), resources.GetString("ComboBox1.Items8"), resources.GetString("ComboBox1.Items9"), resources.GetString("ComboBox1.Items10"), resources.GetString("ComboBox1.Items11"), resources.GetString("ComboBox1.Items12"), resources.GetString("ComboBox1.Items13"), resources.GetString("ComboBox1.Items14"), resources.GetString("ComboBox1.Items15"), resources.GetString("ComboBox1.Items16"), resources.GetString("ComboBox1.Items17")})
-        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
-        Me.ComboBox1.Name = "ComboBox1"
-        '
-        'Label11
-        '
-        resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.Name = "Label11"
-        '
-        'TextBoxItemsearch
-        '
-        resources.ApplyResources(Me.TextBoxItemsearch, "TextBoxItemsearch")
-        Me.TextBoxItemsearch.Name = "TextBoxItemsearch"
         '
         'ListView1
         '
@@ -644,14 +578,6 @@ Partial Class FormMain
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
         Me.LabelWait.Name = "LabelWait"
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 500
-        '
-        'Timer2
-        '
-        Me.Timer2.Interval = 5
-        '
         'FormMain
         '
         resources.ApplyResources(Me, "$this")
@@ -685,7 +611,6 @@ Partial Class FormMain
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents ButtonOpenTextfile As System.Windows.Forms.Button
     Friend WithEvents ButtonImport As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
@@ -706,21 +631,12 @@ Partial Class FormMain
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
-    Friend WithEvents TextBoxItemsearch As System.Windows.Forms.TextBox
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents ListView2 As System.Windows.Forms.ListView
     Friend WithEvents ListView3 As System.Windows.Forms.ListView
     Friend WithEvents ListView5 As System.Windows.Forms.ListView
     Friend WithEvents ListView4 As System.Windows.Forms.ListView
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ListView7 As System.Windows.Forms.ListView
     Friend WithEvents ListView6 As System.Windows.Forms.ListView
     Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
@@ -731,5 +647,4 @@ Partial Class FormMain
     Friend WithEvents Itemslot3 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot2 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot1 As System.Windows.Forms.TextBox
-    Friend WithEvents CheckBoxRecipes As System.Windows.Forms.CheckBox
 End Class
