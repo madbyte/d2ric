@@ -5,7 +5,7 @@ DotA 2 Recommended Items Customizer
 - https://dl.dropboxusercontent.com/u/15746440/D2RIC/release.exe
 
 ###--- TODO ---
-- Add the possibility to reorder items in a better way
+- Add the possibility to reorder items
 - More than one itembuild for each hero
 - Autoupdater (need some testing)
 
@@ -15,6 +15,10 @@ DotA 2 Recommended Items Customizer
 ###--- CHANGELOG ---
 
 (old files can be found here https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old)
+
+Version 1.5 (beta6):
+- Removed drag&drop
+- Reorganize the itemlist to match with the ingame store
 
 Version 1.5 (beta5):
 - Update Heroes

@@ -10,7 +10,7 @@ Public Class FormMain
     Public IntPrice As Integer
     Dim Unsaved As Boolean = False
     Public ImportHero As Boolean = False
-    Dim active_itmebox As Integer = 0
+    Dim active_itembox As ListView
     ' Declare a Resource Manager instance.
     Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
@@ -39,6 +39,12 @@ Public Class FormMain
         Itembuild.InitializeListbox()
 
         Options.InitializeLang()
+
+        active_itembox = ListViewItems0
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        Itembuild.InitializeListbox()
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -99,31 +105,92 @@ Public Class FormMain
         End If
     End Sub
 
-    Private Sub ListView1_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView1.MouseClick
-        If e.Button = MouseButtons.Right Then
-            If active_itmebox = 0 Then
-                ListView2.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView2.Items(ListView2.Items.Count - 1).SubItems(1).Text = ListView2.Items(ListView2.Items.Count - 1).Text
-                Label15.Text = GetStartCosts()
-                CheckCosts(CInt(Label15.Text))
-            ElseIf active_itmebox = 1 Then
-                ListView3.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView3.Items(ListView3.Items.Count - 1).SubItems(1).Text = ListView3.Items(ListView3.Items.Count - 1).Text
-            ElseIf active_itmebox = 2 Then
-                ListView4.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView4.Items(ListView4.Items.Count - 1).SubItems(1).Text = ListView4.Items(ListView4.Items.Count - 1).Text
-            ElseIf active_itmebox = 3 Then
-                ListView5.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView5.Items(ListView5.Items.Count - 1).SubItems(1).Text = ListView5.Items(ListView5.Items.Count - 1).Text
-            ElseIf active_itmebox = 4 Then
-                ListView6.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView6.Items(ListView6.Items.Count - 1).SubItems(1).Text = ListView6.Items(ListView6.Items.Count - 1).Text
-            ElseIf active_itmebox = 5 Then
-                ListView7.Items.Add(ListView1.SelectedItems.Item(0).Clone)
-                ListView7.Items(ListView7.Items.Count - 1).SubItems(1).Text = ListView7.Items(ListView7.Items.Count - 1).Text
-            End If
-            Unsaved = True
+    Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
+        Options.ChangeLang()
+        If Not FirstLangChange Then
+            MessageBox.Show(LocRM.GetString("restartNeeded"))
+        Else
+            FirstLangChange = False
         End If
+    End Sub
+
+    Private Sub ListViewWeapons_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewWeapons.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewWeapons)
+        End If
+    End Sub
+
+    Private Sub ListViewConsumables_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewConsumables.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewConsumables)
+        End If
+    End Sub
+
+    Private Sub ListViewAttributes_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewAttributes.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewAttributes)
+        End If
+    End Sub
+
+    Private Sub ListViewArmaments_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewArmaments.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewArmaments)
+        End If
+    End Sub
+
+    Private Sub ListViewArcane_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewArcane.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewArcane)
+        End If
+    End Sub
+
+    Private Sub ListViewCommon_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewCommon.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewCommon)
+        End If
+    End Sub
+
+    Private Sub ListViewSupport_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewSupport.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewSupport)
+        End If
+    End Sub
+
+    Private Sub ListViewCaster_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewCaster.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewCaster)
+        End If
+    End Sub
+
+    Private Sub ListViewArmor_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewArmor.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewArmor)
+        End If
+    End Sub
+
+    Private Sub ListViewArtifacts_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewArtifacts.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewArtifacts)
+        End If
+    End Sub
+
+    Private Sub ListViewSecretShop_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewSecretShop.MouseClick
+        If e.Button = MouseButtons.Right Then
+            addItem(ListViewSecretShop)
+        End If
+    End Sub
+
+    Private Sub addItem(source As ListView)
+        If active_itembox.Name = "ListViewItems0" Then
+            active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
+            active_itembox.Items(active_itembox.Items.Count - 1).SubItems(1).Text = active_itembox.Items(active_itembox.Items.Count - 1).Text
+            Label15.Text = GetStartCosts()
+            CheckCosts(CInt(Label15.Text))
+        Else
+            active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
+            active_itembox.Items(active_itembox.Items.Count - 1).SubItems(1).Text = active_itembox.Items(active_itembox.Items.Count - 1).Text
+        End If
+        Unsaved = True
     End Sub
 
 #Region "Updater"
@@ -352,23 +419,6 @@ Public Class FormMain
     End Sub
 #End Region
 
-#Region "HeroList"
-    Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
-        Options.ChangeLang()
-        If Not FirstLangChange Then
-            MessageBox.Show(LocRM.GetString("restartNeeded"))
-        Else
-            FirstLangChange = False
-        End If
-    End Sub
-
-    'CHANGE THE HEROS SHOWN IN THE LIST
-    Private Sub ComboBox3_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
-        Itembuild.ChangeHeroList(ComboBox3, ListBox1)
-        Itembuild.ClearNotImplemented()
-    End Sub
-#End Region
-
 #Region "Items"
     'Changes color to red when the costs exceed 625, otherwise to blue
     Public Sub CheckCosts(ByVal price As Integer)
@@ -382,8 +432,8 @@ Public Class FormMain
     'Calculate the item costs for the starting items
     Private Function GetStartCosts() As String
         IntPrice = 0
-        For i = 0 To ListView2.Items.Count - 1
-            IntPrice += (Itembuild.GetPrice(ListView2.Items(i).SubItems(1).Text))
+        For i = 0 To ListViewItems0.Items.Count - 1
+            IntPrice += (Itembuild.GetPrice(ListViewItems0.Items(i).SubItems(1).Text))
         Next
         Return IntPrice.ToString
     End Function
@@ -1530,90 +1580,90 @@ Public Class FormMain
 #End Region
 
 #Region "Itemboxes"
-    Private Sub ListView2_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView2.MouseClick
+    Private Sub ListViewItems0_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems0.MouseClick
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(ListView2.SelectedItems.Item(0).SubItems(1).Text))
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(ListViewItems0.SelectedItems.Item(0).SubItems(1).Text))
             Label15.Text = IntPrice.ToString
             CheckCosts(IntPrice.ToString)
-            ListView2.SelectedItems.Item(0).Remove()
+            ListViewItems0.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
-    Private Sub ListView3_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView3.MouseClick
+    Private Sub ListViewItems1_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems1.MouseClick
         If e.Button = MouseButtons.Right Then
-            ListView3.SelectedItems.Item(0).Remove()
+            ListViewItems1.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
-    Private Sub ListView4_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView4.MouseClick
+    Private Sub ListViewItems2_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems2.MouseClick
         If e.Button = MouseButtons.Right Then
-            ListView4.SelectedItems.Item(0).Remove()
+            ListViewItems2.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
-    Private Sub ListView5_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView5.MouseClick
+    Private Sub ListViewItems3_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems3.MouseClick
         If e.Button = MouseButtons.Right Then
-            ListView5.SelectedItems.Item(0).Remove()
+            ListViewItems3.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
-    Private Sub ListView6_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView6.MouseClick
+    Private Sub ListViewItems4_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems4.MouseClick
         If e.Button = MouseButtons.Right Then
-            ListView6.SelectedItems.Item(0).Remove()
+            ListViewItems4.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
-    Private Sub ListView7_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView7.MouseClick
+    Private Sub ListViewItems5_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListViewItems5.MouseClick
         If e.Button = MouseButtons.Right Then
-            ListView7.SelectedItems.Item(0).Remove()
+            ListViewItems5.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
 
     Private Sub resetItemboxes()
-        active_itmebox = 0
-        ListView2.BackColor = Color.White
-        ListView3.BackColor = Color.White
-        ListView4.BackColor = Color.White
-        ListView5.BackColor = Color.White
-        ListView6.BackColor = Color.White
-        ListView7.BackColor = Color.White
+        active_itembox = ListViewItems0
+        ListViewItems0.BackColor = Color.White
+        ListViewItems1.BackColor = Color.White
+        ListViewItems2.BackColor = Color.White
+        ListViewItems3.BackColor = Color.White
+        ListViewItems4.BackColor = Color.White
+        ListViewItems5.BackColor = Color.White
     End Sub
 
-    Private Sub ListView2_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView2.MouseDown
+    Private Sub ListViewItems0_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems0.MouseDown
         resetItemboxes()
-        active_itmebox = 0
-        ListView2.BackColor = Color.LightGreen
+        active_itembox = ListViewItems0
+        ListViewItems0.BackColor = Color.LightGreen
     End Sub
-    Private Sub ListView3_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView3.MouseDown
+    Private Sub ListViewItems1_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems1.MouseDown
         resetItemboxes()
-        active_itmebox = 1
-        ListView3.BackColor = Color.LightGreen
+        active_itembox = ListViewItems1
+        ListViewItems1.BackColor = Color.LightGreen
     End Sub
-    Private Sub ListView4_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView4.MouseDown
+    Private Sub ListViewItems2_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems2.MouseDown
         resetItemboxes()
-        active_itmebox = 2
-        ListView4.BackColor = Color.LightGreen
+        active_itembox = ListViewItems2
+        ListViewItems2.BackColor = Color.LightGreen
     End Sub
-    Private Sub ListView5_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView5.MouseDown
+    Private Sub ListViewItems3_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems3.MouseDown
         resetItemboxes()
-        active_itmebox = 3
-        ListView5.BackColor = Color.LightGreen
+        active_itembox = ListViewItems3
+        ListViewItems3.BackColor = Color.LightGreen
     End Sub
-    Private Sub ListView6_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView6.MouseDown
+    Private Sub ListViewItems4_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems4.MouseDown
         resetItemboxes()
-        active_itmebox = 4
-        ListView6.BackColor = Color.LightGreen
+        active_itembox = ListViewItems4
+        ListViewItems4.BackColor = Color.LightGreen
     End Sub
-    Private Sub ListView7_MouseDown(sender As Object, e As MouseEventArgs) Handles ListView7.MouseDown
+    Private Sub ListViewItems5_MouseDown(sender As Object, e As MouseEventArgs) Handles ListViewItems5.MouseDown
         resetItemboxes()
-        active_itmebox = 5
-        ListView7.BackColor = Color.LightGreen
+        active_itembox = ListViewItems5
+        ListViewItems5.BackColor = Color.LightGreen
     End Sub
 #End Region
 

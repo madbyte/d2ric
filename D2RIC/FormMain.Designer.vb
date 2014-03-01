@@ -26,26 +26,34 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ListViewSecretShop = New System.Windows.Forms.ListView()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ListViewArcane = New System.Windows.Forms.ListView()
+        Me.ListViewArmaments = New System.Windows.Forms.ListView()
+        Me.ListViewCommon = New System.Windows.Forms.ListView()
+        Me.ListViewArtifacts = New System.Windows.Forms.ListView()
+        Me.ListViewAttributes = New System.Windows.Forms.ListView()
+        Me.ListViewArmor = New System.Windows.Forms.ListView()
+        Me.ListViewSupport = New System.Windows.Forms.ListView()
+        Me.ListViewConsumables = New System.Windows.Forms.ListView()
+        Me.ListViewCaster = New System.Windows.Forms.ListView()
         Me.Itemslot6 = New System.Windows.Forms.TextBox()
         Me.Itemslot5 = New System.Windows.Forms.TextBox()
         Me.Itemslot4 = New System.Windows.Forms.TextBox()
         Me.Itemslot3 = New System.Windows.Forms.TextBox()
         Me.Itemslot2 = New System.Windows.Forms.TextBox()
         Me.Itemslot1 = New System.Windows.Forms.TextBox()
-        Me.ListView7 = New System.Windows.Forms.ListView()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ListView6 = New System.Windows.Forms.ListView()
-        Me.ListView5 = New System.Windows.Forms.ListView()
-        Me.ListView4 = New System.Windows.Forms.ListView()
-        Me.ListView3 = New System.Windows.Forms.ListView()
-        Me.ListView2 = New System.Windows.Forms.ListView()
+        Me.ListViewItems5 = New System.Windows.Forms.ListView()
+        Me.ListViewItems4 = New System.Windows.Forms.ListView()
+        Me.ListViewItems3 = New System.Windows.Forms.ListView()
+        Me.ListViewItems2 = New System.Windows.Forms.ListView()
+        Me.ListViewItems1 = New System.Windows.Forms.ListView()
+        Me.ListViewItems0 = New System.Windows.Forms.ListView()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ListViewWeapons = New System.Windows.Forms.ListView()
         Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label0 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ButtonOpenFolder = New System.Windows.Forms.Button()
@@ -71,6 +79,18 @@ Partial Class FormMain
         Me.ButtonDeleteBackup = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -91,25 +111,45 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.Label18)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.Label13)
+        Me.TabPage1.Controls.Add(Me.Label12)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.CheckBox1)
+        Me.TabPage1.Controls.Add(Me.ListViewSecretShop)
+        Me.TabPage1.Controls.Add(Me.ListViewArcane)
+        Me.TabPage1.Controls.Add(Me.ListViewArmaments)
+        Me.TabPage1.Controls.Add(Me.ListViewCommon)
+        Me.TabPage1.Controls.Add(Me.ListViewArtifacts)
+        Me.TabPage1.Controls.Add(Me.ListViewAttributes)
+        Me.TabPage1.Controls.Add(Me.ListViewArmor)
+        Me.TabPage1.Controls.Add(Me.ListViewSupport)
+        Me.TabPage1.Controls.Add(Me.ListViewConsumables)
+        Me.TabPage1.Controls.Add(Me.ListViewCaster)
         Me.TabPage1.Controls.Add(Me.Itemslot6)
         Me.TabPage1.Controls.Add(Me.Itemslot5)
         Me.TabPage1.Controls.Add(Me.Itemslot4)
         Me.TabPage1.Controls.Add(Me.Itemslot3)
         Me.TabPage1.Controls.Add(Me.Itemslot2)
         Me.TabPage1.Controls.Add(Me.Itemslot1)
-        Me.TabPage1.Controls.Add(Me.ListView7)
-        Me.TabPage1.Controls.Add(Me.ListView6)
-        Me.TabPage1.Controls.Add(Me.ListView5)
-        Me.TabPage1.Controls.Add(Me.ListView4)
-        Me.TabPage1.Controls.Add(Me.ListView3)
-        Me.TabPage1.Controls.Add(Me.ListView2)
+        Me.TabPage1.Controls.Add(Me.ListViewItems5)
+        Me.TabPage1.Controls.Add(Me.ListViewItems4)
+        Me.TabPage1.Controls.Add(Me.ListViewItems3)
+        Me.TabPage1.Controls.Add(Me.ListViewItems2)
+        Me.TabPage1.Controls.Add(Me.ListViewItems1)
+        Me.TabPage1.Controls.Add(Me.ListViewItems0)
         Me.TabPage1.Controls.Add(Me.Label15)
         Me.TabPage1.Controls.Add(Me.Label14)
-        Me.TabPage1.Controls.Add(Me.ListView1)
+        Me.TabPage1.Controls.Add(Me.ListViewWeapons)
         Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
-        Me.TabPage1.Controls.Add(Me.Label24)
-        Me.TabPage1.Controls.Add(Me.ComboBox3)
-        Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label0)
         Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.ButtonOpenFolder)
@@ -121,48 +161,26 @@ Partial Class FormMain
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Itemslot6
+        'CheckBox1
         '
-        resources.ApplyResources(Me.Itemslot6, "Itemslot6")
-        Me.Itemslot6.Name = "Itemslot6"
+        resources.ApplyResources(Me.CheckBox1, "CheckBox1")
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Itemslot5
+        'ListViewSecretShop
         '
-        resources.ApplyResources(Me.Itemslot5, "Itemslot5")
-        Me.Itemslot5.Name = "Itemslot5"
-        '
-        'Itemslot4
-        '
-        resources.ApplyResources(Me.Itemslot4, "Itemslot4")
-        Me.Itemslot4.Name = "Itemslot4"
-        '
-        'Itemslot3
-        '
-        resources.ApplyResources(Me.Itemslot3, "Itemslot3")
-        Me.Itemslot3.Name = "Itemslot3"
-        '
-        'Itemslot2
-        '
-        resources.ApplyResources(Me.Itemslot2, "Itemslot2")
-        Me.Itemslot2.Name = "Itemslot2"
-        '
-        'Itemslot1
-        '
-        resources.ApplyResources(Me.Itemslot1, "Itemslot1")
-        Me.Itemslot1.Name = "Itemslot1"
-        '
-        'ListView7
-        '
-        Me.ListView7.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView7, "ListView7")
-        Me.ListView7.MultiSelect = False
-        Me.ListView7.Name = "ListView7"
-        Me.ListView7.ShowGroups = False
-        Me.ListView7.ShowItemToolTips = True
-        Me.ListView7.SmallImageList = Me.ImageList1
-        Me.ListView7.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView7.UseCompatibleStateImageBehavior = False
-        Me.ListView7.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewSecretShop, "ListViewSecretShop")
+        Me.ListViewSecretShop.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewSecretShop.LargeImageList = Me.ImageList1
+        Me.ListViewSecretShop.MultiSelect = False
+        Me.ListViewSecretShop.Name = "ListViewSecretShop"
+        Me.ListViewSecretShop.ShowGroups = False
+        Me.ListViewSecretShop.ShowItemToolTips = True
+        Me.ListViewSecretShop.SmallImageList = Me.ImageList1
+        Me.ListViewSecretShop.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewSecretShop.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewSecretShop.UseCompatibleStateImageBehavior = False
+        Me.ListViewSecretShop.View = System.Windows.Forms.View.Tile
         '
         'ImageList1
         '
@@ -305,71 +323,249 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(134, "Recipe_Scroll.png")
         Me.ImageList1.Images.SetKeyName(135, "40px-Shadow_Amulet.png")
         '
-        'ListView6
+        'ListViewArcane
         '
-        Me.ListView6.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView6, "ListView6")
-        Me.ListView6.MultiSelect = False
-        Me.ListView6.Name = "ListView6"
-        Me.ListView6.ShowGroups = False
-        Me.ListView6.ShowItemToolTips = True
-        Me.ListView6.SmallImageList = Me.ImageList1
-        Me.ListView6.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView6.UseCompatibleStateImageBehavior = False
-        Me.ListView6.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewArcane, "ListViewArcane")
+        Me.ListViewArcane.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewArcane.LargeImageList = Me.ImageList1
+        Me.ListViewArcane.MultiSelect = False
+        Me.ListViewArcane.Name = "ListViewArcane"
+        Me.ListViewArcane.ShowGroups = False
+        Me.ListViewArcane.ShowItemToolTips = True
+        Me.ListViewArcane.SmallImageList = Me.ImageList1
+        Me.ListViewArcane.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewArcane.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewArcane.UseCompatibleStateImageBehavior = False
+        Me.ListViewArcane.View = System.Windows.Forms.View.Tile
         '
-        'ListView5
+        'ListViewArmaments
         '
-        Me.ListView5.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView5, "ListView5")
-        Me.ListView5.MultiSelect = False
-        Me.ListView5.Name = "ListView5"
-        Me.ListView5.ShowGroups = False
-        Me.ListView5.ShowItemToolTips = True
-        Me.ListView5.SmallImageList = Me.ImageList1
-        Me.ListView5.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView5.UseCompatibleStateImageBehavior = False
-        Me.ListView5.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewArmaments, "ListViewArmaments")
+        Me.ListViewArmaments.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewArmaments.LargeImageList = Me.ImageList1
+        Me.ListViewArmaments.MultiSelect = False
+        Me.ListViewArmaments.Name = "ListViewArmaments"
+        Me.ListViewArmaments.ShowGroups = False
+        Me.ListViewArmaments.ShowItemToolTips = True
+        Me.ListViewArmaments.SmallImageList = Me.ImageList1
+        Me.ListViewArmaments.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewArmaments.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewArmaments.UseCompatibleStateImageBehavior = False
+        Me.ListViewArmaments.View = System.Windows.Forms.View.Tile
         '
-        'ListView4
+        'ListViewCommon
         '
-        Me.ListView4.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView4, "ListView4")
-        Me.ListView4.MultiSelect = False
-        Me.ListView4.Name = "ListView4"
-        Me.ListView4.ShowGroups = False
-        Me.ListView4.ShowItemToolTips = True
-        Me.ListView4.SmallImageList = Me.ImageList1
-        Me.ListView4.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView4.UseCompatibleStateImageBehavior = False
-        Me.ListView4.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewCommon, "ListViewCommon")
+        Me.ListViewCommon.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewCommon.LargeImageList = Me.ImageList1
+        Me.ListViewCommon.MultiSelect = False
+        Me.ListViewCommon.Name = "ListViewCommon"
+        Me.ListViewCommon.ShowGroups = False
+        Me.ListViewCommon.ShowItemToolTips = True
+        Me.ListViewCommon.SmallImageList = Me.ImageList1
+        Me.ListViewCommon.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewCommon.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewCommon.UseCompatibleStateImageBehavior = False
+        Me.ListViewCommon.View = System.Windows.Forms.View.Tile
         '
-        'ListView3
+        'ListViewArtifacts
         '
-        Me.ListView3.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView3, "ListView3")
-        Me.ListView3.MultiSelect = False
-        Me.ListView3.Name = "ListView3"
-        Me.ListView3.ShowGroups = False
-        Me.ListView3.ShowItemToolTips = True
-        Me.ListView3.SmallImageList = Me.ImageList1
-        Me.ListView3.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView3.UseCompatibleStateImageBehavior = False
-        Me.ListView3.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewArtifacts, "ListViewArtifacts")
+        Me.ListViewArtifacts.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewArtifacts.LargeImageList = Me.ImageList1
+        Me.ListViewArtifacts.MultiSelect = False
+        Me.ListViewArtifacts.Name = "ListViewArtifacts"
+        Me.ListViewArtifacts.ShowGroups = False
+        Me.ListViewArtifacts.ShowItemToolTips = True
+        Me.ListViewArtifacts.SmallImageList = Me.ImageList1
+        Me.ListViewArtifacts.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewArtifacts.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewArtifacts.UseCompatibleStateImageBehavior = False
+        Me.ListViewArtifacts.View = System.Windows.Forms.View.Tile
         '
-        'ListView2
+        'ListViewAttributes
         '
-        Me.ListView2.BackColor = System.Drawing.SystemColors.Window
-        Me.ListView2.LargeImageList = Me.ImageList1
-        resources.ApplyResources(Me.ListView2, "ListView2")
-        Me.ListView2.MultiSelect = False
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.ShowGroups = False
-        Me.ListView2.ShowItemToolTips = True
-        Me.ListView2.SmallImageList = Me.ImageList1
-        Me.ListView2.TileSize = New System.Drawing.Size(44, 34)
-        Me.ListView2.UseCompatibleStateImageBehavior = False
-        Me.ListView2.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewAttributes, "ListViewAttributes")
+        Me.ListViewAttributes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewAttributes.LargeImageList = Me.ImageList1
+        Me.ListViewAttributes.MultiSelect = False
+        Me.ListViewAttributes.Name = "ListViewAttributes"
+        Me.ListViewAttributes.ShowGroups = False
+        Me.ListViewAttributes.ShowItemToolTips = True
+        Me.ListViewAttributes.SmallImageList = Me.ImageList1
+        Me.ListViewAttributes.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewAttributes.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewAttributes.UseCompatibleStateImageBehavior = False
+        Me.ListViewAttributes.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewArmor
+        '
+        resources.ApplyResources(Me.ListViewArmor, "ListViewArmor")
+        Me.ListViewArmor.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewArmor.LargeImageList = Me.ImageList1
+        Me.ListViewArmor.MultiSelect = False
+        Me.ListViewArmor.Name = "ListViewArmor"
+        Me.ListViewArmor.ShowGroups = False
+        Me.ListViewArmor.ShowItemToolTips = True
+        Me.ListViewArmor.SmallImageList = Me.ImageList1
+        Me.ListViewArmor.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewArmor.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewArmor.UseCompatibleStateImageBehavior = False
+        Me.ListViewArmor.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewSupport
+        '
+        resources.ApplyResources(Me.ListViewSupport, "ListViewSupport")
+        Me.ListViewSupport.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewSupport.LargeImageList = Me.ImageList1
+        Me.ListViewSupport.MultiSelect = False
+        Me.ListViewSupport.Name = "ListViewSupport"
+        Me.ListViewSupport.ShowGroups = False
+        Me.ListViewSupport.ShowItemToolTips = True
+        Me.ListViewSupport.SmallImageList = Me.ImageList1
+        Me.ListViewSupport.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewSupport.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewSupport.UseCompatibleStateImageBehavior = False
+        Me.ListViewSupport.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewConsumables
+        '
+        resources.ApplyResources(Me.ListViewConsumables, "ListViewConsumables")
+        Me.ListViewConsumables.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewConsumables.LargeImageList = Me.ImageList1
+        Me.ListViewConsumables.MultiSelect = False
+        Me.ListViewConsumables.Name = "ListViewConsumables"
+        Me.ListViewConsumables.ShowGroups = False
+        Me.ListViewConsumables.ShowItemToolTips = True
+        Me.ListViewConsumables.SmallImageList = Me.ImageList1
+        Me.ListViewConsumables.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewConsumables.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewConsumables.UseCompatibleStateImageBehavior = False
+        Me.ListViewConsumables.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewCaster
+        '
+        resources.ApplyResources(Me.ListViewCaster, "ListViewCaster")
+        Me.ListViewCaster.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewCaster.LargeImageList = Me.ImageList1
+        Me.ListViewCaster.MultiSelect = False
+        Me.ListViewCaster.Name = "ListViewCaster"
+        Me.ListViewCaster.ShowGroups = False
+        Me.ListViewCaster.ShowItemToolTips = True
+        Me.ListViewCaster.SmallImageList = Me.ImageList1
+        Me.ListViewCaster.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewCaster.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewCaster.UseCompatibleStateImageBehavior = False
+        Me.ListViewCaster.View = System.Windows.Forms.View.Tile
+        '
+        'Itemslot6
+        '
+        resources.ApplyResources(Me.Itemslot6, "Itemslot6")
+        Me.Itemslot6.Name = "Itemslot6"
+        '
+        'Itemslot5
+        '
+        resources.ApplyResources(Me.Itemslot5, "Itemslot5")
+        Me.Itemslot5.Name = "Itemslot5"
+        '
+        'Itemslot4
+        '
+        resources.ApplyResources(Me.Itemslot4, "Itemslot4")
+        Me.Itemslot4.Name = "Itemslot4"
+        '
+        'Itemslot3
+        '
+        resources.ApplyResources(Me.Itemslot3, "Itemslot3")
+        Me.Itemslot3.Name = "Itemslot3"
+        '
+        'Itemslot2
+        '
+        resources.ApplyResources(Me.Itemslot2, "Itemslot2")
+        Me.Itemslot2.Name = "Itemslot2"
+        '
+        'Itemslot1
+        '
+        resources.ApplyResources(Me.Itemslot1, "Itemslot1")
+        Me.Itemslot1.Name = "Itemslot1"
+        '
+        'ListViewItems5
+        '
+        Me.ListViewItems5.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems5, "ListViewItems5")
+        Me.ListViewItems5.MultiSelect = False
+        Me.ListViewItems5.Name = "ListViewItems5"
+        Me.ListViewItems5.ShowGroups = False
+        Me.ListViewItems5.ShowItemToolTips = True
+        Me.ListViewItems5.SmallImageList = Me.ImageList1
+        Me.ListViewItems5.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems5.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems5.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewItems4
+        '
+        Me.ListViewItems4.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems4, "ListViewItems4")
+        Me.ListViewItems4.MultiSelect = False
+        Me.ListViewItems4.Name = "ListViewItems4"
+        Me.ListViewItems4.ShowGroups = False
+        Me.ListViewItems4.ShowItemToolTips = True
+        Me.ListViewItems4.SmallImageList = Me.ImageList1
+        Me.ListViewItems4.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems4.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems4.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewItems3
+        '
+        Me.ListViewItems3.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems3, "ListViewItems3")
+        Me.ListViewItems3.MultiSelect = False
+        Me.ListViewItems3.Name = "ListViewItems3"
+        Me.ListViewItems3.ShowGroups = False
+        Me.ListViewItems3.ShowItemToolTips = True
+        Me.ListViewItems3.SmallImageList = Me.ImageList1
+        Me.ListViewItems3.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems3.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems3.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewItems2
+        '
+        Me.ListViewItems2.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems2, "ListViewItems2")
+        Me.ListViewItems2.MultiSelect = False
+        Me.ListViewItems2.Name = "ListViewItems2"
+        Me.ListViewItems2.ShowGroups = False
+        Me.ListViewItems2.ShowItemToolTips = True
+        Me.ListViewItems2.SmallImageList = Me.ImageList1
+        Me.ListViewItems2.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems2.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems2.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewItems1
+        '
+        Me.ListViewItems1.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems1, "ListViewItems1")
+        Me.ListViewItems1.MultiSelect = False
+        Me.ListViewItems1.Name = "ListViewItems1"
+        Me.ListViewItems1.ShowGroups = False
+        Me.ListViewItems1.ShowItemToolTips = True
+        Me.ListViewItems1.SmallImageList = Me.ImageList1
+        Me.ListViewItems1.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems1.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems1.View = System.Windows.Forms.View.Tile
+        '
+        'ListViewItems0
+        '
+        Me.ListViewItems0.BackColor = System.Drawing.SystemColors.Window
+        Me.ListViewItems0.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListViewItems0, "ListViewItems0")
+        Me.ListViewItems0.MultiSelect = False
+        Me.ListViewItems0.Name = "ListViewItems0"
+        Me.ListViewItems0.ShowGroups = False
+        Me.ListViewItems0.ShowItemToolTips = True
+        Me.ListViewItems0.SmallImageList = Me.ImageList1
+        Me.ListViewItems0.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewItems0.UseCompatibleStateImageBehavior = False
+        Me.ListViewItems0.View = System.Windows.Forms.View.Tile
         '
         'Label15
         '
@@ -381,43 +577,26 @@ Partial Class FormMain
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
         '
-        'ListView1
+        'ListViewWeapons
         '
-        resources.ApplyResources(Me.ListView1, "ListView1")
-        Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.ShowGroups = False
-        Me.ListView1.ShowItemToolTips = True
-        Me.ListView1.SmallImageList = Me.ImageList1
-        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
-        Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Tile
+        resources.ApplyResources(Me.ListViewWeapons, "ListViewWeapons")
+        Me.ListViewWeapons.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListViewWeapons.LargeImageList = Me.ImageList1
+        Me.ListViewWeapons.MultiSelect = False
+        Me.ListViewWeapons.Name = "ListViewWeapons"
+        Me.ListViewWeapons.ShowGroups = False
+        Me.ListViewWeapons.ShowItemToolTips = True
+        Me.ListViewWeapons.SmallImageList = Me.ImageList1
+        Me.ListViewWeapons.Sorting = System.Windows.Forms.SortOrder.Ascending
+        Me.ListViewWeapons.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListViewWeapons.UseCompatibleStateImageBehavior = False
+        Me.ListViewWeapons.View = System.Windows.Forms.View.Tile
         '
         'ButtonDefaultItembuild
         '
         resources.ApplyResources(Me.ButtonDefaultItembuild, "ButtonDefaultItembuild")
         Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
         Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        resources.ApplyResources(Me.Label24, "Label24")
-        Me.Label24.Name = "Label24"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {resources.GetString("ComboBox3.Items"), resources.GetString("ComboBox3.Items1"), resources.GetString("ComboBox3.Items2"), resources.GetString("ComboBox3.Items3"), resources.GetString("ComboBox3.Items4"), resources.GetString("ComboBox3.Items5"), resources.GetString("ComboBox3.Items6"), resources.GetString("ComboBox3.Items7"), resources.GetString("ComboBox3.Items8"), resources.GetString("ComboBox3.Items9"), resources.GetString("ComboBox3.Items10")})
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Name = "Label12"
         '
         'Label0
         '
@@ -578,6 +757,66 @@ Partial Class FormMain
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
         Me.LabelWait.Name = "LabelWait"
         '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.Name = "Label6"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.Name = "Label8"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.Name = "Label10"
+        '
+        'Label11
+        '
+        resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.Name = "Label11"
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.Name = "Label12"
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.Name = "Label13"
+        '
+        'Label17
+        '
+        resources.ApplyResources(Me.Label17, "Label17")
+        Me.Label17.Name = "Label17"
+        '
+        'Label18
+        '
+        resources.ApplyResources(Me.Label18, "Label18")
+        Me.Label18.Name = "Label18"
+        '
+        'Label19
+        '
+        resources.ApplyResources(Me.Label19, "Label19")
+        Me.Label19.Name = "Label19"
+        '
         'FormMain
         '
         resources.ApplyResources(Me, "$this")
@@ -625,20 +864,17 @@ Partial Class FormMain
     Friend WithEvents ButtonOpenBackupFolder As System.Windows.Forms.Button
     Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
     Friend WithEvents LabelWait As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewWeapons As System.Windows.Forms.ListView
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents ListView2 As System.Windows.Forms.ListView
-    Friend WithEvents ListView3 As System.Windows.Forms.ListView
-    Friend WithEvents ListView5 As System.Windows.Forms.ListView
-    Friend WithEvents ListView4 As System.Windows.Forms.ListView
-    Friend WithEvents ListView7 As System.Windows.Forms.ListView
-    Friend WithEvents ListView6 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems0 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems1 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems3 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems2 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems5 As System.Windows.Forms.ListView
+    Friend WithEvents ListViewItems4 As System.Windows.Forms.ListView
     Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Itemslot6 As System.Windows.Forms.TextBox
@@ -647,4 +883,27 @@ Partial Class FormMain
     Friend WithEvents Itemslot3 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot2 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot1 As System.Windows.Forms.TextBox
+    Friend WithEvents ListViewCaster As System.Windows.Forms.ListView
+    Friend WithEvents ListViewAttributes As System.Windows.Forms.ListView
+    Friend WithEvents ListViewArmor As System.Windows.Forms.ListView
+    Friend WithEvents ListViewSupport As System.Windows.Forms.ListView
+    Friend WithEvents ListViewConsumables As System.Windows.Forms.ListView
+    Friend WithEvents ListViewSecretShop As System.Windows.Forms.ListView
+    Friend WithEvents ListViewArcane As System.Windows.Forms.ListView
+    Friend WithEvents ListViewArmaments As System.Windows.Forms.ListView
+    Friend WithEvents ListViewCommon As System.Windows.Forms.ListView
+    Friend WithEvents ListViewArtifacts As System.Windows.Forms.ListView
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
 End Class

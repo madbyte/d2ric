@@ -11,197 +11,327 @@ Public Class ItembuildClass
         'DISABLE THE SAVE BUTTON BECAUSE NO HERO IS CHOOSEN IF THE PROGRAM STARTS
         FormMain.ButtonSave.Enabled = False
 
-        'PRESELECT THE BOX
-        FormMain.ComboBox3.SelectedIndex = 0
-
+        ChangeHeroList()
         ClearNotImplemented()
     End Sub
 
     'Intitialize the ListView with all items
     Public Sub InitializeListbox()
         'Listview füllen
-        With FormMain.ListView1
+        With FormMain.ListViewWeapons
             .Clear()
-            ' Add column headers so the subitems will appear.
-            .Columns.AddRange(New ColumnHeader() {New ColumnHeader(), New ColumnHeader()})
             ' Create items and add them to ListView.
-            Dim item0 As New ListViewItem(New String() {"Abyssal Blade", "Weapons", "PLACEHOLDER"}, 0)
-            Dim item1 As New ListViewItem(New String() {"Aghanim's Scepter", "Caster", "PLACEHOLDER"}, 1)
-            Dim item2 As New ListViewItem(New String() {"Animal Courier", "Consumables", "PLACEHOLDER"}, 2)
-            Dim item3 As New ListViewItem(New String() {"Arcane Boots", "Support, Side Lane Shop", "PLACEHOLDER"}, 3)
-            Dim item4 As New ListViewItem(New String() {"Armlet", "Weapons", "PLACEHOLDER"}, 4)
-            Dim item5 As New ListViewItem(New String() {"Assault Cuirass", "Armor", "PLACEHOLDER"}, 5)
-            Dim item6 As New ListViewItem(New String() {"Battle Fury", "Weapons", "PLACEHOLDER"}, 6)
-            Dim item7 As New ListViewItem(New String() {"Belt of Strength", "Attributes, Side Lane Shop", "PLACEHOLDER"}, 7)
-            Dim item8 As New ListViewItem(New String() {"Black King Bar", "Armor", "PLACEHOLDER"}, 8)
-            Dim item9 As New ListViewItem(New String() {"Blade Mail", "Armor", "PLACEHOLDER"}, 9)
-            Dim item10 As New ListViewItem(New String() {"Blade of Alacrity", "Attributes", "PLACEHOLDER"}, 10)
-            Dim item11 As New ListViewItem(New String() {"Blades of Attack", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 11)
-            Dim item12 As New ListViewItem(New String() {"Blink Dagger", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 12)
-            Dim item13 As New ListViewItem(New String() {"Bloodstone", "Armor", "PLACEHOLDER"}, 13)
-            Dim item14 As New ListViewItem(New String() {"Boots of Elvenskin", "Attributes, Side Lane Shop", "PLACEHOLDER"}, 14)
-            Dim item15 As New ListViewItem(New String() {"Boots of Speed", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 15)
-            Dim item16 As New ListViewItem(New String() {"Boots of Travel", "Common", "PLACEHOLDER"}, 16)
-            Dim item17 As New ListViewItem(New String() {"Bottle", "Consumables", "PLACEHOLDER"}, 17)
-            Dim item18 As New ListViewItem(New String() {"Bracer", "Common", "PLACEHOLDER"}, 18)
-            Dim item19 As New ListViewItem(New String() {"Broadsword", "Armaments", "PLACEHOLDER"}, 19)
-            Dim item20 As New ListViewItem(New String() {"Buckler", "Support", "PLACEHOLDER"}, 20)
-            Dim item21 As New ListViewItem(New String() {"Butterfly", "Weapons", "PLACEHOLDER"}, 21)
-            Dim item22 As New ListViewItem(New String() {"Chainmail", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 22)
-            Dim item23 As New ListViewItem(New String() {"Circlet", "Attributes", "PLACEHOLDER"}, 23)
-            Dim item24 As New ListViewItem(New String() {"Clarity", "Consumables", "PLACEHOLDER"}, 24)
-            Dim item25 As New ListViewItem(New String() {"Claymore", "Armaments", "PLACEHOLDER"}, 25)
-            Dim item26 As New ListViewItem(New String() {"Cloak", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 26)
-            Dim item27 As New ListViewItem(New String() {"Crystalys", "Weapons", "PLACEHOLDER"}, 27)
-            Dim item28 As New ListViewItem(New String() {"Daedalus", "Weapons", "PLACEHOLDER"}, 28)
-            Dim item29 As New ListViewItem(New String() {"Dagon 1", "Caster", "PLACEHOLDER"}, 29)
-            Dim item30 As New ListViewItem(New String() {"Dagon 2", "Caster", "PLACEHOLDER"}, 30)
-            Dim item31 As New ListViewItem(New String() {"Dagon 3", "Caster", "PLACEHOLDER"}, 31)
-            Dim item32 As New ListViewItem(New String() {"Dagon 4", "Caster", "PLACEHOLDER"}, 32)
-            Dim item33 As New ListViewItem(New String() {"Dagon 5", "Caster", "PLACEHOLDER"}, 33)
-            Dim item34 As New ListViewItem(New String() {"Demon Edge", "Secret Shop", "PLACEHOLDER"}, 34)
-            Dim item35 As New ListViewItem(New String() {"Desolator", "Artifacts", "PLACEHOLDER"}, 35)
-            Dim item36 As New ListViewItem(New String() {"Diffusal Blade 1", "Artifacts", "PLACEHOLDER"}, 36)
-            Dim item37 As New ListViewItem(New String() {"Diffusal Blade 2", "Artifacts", "PLACEHOLDER"}, 37)
-            Dim item38 As New ListViewItem(New String() {"Divine Rapier", "Weapons", "PLACEHOLDER"}, 38)
-            Dim item39 As New ListViewItem(New String() {"Drum of Endurance", "Support", "PLACEHOLDER"}, 39)
-            Dim item40 As New ListViewItem(New String() {"Dust of Appearance", "Consumables", "PLACEHOLDER"}, 40)
-            Dim item41 As New ListViewItem(New String() {"Eaglesong", "Secret Shop", "PLACEHOLDER"}, 41)
-            Dim item42 As New ListViewItem(New String() {"Energy Booster", "Secret Shop, Side Lane Shop", "PLACEHOLDER"}, 42)
-            Dim item43 As New ListViewItem(New String() {"Ethereal Blade", "Weapons", "PLACEHOLDER"}, 43)
-            Dim item44 As New ListViewItem(New String() {"Eul's Scepter of Divinity", "Caster", "PLACEHOLDER"}, 44)
-            Dim item45 As New ListViewItem(New String() {"Eye of Skadi", "Artifacts", "PLACEHOLDER"}, 45)
-            Dim item46 As New ListViewItem(New String() {"Flying Courier", "Consumables", "PLACEHOLDER"}, 46)
-            Dim item47 As New ListViewItem(New String() {"Force Staff", "Caster", "PLACEHOLDER"}, 47)
-            Dim item48 As New ListViewItem(New String() {"Gauntlets of Strength", "Attributes", "PLACEHOLDER"}, 48)
-            Dim item49 As New ListViewItem(New String() {"Gem of True Sight", "Arcane", "PLACEHOLDER"}, 49)
-            Dim item50 As New ListViewItem(New String() {"Ghost Scepter", "Arcane", "PLACEHOLDER"}, 50)
-            Dim item51 As New ListViewItem(New String() {"Gloves of Haste", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 51)
-            Dim item52 As New ListViewItem(New String() {"Hand of Midas", "Common", "PLACEHOLDER"}, 52)
-            Dim item53 As New ListViewItem(New String() {"Headdress", "Support", "PLACEHOLDER"}, 53)
-            Dim item54 As New ListViewItem(New String() {"Healing Salve", "Consumables", "PLACEHOLDER"}, 54)
-            Dim item55 As New ListViewItem(New String() {"Heart of Tarrasque", "Armor", "PLACEHOLDER"}, 55)
-            Dim item56 As New ListViewItem(New String() {"Heaven's Halberd", "Artifacts", "PLACEHOLDER"}, 56)
-            Dim item57 As New ListViewItem(New String() {"Helm of Iron Will", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 57)
-            Dim item58 As New ListViewItem(New String() {"Helm of the Dominator", "Artifacts, Side Lane Shop", "PLACEHOLDER"}, 58)
-            Dim item59 As New ListViewItem(New String() {"Hood of Defiance", "Armor, Side Lane Shop", "PLACEHOLDER"}, 59)
-            Dim item60 As New ListViewItem(New String() {"Hyperstone", "Secret Shop", "PLACEHOLDER"}, 60)
-            Dim item61 As New ListViewItem(New String() {"Iron Branch", "Attributes", "PLACEHOLDER"}, 61)
-            Dim item62 As New ListViewItem(New String() {"Javelin", "Armaments", "PLACEHOLDER"}, 62)
-            Dim item63 As New ListViewItem(New String() {"Linken's Sphere", "Armor", "PLACEHOLDER"}, 63)
-            Dim item64 As New ListViewItem(New String() {"Maelstrom", "Artifacts", "PLACEHOLDER"}, 64)
-            Dim item65 As New ListViewItem(New String() {"Magic Stick", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 65)
-            Dim item66 As New ListViewItem(New String() {"Magic Wand", "Common", "PLACEHOLDER"}, 66)
-            Dim item67 As New ListViewItem(New String() {"Manta Style", "Armor", "PLACEHOLDER"}, 67)
-            Dim item68 As New ListViewItem(New String() {"Mantle of Intelligence", "Attributes", "PLACEHOLDER"}, 68)
-            Dim item69 As New ListViewItem(New String() {"Mask of Madness", "Artifacts", "PLACEHOLDER"}, 69)
-            Dim item70 As New ListViewItem(New String() {"Medallion of Courage", "Support", "PLACEHOLDER"}, 70)
-            Dim item71 As New ListViewItem(New String() {"Mekansm", "Support", "PLACEHOLDER"}, 71)
-            Dim item72 As New ListViewItem(New String() {"Mithril Hammer", "Armaments", "PLACEHOLDER"}, 72)
-            Dim item73 As New ListViewItem(New String() {"Mjollnir", "Artifacts", "PLACEHOLDER"}, 73)
-            Dim item74 As New ListViewItem(New String() {"Monkey King Bar", "Weapons", "PLACEHOLDER"}, 74)
-            Dim item75 As New ListViewItem(New String() {"Morbid Mask", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 75)
-            Dim item76 As New ListViewItem(New String() {"Mystic Staff", "Secret Shop", "PLACEHOLDER"}, 76)
-            Dim item77 As New ListViewItem(New String() {"Necronomicon 1", "Caster", "PLACEHOLDER"}, 77)
-            Dim item78 As New ListViewItem(New String() {"Necronomicon 2", "Caster", "PLACEHOLDER"}, 78)
-            Dim item79 As New ListViewItem(New String() {"Necronomicon 3", "Caster", "PLACEHOLDER"}, 79)
-            Dim item80 As New ListViewItem(New String() {"Null Talisman", "Common", "PLACEHOLDER"}, 80)
-            Dim item81 As New ListViewItem(New String() {"Oblivion Staff", "Common, Side Lane Shop", "PLACEHOLDER"}, 81)
-            Dim item82 As New ListViewItem(New String() {"Observer Ward", "Consumables", "PLACEHOLDER"}, 82)
-            Dim item83 As New ListViewItem(New String() {"Ogre Club", "Attributes", "PLACEHOLDER"}, 83)
-            Dim item84 As New ListViewItem(New String() {"Orb of Venom", "Secret Shop, Side Lane Shop", "PLACEHOLDER"}, 84)
-            Dim item85 As New ListViewItem(New String() {"Orchid Malevolence", "Caster", "PLACEHOLDER"}, 85)
-            Dim item86 As New ListViewItem(New String() {"Perseverance", "Common", "PLACEHOLDER"}, 86)
-            Dim item87 As New ListViewItem(New String() {"Phase Boots", "Common, Side Lane Shop", "PLACEHOLDER"}, 87)
-            Dim item88 As New ListViewItem(New String() {"Pipe of Insight", "Support", "PLACEHOLDER"}, 88)
-            Dim item89 As New ListViewItem(New String() {"Platemail", "Armaments", "PLACEHOLDER"}, 89)
-            Dim item90 As New ListViewItem(New String() {"Point Booster", "Secret Shop", "PLACEHOLDER"}, 90)
-            Dim item91 As New ListViewItem(New String() {"Poor Man's Shield", "Common, Side Lane Shop", "PLACEHOLDER"}, 91)
-            Dim item92 As New ListViewItem(New String() {"Power Treads", "Common, Side Lane Shop", "PLACEHOLDER"}, 92)
-            Dim item93 As New ListViewItem(New String() {"Quarterstaff", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 93)
-            Dim item94 As New ListViewItem(New String() {"Quelling Blade", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 94)
-            Dim item95 As New ListViewItem(New String() {"Radiance", "Weapons", "PLACEHOLDER"}, 95)
-            Dim item96 As New ListViewItem(New String() {"Reaver", "Secret Shop", "PLACEHOLDER"}, 96)
-            Dim item97 As New ListViewItem(New String() {"Refresher Orb", "Caster", "PLACEHOLDER"}, 97)
-            Dim item98 As New ListViewItem(New String() {"Ring of Aquila", "Support", "PLACEHOLDER"}, 98)
-            Dim item99 As New ListViewItem(New String() {"Ring of Basilius", "Support", "PLACEHOLDER"}, 99)
-            Dim item100 As New ListViewItem(New String() {"Ring of Health", "Secret Shop, Side Lane Shop", "PLACEHOLDER"}, 100)
-            Dim item101 As New ListViewItem(New String() {"Ring of Protection", "Armaments", "PLACEHOLDER"}, 101)
-            Dim item102 As New ListViewItem(New String() {"Ring of Regen", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 102)
-            Dim item103 As New ListViewItem(New String() {"Robe of the Magi", "Attributes, Side Lane Shop", "PLACEHOLDER"}, 103)
-            Dim item104 As New ListViewItem(New String() {"Rod of Atos", "Caster", "PLACEHOLDER"}, 104)
-            Dim item105 As New ListViewItem(New String() {"Sacred Relic", "Secret Shop", "PLACEHOLDER"}, 105)
-            Dim item106 As New ListViewItem(New String() {"Sage's Mask", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 106)
-            Dim item107 As New ListViewItem(New String() {"Sange", "Artifacts", "PLACEHOLDER"}, 107)
-            Dim item108 As New ListViewItem(New String() {"Sange and Yasha", "Artifacts", "PLACEHOLDER"}, 108)
-            Dim item109 As New ListViewItem(New String() {"Satanic", "Artifacts", "PLACEHOLDER"}, 109)
-            Dim item110 As New ListViewItem(New String() {"Scythe of Vyse", "Caster", "PLACEHOLDER"}, 110)
-            Dim item111 As New ListViewItem(New String() {"Sentry Ward", "Consumables", "PLACEHOLDER"}, 111)
-            Dim item112 As New ListViewItem(New String() {"Shadow Blade", "Weapons", "PLACEHOLDER"}, 112)
-            Dim item113 As New ListViewItem(New String() {"Shiva's Guard", "Armor", "PLACEHOLDER"}, 113)
-            Dim item114 As New ListViewItem(New String() {"Skull Basher", "Weapons", "PLACEHOLDER"}, 114)
-            Dim item115 As New ListViewItem(New String() {"Slippers of Agility", "Attributes, Side Lane Shop", "PLACEHOLDER"}, 115)
-            Dim item116 As New ListViewItem(New String() {"Smoke of Deceit", "Consumables", "PLACEHOLDER"}, 116)
-            Dim item117 As New ListViewItem(New String() {"Soul Booster", "Armor", "PLACEHOLDER"}, 117)
-            Dim item118 As New ListViewItem(New String() {"Soul Ring", "Common", "PLACEHOLDER"}, 118)
-            Dim item119 As New ListViewItem(New String() {"Staff of Wizardry", "Attributes", "PLACEHOLDER"}, 119)
-            Dim item120 As New ListViewItem(New String() {"Stout Shield", "Armaments, Side Lane Shop", "PLACEHOLDER"}, 120)
-            Dim item121 As New ListViewItem(New String() {"Talisman of Evasion", "Arcane, Side Lane Shop", "PLACEHOLDER"}, 121)
-            Dim item122 As New ListViewItem(New String() {"Tango", "Consumables", "PLACEHOLDER"}, 122)
-            Dim item123 As New ListViewItem(New String() {"Town Portal Scroll", "Consumables, Side Lane Shop", "PLACEHOLDER"}, 123)
-            Dim item124 As New ListViewItem(New String() {"Tranquil Boots", "Support", "PLACEHOLDER"}, 124)
-            Dim item125 As New ListViewItem(New String() {"Ultimate Orb", "Attributes, Side Lane Shop", "PLACEHOLDER"}, 125)
-            Dim item126 As New ListViewItem(New String() {"Urn of Shadows", "Support", "PLACEHOLDER"}, 126)
-            Dim item127 As New ListViewItem(New String() {"Vanguard", "Armor", "PLACEHOLDER"}, 127)
-            Dim item128 As New ListViewItem(New String() {"Veil of Discord", "Caster", "PLACEHOLDER"}, 128)
-            Dim item129 As New ListViewItem(New String() {"Vitality Booster", "Secret Shop", "PLACEHOLDER"}, 129)
-            Dim item130 As New ListViewItem(New String() {"Vladmir's Offering", "Support", "PLACEHOLDER"}, 130)
-            Dim item131 As New ListViewItem(New String() {"Void Stone", "Secret Shop", "PLACEHOLDER"}, 131)
-            Dim item132 As New ListViewItem(New String() {"Wraith Band", "Common", "PLACEHOLDER"}, 132)
-            Dim item133 As New ListViewItem(New String() {"Yasha", "Artifacts", "PLACEHOLDER"}, 133)
-            Dim item134 As New ListViewItem(New String() {"Wraith Band (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item135 As New ListViewItem(New String() {"Bracer (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item136 As New ListViewItem(New String() {"Null Talisman (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item137 As New ListViewItem(New String() {"Magic Wand (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item138 As New ListViewItem(New String() {"Hand of Midas (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item139 As New ListViewItem(New String() {"Soul Ring (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item140 As New ListViewItem(New String() {"Boots of Travel (Recipe)", "Common", "PLACEHOLDER"}, 134)
-            Dim item141 As New ListViewItem(New String() {"Headdress (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item142 As New ListViewItem(New String() {"Buckler (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item143 As New ListViewItem(New String() {"Urn of Shadows (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item144 As New ListViewItem(New String() {"Mekansm (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item145 As New ListViewItem(New String() {"Medallion of Courage (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item146 As New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item147 As New ListViewItem(New String() {"Pipe of Insight (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item148 As New ListViewItem(New String() {"Drum of Endurance (Recipe)", "Support", "PLACEHOLDER"}, 134)
-            Dim item149 As New ListViewItem(New String() {"Necronomicon (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item150 As New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item151 As New ListViewItem(New String() {"Dagon (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item152 As New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item153 As New ListViewItem(New String() {"Orchid Malevolence (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item154 As New ListViewItem(New String() {"Refresher Orb (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item155 As New ListViewItem(New String() {"Force Staff (Recipe)", "Caster", "PLACEHOLDER"}, 134)
-            Dim item156 As New ListViewItem(New String() {"Armlet (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item157 As New ListViewItem(New String() {"Crystalys (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item158 As New ListViewItem(New String() {"Daedalus (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item159 As New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item160 As New ListViewItem(New String() {"Radiance (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
-            Dim item161 As New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item162 As New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item163 As New ListViewItem(New String() {"Manta Style (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item164 As New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item165 As New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item166 As New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor", "PLACEHOLDER"}, 134)
-            Dim item167 As New ListViewItem(New String() {"Desolator (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item168 As New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item169 As New ListViewItem(New String() {"Satanic (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item170 As New ListViewItem(New String() {"Yasha (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item171 As New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item172 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item173 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item174 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            Dim item175 As New ListViewItem(New String() {"Shadow Amulet", "Arcane", "PLACEHOLDER"}, 135)
-            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175})
+            Dim item0 As New ListViewItem(New String() {"Abyssal Blade", "Weapons"}, 0)
+            Dim item1 As New ListViewItem(New String() {"Armlet", "Weapons"}, 4)
+            Dim item2 As New ListViewItem(New String() {"Battle Fury", "Weapons"}, 6)
+            Dim item3 As New ListViewItem(New String() {"Butterfly", "Weapons"}, 21)
+            Dim item4 As New ListViewItem(New String() {"Crystalys", "Weapons"}, 27)
+            Dim item5 As New ListViewItem(New String() {"Daedalus", "Weapons"}, 28)
+            Dim item6 As New ListViewItem(New String() {"Divine Rapier", "Weapons"}, 38)
+            Dim item7 As New ListViewItem(New String() {"Ethereal Blade", "Weapons"}, 43)
+            Dim item8 As New ListViewItem(New String() {"Monkey King Bar", "Weapons"}, 74)
+            Dim item9 As New ListViewItem(New String() {"Radiance", "Weapons"}, 95)
+            Dim item10 As New ListViewItem(New String() {"Shadow Blade", "Weapons"}, 112)
+            Dim item11 As New ListViewItem(New String() {"Skull Basher", "Weapons"}, 114)
+            Dim item12 As New ListViewItem(New String() {"Armlet (Recipe)", "Weapons"}, 134)
+            Dim item13 As New ListViewItem(New String() {"Crystalys (Recipe)", "Weapons"}, 134)
+            Dim item14 As New ListViewItem(New String() {"Daedalus (Recipe)", "Weapons"}, 134)
+            Dim item15 As New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons"}, 134)
+            Dim item16 As New ListViewItem(New String() {"Radiance (Recipe)", "Weapons"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item12, item13, item14, item15, item16})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewCaster
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Aghanim's Scepter", "Caster"}, 1)
+            Dim item1 As New ListViewItem(New String() {"Dagon 1", "Caster"}, 29)
+            Dim item2 As New ListViewItem(New String() {"Dagon 2", "Caster"}, 30)
+            Dim item3 As New ListViewItem(New String() {"Dagon 3", "Caster"}, 31)
+            Dim item4 As New ListViewItem(New String() {"Dagon 4", "Caster"}, 32)
+            Dim item5 As New ListViewItem(New String() {"Dagon 5", "Caster"}, 33)
+            Dim item6 As New ListViewItem(New String() {"Eul's Scepter of Divinity", "Caster"}, 44)
+            Dim item7 As New ListViewItem(New String() {"Force Staff", "Caster"}, 47)
+            Dim item8 As New ListViewItem(New String() {"Necronomicon 1", "Caster"}, 77)
+            Dim item9 As New ListViewItem(New String() {"Necronomicon 2", "Caster"}, 78)
+            Dim item10 As New ListViewItem(New String() {"Necronomicon 3", "Caster"}, 79)
+            Dim item11 As New ListViewItem(New String() {"Orchid Malevolence", "Caster"}, 85)
+            Dim item12 As New ListViewItem(New String() {"Refresher Orb", "Caster"}, 97)
+            Dim item13 As New ListViewItem(New String() {"Rod of Atos", "Caster"}, 104)
+            Dim item14 As New ListViewItem(New String() {"Scythe of Vyse", "Caster"}, 110)
+            Dim item15 As New ListViewItem(New String() {"Veil of Discord", "Caster"}, 128)
+            Dim item16 As New ListViewItem(New String() {"Necronomicon (Recipe)", "Caster"}, 134)
+            Dim item17 As New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster"}, 134)
+            Dim item18 As New ListViewItem(New String() {"Dagon (Recipe)", "Caster"}, 134)
+            Dim item19 As New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster"}, 134)
+            Dim item20 As New ListViewItem(New String() {"Orchid Malevolence (Recipe)", "Caster"}, 134)
+            Dim item21 As New ListViewItem(New String() {"Refresher Orb (Recipe)", "Caster"}, 134)
+            Dim item22 As New ListViewItem(New String() {"Force Staff (Recipe)", "Caster"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item16, item17, item18, item19, item20, item21, item22})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewConsumables
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Animal Courier", "Consumables"}, 2)
+            Dim item1 As New ListViewItem(New String() {"Bottle", "Consumables"}, 17)
+            Dim item2 As New ListViewItem(New String() {"Clarity", "Consumables"}, 24)
+            Dim item3 As New ListViewItem(New String() {"Dust of Appearance", "Consumables"}, 40)
+            Dim item4 As New ListViewItem(New String() {"Flying Courier", "Consumables"}, 46)
+            Dim item5 As New ListViewItem(New String() {"Healing Salve", "Consumables"}, 54)
+            Dim item6 As New ListViewItem(New String() {"Observer Ward", "Consumables"}, 82)
+            Dim item7 As New ListViewItem(New String() {"Sentry Ward", "Consumables"}, 111)
+            Dim item8 As New ListViewItem(New String() {"Smoke of Deceit", "Consumables"}, 116)
+            Dim item9 As New ListViewItem(New String() {"Tango", "Consumables"}, 122)
+            Dim item10 As New ListViewItem(New String() {"Town Portal Scroll", "Consumables"}, 123)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10})
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewSupport
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Arcane Boots", "Support"}, 3)
+            Dim item1 As New ListViewItem(New String() {"Drum of Endurance", "Support"}, 39)
+            Dim item2 As New ListViewItem(New String() {"Medallion of Courage", "Support"}, 70)
+            Dim item3 As New ListViewItem(New String() {"Mekansm", "Support"}, 71)
+            Dim item4 As New ListViewItem(New String() {"Pipe of Insight", "Support"}, 88)
+            Dim item5 As New ListViewItem(New String() {"Ring of Aquila", "Support"}, 98)
+            Dim item6 As New ListViewItem(New String() {"Ring of Basilius", "Support"}, 99)
+            Dim item7 As New ListViewItem(New String() {"Tranquil Boots", "Support"}, 124)
+            Dim item8 As New ListViewItem(New String() {"Urn of Shadows", "Support"}, 126)
+            Dim item9 As New ListViewItem(New String() {"Vladmir's Offering", "Support"}, 130)
+            Dim item10 As New ListViewItem(New String() {"Headdress", "Support"}, 53)
+            Dim item11 As New ListViewItem(New String() {"Buckler", "Support"}, 20)
+            Dim item12 As New ListViewItem(New String() {"Headdress (Recipe)", "Support"}, 134)
+            Dim item13 As New ListViewItem(New String() {"Buckler (Recipe)", "Support"}, 134)
+            Dim item14 As New ListViewItem(New String() {"Urn of Shadows (Recipe)", "Support"}, 134)
+            Dim item15 As New ListViewItem(New String() {"Mekansm (Recipe)", "Support"}, 134)
+            Dim item16 As New ListViewItem(New String() {"Medallion of Courage (Recipe)", "Support"}, 134)
+            Dim item17 As New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support"}, 134)
+            Dim item18 As New ListViewItem(New String() {"Pipe of Insight (Recipe)", "Support"}, 134)
+            Dim item19 As New ListViewItem(New String() {"Drum of Endurance (Recipe)", "Support"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item12, item13, item14, item15, item16, item17, item18, item19})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewArmor
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Assault Cuirass", "Armor"}, 5)
+            Dim item1 As New ListViewItem(New String() {"Black King Bar", "Armor"}, 8)
+            Dim item2 As New ListViewItem(New String() {"Blade Mail", "Armor"}, 9)
+            Dim item3 As New ListViewItem(New String() {"Bloodstone", "Armor"}, 13)
+            Dim item4 As New ListViewItem(New String() {"Heart of Tarrasque", "Armor"}, 55)
+            Dim item5 As New ListViewItem(New String() {"Hood of Defiance", "Armor"}, 59)
+            Dim item6 As New ListViewItem(New String() {"Linken's Sphere", "Armor"}, 63)
+            Dim item7 As New ListViewItem(New String() {"Manta Style", "Armor"}, 67)
+            Dim item8 As New ListViewItem(New String() {"Shiva's Guard", "Armor"}, 113)
+            Dim item9 As New ListViewItem(New String() {"Soul Booster", "Armor"}, 117)
+            Dim item10 As New ListViewItem(New String() {"Vanguard", "Armor"}, 127)
+            Dim item11 As New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor"}, 134)
+            Dim item12 As New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor"}, 134)
+            Dim item13 As New ListViewItem(New String() {"Manta Style (Recipe)", "Armor"}, 134)
+            Dim item14 As New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor"}, 134)
+            Dim item15 As New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor"}, 134)
+            Dim item16 As New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item11, item12, item13, item14, item15, item16})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewAttributes
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Belt of Strength", "Attributes"}, 7)
+            Dim item1 As New ListViewItem(New String() {"Blade of Alacrity", "Attributes"}, 10)
+            Dim item2 As New ListViewItem(New String() {"Boots of Elvenskin", "Attributes"}, 14)
+            Dim item3 As New ListViewItem(New String() {"Circlet", "Attributes"}, 23)
+            Dim item4 As New ListViewItem(New String() {"Gauntlets of Strength", "Attributes"}, 48)
+            Dim item5 As New ListViewItem(New String() {"Iron Branch", "Attributes"}, 61)
+            Dim item6 As New ListViewItem(New String() {"Mantle of Intelligence", "Attributes"}, 68)
+            Dim item7 As New ListViewItem(New String() {"Ogre Club", "Attributes"}, 83)
+            Dim item8 As New ListViewItem(New String() {"Robe of the Magi", "Attributes"}, 103)
+            Dim item9 As New ListViewItem(New String() {"Slippers of Agility", "Attributes"}, 115)
+            Dim item10 As New ListViewItem(New String() {"Staff of Wizardry", "Attributes"}, 119)
+            Dim item11 As New ListViewItem(New String() {"Ultimate Orb", "Attributes"}, 125)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewArtifacts
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Desolator", "Artifacts"}, 35)
+            Dim item1 As New ListViewItem(New String() {"Diffusal Blade 1", "Artifacts"}, 36)
+            Dim item2 As New ListViewItem(New String() {"Diffusal Blade 2", "Artifacts"}, 37)
+            Dim item3 As New ListViewItem(New String() {"Eye of Skadi", "Artifacts"}, 45)
+            Dim item4 As New ListViewItem(New String() {"Heaven's Halberd", "Artifacts"}, 56)
+            Dim item5 As New ListViewItem(New String() {"Helm of the Dominator", "Artifacts"}, 58)
+            Dim item6 As New ListViewItem(New String() {"Maelstrom", "Artifacts"}, 64)
+            Dim item7 As New ListViewItem(New String() {"Mask of Madness", "Artifacts"}, 69)
+            Dim item8 As New ListViewItem(New String() {"Mjollnir", "Artifacts"}, 73)
+            Dim item9 As New ListViewItem(New String() {"Sange", "Artifacts"}, 107)
+            Dim item10 As New ListViewItem(New String() {"Sange and Yasha", "Artifacts"}, 108)
+            Dim item11 As New ListViewItem(New String() {"Satanic", "Artifacts"}, 109)
+            Dim item12 As New ListViewItem(New String() {"Yasha", "Artifacts"}, 133)
+            Dim item13 As New ListViewItem(New String() {"Desolator (Recipe)", "Artifact"}, 134)
+            Dim item14 As New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact"}, 134)
+            Dim item15 As New ListViewItem(New String() {"Satanic (Recipe)", "Artifact"}, 134)
+            Dim item16 As New ListViewItem(New String() {"Yasha (Recipe)", "Artifact"}, 134)
+            Dim item17 As New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact"}, 134)
+            Dim item18 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact"}, 134)
+            Dim item19 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact"}, 134)
+            Dim item20 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item13, item14, item15, item16, item17, item18, item19, item20})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewCommon
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Boots of Travel", "Common"}, 16)
+            Dim item1 As New ListViewItem(New String() {"Bracer", "Common"}, 18)
+            Dim item2 As New ListViewItem(New String() {"Hand of Midas", "Common"}, 52)
+            Dim item3 As New ListViewItem(New String() {"Magic Wand", "Common"}, 66)
+            Dim item4 As New ListViewItem(New String() {"Null Talisman", "Common"}, 80)
+            Dim item5 As New ListViewItem(New String() {"Oblivion Staff", "Common"}, 81)
+            Dim item6 As New ListViewItem(New String() {"Perseverance", "Common"}, 86)
+            Dim item7 As New ListViewItem(New String() {"Phase Boots", "Common"}, 87)
+            Dim item8 As New ListViewItem(New String() {"Poor Man's Shield", "Common"}, 91)
+            Dim item9 As New ListViewItem(New String() {"Power Treads", "Common"}, 92)
+            Dim item10 As New ListViewItem(New String() {"Soul Ring", "Common"}, 118)
+            Dim item11 As New ListViewItem(New String() {"Wraith Band", "Common"}, 132)
+            Dim item12 As New ListViewItem(New String() {"Wraith Band (Recipe)", "Common"}, 134)
+            Dim item13 As New ListViewItem(New String() {"Bracer (Recipe)", "Common"}, 134)
+            Dim item14 As New ListViewItem(New String() {"Null Talisman (Recipe)", "Common"}, 134)
+            Dim item15 As New ListViewItem(New String() {"Magic Wand (Recipe)", "Common"}, 134)
+            Dim item16 As New ListViewItem(New String() {"Hand of Midas (Recipe)", "Common"}, 134)
+            Dim item17 As New ListViewItem(New String() {"Soul Ring (Recipe)", "Common"}, 134)
+            Dim item18 As New ListViewItem(New String() {"Boots of Travel (Recipe)", "Common"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            If FormMain.CheckBox1.Checked Then
+                .Items.AddRange(New ListViewItem() {item12, item13, item14, item15, item16, item17, item18})
+            End If
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewArmaments
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Blades of Attack", "Armaments"}, 11)
+            Dim item1 As New ListViewItem(New String() {"Broadsword", "Armaments"}, 19)
+            Dim item2 As New ListViewItem(New String() {"Chainmail", "Armaments"}, 22)
+            Dim item3 As New ListViewItem(New String() {"Claymore", "Armaments"}, 25)
+            Dim item4 As New ListViewItem(New String() {"Helm of Iron Will", "Armaments"}, 57)
+            Dim item5 As New ListViewItem(New String() {"Javelin", "Armaments"}, 62)
+            Dim item6 As New ListViewItem(New String() {"Mithril Hammer", "Armaments"}, 72)
+            Dim item7 As New ListViewItem(New String() {"Platemail", "Armaments"}, 89)
+            Dim item8 As New ListViewItem(New String() {"Quarterstaff", "Armaments"}, 93)
+            Dim item9 As New ListViewItem(New String() {"Quelling Blade", "Armaments"}, 94)
+            Dim item10 As New ListViewItem(New String() {"Ring of Protection", "Armaments"}, 101)
+            Dim item11 As New ListViewItem(New String() {"Stout Shield", "Armaments"}, 120)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewArcane
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Blink Dagger", "Arcane"}, 12)
+            Dim item1 As New ListViewItem(New String() {"Boots of Speed", "Arcane"}, 15)
+            Dim item2 As New ListViewItem(New String() {"Cloak", "Arcane"}, 26)
+            Dim item3 As New ListViewItem(New String() {"Gem of True Sight", "Arcane"}, 49)
+            Dim item4 As New ListViewItem(New String() {"Ghost Scepter", "Arcane"}, 50)
+            Dim item5 As New ListViewItem(New String() {"Gloves of Haste", "Arcane"}, 51)
+            Dim item6 As New ListViewItem(New String() {"Magic Stick", "Arcane"}, 65)
+            Dim item7 As New ListViewItem(New String() {"Morbid Mask", "Arcane"}, 75)
+            Dim item8 As New ListViewItem(New String() {"Ring of Regen", "Arcane"}, 102)
+            Dim item9 As New ListViewItem(New String() {"Sage's Mask", "Arcane"}, 106)
+            Dim item10 As New ListViewItem(New String() {"Talisman of Evasion", "Arcane"}, 121)
+            Dim item11 As New ListViewItem(New String() {"Shadow Amulet", "Arcane"}, 135)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
+
+            'Add Tooltips to Listview
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
+        End With
+
+        With FormMain.ListViewSecretShop
+            .Clear()
+            ' Create items and add them to ListView.
+            Dim item0 As New ListViewItem(New String() {"Demon Edge", "Secret Shop"}, 34)
+            Dim item1 As New ListViewItem(New String() {"Eaglesong", "Secret Shop"}, 41)
+            Dim item2 As New ListViewItem(New String() {"Energy Booster", "Secret Shop"}, 42)
+            Dim item3 As New ListViewItem(New String() {"Hyperstone", "Secret Shop"}, 60)
+            Dim item4 As New ListViewItem(New String() {"Mystic Staff", "Secret Shop"}, 76)
+            Dim item5 As New ListViewItem(New String() {"Orb of Venom", "Secret Shop"}, 84)
+            Dim item6 As New ListViewItem(New String() {"Point Booster", "Secret Shop"}, 90)
+            Dim item7 As New ListViewItem(New String() {"Reaver", "Secret Shop"}, 96)
+            Dim item8 As New ListViewItem(New String() {"Ring of Health", "Secret Shop"}, 100)
+            Dim item9 As New ListViewItem(New String() {"Sacred Relic", "Secret Shop"}, 105)
+            Dim item10 As New ListViewItem(New String() {"Vitality Booster", "Secret Shop"}, 129)
+            Dim item11 As New ListViewItem(New String() {"Void Stone", "Secret Shop"}, 131)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11})
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -223,13 +353,12 @@ Public Class ItembuildClass
         FormMain.Itemslot6.Text = "unused"
         FormMain.IntPrice = 0
         NewText = ""
-        FormMain.ListView2.Clear()
-        FormMain.ListView3.Clear()
-        FormMain.ListView4.Clear()
-        FormMain.ListView5.Clear()
-        FormMain.ListView6.Clear()
-        FormMain.ListView7.Clear()
-
+        FormMain.ListViewItems0.Clear()
+        FormMain.ListViewItems1.Clear()
+        FormMain.ListViewItems2.Clear()
+        FormMain.ListViewItems3.Clear()
+        FormMain.ListViewItems4.Clear()
+        FormMain.ListViewItems5.Clear()
     End Sub
 
     'Save the itembuild and change the author
@@ -301,7 +430,7 @@ Public Class ItembuildClass
         Dim File As String = My.Settings.dota2path + "\default_" + hero + ".txt"
         If IO.File.Exists(File) Then
             Dim ItemName As String
-            Dim ItemList As Object = FormMain.ListView2
+            Dim ItemList As Object = FormMain.ListViewItems0
             Dim Index As Integer = 0
             Dim price As Object = FormMain.Label15
             Dim savePrice As Boolean = True
@@ -330,27 +459,27 @@ Public Class ItembuildClass
                             FormMain.Itemslot1.Text = GetLabel(OldLine)
                         Case 3
                             FormMain.Itemslot2.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView3
+                            ItemList = FormMain.ListViewItems1
                             Index = 0
                             savePrice = False
                         Case 4
                             FormMain.Itemslot3.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView4
+                            ItemList = FormMain.ListViewItems2
                             Index = 0
                             savePrice = False
                         Case 5
                             FormMain.Itemslot4.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView5
+                            ItemList = FormMain.ListViewItems3
                             Index = 0
                             savePrice = False
                         Case 6
                             FormMain.Itemslot5.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView6
+                            ItemList = FormMain.ListViewItems4
                             Index = 0
                             savePrice = False
                         Case 7
                             FormMain.Itemslot6.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView7
+                            ItemList = FormMain.ListViewItems5
                             Index = 0
                             savePrice = False
                         Case Else
@@ -378,7 +507,7 @@ Public Class ItembuildClass
         Dim File As String = My.Settings.dota2path + "\Backup\default_" + Selected_Hero + ".txt"
         If IO.File.Exists(File) Then
             Dim ItemName As String
-            Dim ItemList As Object = FormMain.ListView2
+            Dim ItemList As Object = FormMain.ListViewItems0
             Dim Index As Integer = 0
             Dim price As Object = FormMain.Label15
             Dim savePrice As Boolean = True
@@ -408,27 +537,27 @@ Public Class ItembuildClass
                             FormMain.Itemslot1.Text = GetLabel(OldLine)
                         Case 3
                             FormMain.Itemslot2.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView3
+                            ItemList = FormMain.ListViewItems1
                             Index = 0
                             savePrice = False
                         Case 4
                             FormMain.Itemslot3.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView4
+                            ItemList = FormMain.ListViewItems2
                             Index = 0
                             savePrice = False
                         Case 5
                             FormMain.Itemslot4.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView5
+                            ItemList = FormMain.ListViewItems3
                             Index = 0
                             savePrice = False
                         Case 6
                             FormMain.Itemslot5.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView6
+                            ItemList = FormMain.ListViewItems4
                             Index = 0
                             savePrice = False
                         Case 7
                             FormMain.Itemslot6.Text = GetLabel(OldLine)
-                            ItemList = FormMain.ListView7
+                            ItemList = FormMain.ListViewItems5
                             Index = 0
                             savePrice = False
                         Case Else
@@ -520,23 +649,23 @@ Public Class ItembuildClass
             Dim Box6 As String = ""
             Dim a As Integer = 1
 
-            For i = 0 To (FormMain.ListView2.Items.Count - 1)
-                Box1 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems0.Items.Count - 1)
+                Box1 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems0.Items(i).SubItems(1).Text) & """"
             Next
-            For i = 0 To (FormMain.ListView3.Items.Count - 1)
-                Box2 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems1.Items.Count - 1)
+                Box2 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems1.Items(i).SubItems(1).Text) & """"
             Next
-            For i = 0 To (FormMain.ListView4.Items.Count - 1)
-                Box3 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems2.Items.Count - 1)
+                Box3 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems2.Items(i).SubItems(1).Text) & """"
             Next
-            For i = 0 To (FormMain.ListView5.Items.Count - 1)
-                Box4 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems3.Items.Count - 1)
+                Box4 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems3.Items(i).SubItems(1).Text) & """"
             Next
-            For i = 0 To (FormMain.ListView6.Items.Count - 1)
-                Box5 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView6.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems4.Items.Count - 1)
+                Box5 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems4.Items(i).SubItems(1).Text) & """"
             Next
-            For i = 0 To (FormMain.ListView7.Items.Count - 1)
-                Box6 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView7.Items(i).SubItems(1).Text) & """"
+            For i = 0 To (FormMain.ListViewItems5.Items.Count - 1)
+                Box6 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListViewItems5.Items(i).SubItems(1).Text) & """"
             Next
 
             NewText &= vbTab & "{" & vbNewLine
@@ -922,554 +1051,127 @@ Public Class ItembuildClass
     End Function
 
     'Change the list of heros to a selection like all carrys or all agi heros
-    Public Sub ChangeHeroList(ByVal cb As Object, ByVal lb As Object)
-        Dim i As Integer
-        Dim sI As Integer = cb.SelectedIndex
+    Public Sub ChangeHeroList()
+        With FormMain.ListBox1
+            'Clear Listbox
+            .SelectedItems.Clear()
+            For i = .Items.Count - 1 To 0 Step -1
+                .Items.Remove(.Items(i).ToString)
+            Next
 
-        'Clear Listbox
-        lb.SelectedItems.Clear()
-        For i = lb.Items.Count - 1 To 0 Step -1
-            lb.Items.Remove(lb.Items(i).ToString)
-        Next
-
-        Select Case sI
-            Case 0
-                'All
-                lb.Items.Add("Abaddon")
-                lb.Items.Add("Abyssal Underlord")
-                lb.Items.Add("Alchemist")
-                lb.Items.Add("Ancient Apparition")
-                lb.Items.Add("Anti-Mage")
-                lb.Items.Add("Arc Warden")
-                lb.Items.Add("Axe")
-                lb.Items.Add("Bane")
-                lb.Items.Add("Batrider")
-                lb.Items.Add("Beastmaster")
-                lb.Items.Add("Bloodseeker")
-                lb.Items.Add("Bounty Hunter")
-                lb.Items.Add("Brewmaster")
-                lb.Items.Add("Bristleback")
-                lb.Items.Add("Broodmother")
-                lb.Items.Add("Centaur Warrunner")
-                lb.Items.Add("Chaos Knight")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Clinkz")
-                lb.Items.Add("Clockwerk")
-                lb.Items.Add("Crystal Maiden")
-                lb.Items.Add("Dark Seer")
-                lb.Items.Add("Dazzle")
-                lb.Items.Add("Death Prophet")
-                lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom")
-                lb.Items.Add("Dragon Knight")
-                lb.Items.Add("Drow Ranger")
-                lb.Items.Add("Earth Spirit")
-                lb.Items.Add("Earthshaker")
-                lb.Items.Add("Elder Titan")
-                lb.Items.Add("Ember Spirit")
-                lb.Items.Add("Enchantress")
-                lb.Items.Add("Enigma")
-                lb.Items.Add("Faceless Void")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Gyrocopter")
-                lb.Items.Add("Huskar")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Io")
-                lb.Items.Add("Jakiro")
-                lb.Items.Add("Juggernaut")
-                lb.Items.Add("Keeper of the Light")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Leshrac")
-                lb.Items.Add("Lich")
-                lb.Items.Add("Lifestealer")
-                lb.Items.Add("Lina")
-                lb.Items.Add("Lion")
-                lb.Items.Add("Lone Druid")
-                lb.Items.Add("Luna")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Magnus")
-                lb.Items.Add("Medusa")
-                lb.Items.Add("Meepo")
-                lb.Items.Add("Mirana")
-                lb.Items.Add("Morphling")
-                lb.Items.Add("Naga Siren")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Night Stalker")
-                lb.Items.Add("Nyx Assassin")
-                lb.Items.Add("Ogre Magi")
-                lb.Items.Add("Omniknight")
-                lb.Items.Add("Oracle")
-                lb.Items.Add("Outworld Devourer")
-                lb.Items.Add("Phantom Assassin")
-                lb.Items.Add("Phantom Lancer")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Puck")
-                lb.Items.Add("Pudge")
-                lb.Items.Add("Pugna")
-                lb.Items.Add("Queen of Pain")
-                lb.Items.Add("Razor")
-                lb.Items.Add("Riki")
-                lb.Items.Add("Rubick")
-                lb.Items.Add("Sand King")
-                lb.Items.Add("Shadow Demon")
-                lb.Items.Add("Shadow Fiend")
-                lb.Items.Add("Shadow Shaman")
-                lb.Items.Add("Silencer")
-                lb.Items.Add("Skeleton King")
-                lb.Items.Add("Skywrath Mage")
-                lb.Items.Add("Slardar")
-                lb.Items.Add("Slark")
-                lb.Items.Add("Sniper")
-                lb.Items.Add("Terrorblade")
-                lb.Items.Add("Spectre")
-                lb.Items.Add("Spirit Breaker")
-                lb.Items.Add("Storm Spirit")
-                lb.Items.Add("Sven")
-                lb.Items.Add("Templar Assassin")
-                lb.Items.Add("Tidehunter")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Tiny")
-                lb.Items.Add("Treant Protector")
-                lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Tusk")
-                lb.Items.Add("Undying")
-                lb.Items.Add("Ursa")
-                lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Venomancer")
-                lb.Items.Add("Viper")
-                lb.Items.Add("Visage")
-                lb.Items.Add("Warlock")
-                lb.Items.Add("Weaver")
-                lb.Items.Add("Windranger")
-                lb.Items.Add("Winter Wyvern")
-                lb.Items.Add("Witch Doctor")
-                lb.Items.Add("Zeus")
-            Case 1
-                'Strenght
-                lb.Items.Add("Abaddon")
-                lb.Items.Add("Abyssal Underlord")
-                lb.Items.Add("Alchemist")
-                lb.Items.Add("Axe")
-                lb.Items.Add("Beastmaster")
-                lb.Items.Add("Brewmaster")
-                lb.Items.Add("Bristleback")
-                lb.Items.Add("Centaur Warrunner")
-                lb.Items.Add("Chaos Knight")
-                lb.Items.Add("Clockwerk")
-                lb.Items.Add("Doom")
-                lb.Items.Add("Dragon Knight")
-                lb.Items.Add("Earth Spirit")
-                lb.Items.Add("Earthshaker")
-                lb.Items.Add("Elder Titan")
-                lb.Items.Add("Huskar")
-                lb.Items.Add("Io")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Lifestealer")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Magnus")
-                lb.Items.Add("Night Stalker")
-                lb.Items.Add("Omniknight")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Pudge")
-                lb.Items.Add("Sand King")
-                lb.Items.Add("Skeleton King")
-                lb.Items.Add("Slardar")
-                lb.Items.Add("Spirit Breaker")
-                lb.Items.Add("Sven")
-                lb.Items.Add("Tidehunter")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Tiny")
-                lb.Items.Add("Treant Protector")
-                lb.Items.Add("Tusk")
-                lb.Items.Add("Undying")
-            Case 2
-                'Agility
-                lb.Items.Add("Anti-Mage")
-                lb.Items.Add("Arc Warden")
-                lb.Items.Add("Bloodseeker")
-                lb.Items.Add("Bounty Hunter")
-                lb.Items.Add("Broodmother")
-                lb.Items.Add("Clinkz")
-                lb.Items.Add("Drow Ranger")
-                lb.Items.Add("Ember Spirit")
-                lb.Items.Add("Faceless Void")
-                lb.Items.Add("Gyrocopter")
-                lb.Items.Add("Juggernaut")
-                lb.Items.Add("Lone Druid")
-                lb.Items.Add("Luna")
-                lb.Items.Add("Medusa")
-                lb.Items.Add("Meepo")
-                lb.Items.Add("Mirana")
-                lb.Items.Add("Morphling")
-                lb.Items.Add("Naga Siren")
-                lb.Items.Add("Nyx Assassin")
-                lb.Items.Add("Phantom Assassin")
-                lb.Items.Add("Phantom Lancer")
-                lb.Items.Add("Razor")
-                lb.Items.Add("Riki")
-                lb.Items.Add("Shadow Fiend")
-                lb.Items.Add("Slark")
-                lb.Items.Add("Sniper")
-                lb.Items.Add("Terrorblade")
-                lb.Items.Add("Spectre")
-                lb.Items.Add("Templar Assassin")
-                lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Ursa")
-                lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Venomancer")
-                lb.Items.Add("Viper")
-                lb.Items.Add("Weaver")
-            Case 3
-                'Intelligence
-                lb.Items.Add("Ancient Apparition")
-                lb.Items.Add("Bane")
-                lb.Items.Add("Batrider")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Crystal Maiden")
-                lb.Items.Add("Dark Seer")
-                lb.Items.Add("Dazzle")
-                lb.Items.Add("Death Prophet")
-                lb.Items.Add("Disruptor")
-                lb.Items.Add("Enchantress")
-                lb.Items.Add("Enigma")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Jakiro")
-                lb.Items.Add("Keeper of the Light")
-                lb.Items.Add("Leshrac")
-                lb.Items.Add("Lich")
-                lb.Items.Add("Lina")
-                lb.Items.Add("Lion")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Ogre Magi")
-                lb.Items.Add("Oracle")
-                lb.Items.Add("Outworld Devourer")
-                lb.Items.Add("Puck")
-                lb.Items.Add("Pugna")
-                lb.Items.Add("Queen of Pain")
-                lb.Items.Add("Rubick")
-                lb.Items.Add("Shadow Demon")
-                lb.Items.Add("Shadow Shaman")
-                lb.Items.Add("Silencer")
-                lb.Items.Add("Skywrath Mage")
-                lb.Items.Add("Storm Spirit")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Visage")
-                lb.Items.Add("Warlock")
-                lb.Items.Add("Windranger")
-                lb.Items.Add("Winter Wyvern")
-                lb.Items.Add("Witch Doctor")
-                lb.Items.Add("Zeus")
-            Case 4
-                'Carry
-                lb.Items.Add("Alchemist")
-                lb.Items.Add("Anti-Mage")
-                lb.Items.Add("Bloodseeker")
-                lb.Items.Add("Bounty Hunter")
-                lb.Items.Add("Broodmother")
-                lb.Items.Add("Clinkz")
-                lb.Items.Add("Doom")
-                lb.Items.Add("Dragon Knight")
-                lb.Items.Add("Drow Ranger")
-                lb.Items.Add("Ember Spirit")
-                lb.Items.Add("Faceless Void")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Gyrocopter")
-                lb.Items.Add("Huskar")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Juggernaut")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Templar Assassin")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Leshrac")
-                lb.Items.Add("Lone Druid")
-                lb.Items.Add("Luna")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Medusa")
-                lb.Items.Add("Meepo")
-                lb.Items.Add("Mirana")
-                lb.Items.Add("Morphling")
-                lb.Items.Add("Phantom Assassin")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Night Stalker")
-                lb.Items.Add("Outworld Devourer")
-                lb.Items.Add("Phantom Lancer")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Queen of Pain")
-                lb.Items.Add("Razor")
-                lb.Items.Add("Riki")
-                lb.Items.Add("Shadow Fiend")
-                lb.Items.Add("Silencer")
-                lb.Items.Add("Skeleton King")
-                lb.Items.Add("Skywrath Mage")
-                lb.Items.Add("Slardar")
-                lb.Items.Add("Sniper")
-                lb.Items.Add("Terrorblade")
-                lb.Items.Add("Spectre")
-                lb.Items.Add("Storm Spirit")
-                lb.Items.Add("Sven")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Ursa")
-                lb.Items.Add("Venomancer")
-                lb.Items.Add("Viper")
-                lb.Items.Add("Weaver")
-                lb.Items.Add("Windranger")
-            Case 5
-                'Support
-                lb.Items.Add("Abaddon")
-                lb.Items.Add("Ancient Apparition")
-                lb.Items.Add("Bane")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Crystal Maiden")
-                lb.Items.Add("Dark Seer")
-                lb.Items.Add("Dazzle")
-                lb.Items.Add("Disruptor")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Io")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Keeper of the Light")
-                lb.Items.Add("Lich")
-                lb.Items.Add("Lion")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Ogre Magi")
-                lb.Items.Add("Omniknight")
-                lb.Items.Add("Rubick")
-                lb.Items.Add("Shadow Demon")
-                lb.Items.Add("Silencer")
-                lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Warlock")
-                lb.Items.Add("Witch Doctor")
-            Case 6
-                'Ganker
-                lb.Items.Add("Ancient Apparition")
-                lb.Items.Add("Bane")
-                lb.Items.Add("Batrider")
-                lb.Items.Add("Beastmaster")
-                lb.Items.Add("Bloodseeker")
-                lb.Items.Add("Bounty Hunter")
-                lb.Items.Add("Bristleback")
-                lb.Items.Add("Chaos Knight")
-                lb.Items.Add("Clockwerk")
-                lb.Items.Add("Undying")
-                lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom")
-                lb.Items.Add("Earthshaker")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Jakiro")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Templar Assassin")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Lich")
-                lb.Items.Add("Lifestealer")
-                lb.Items.Add("Lina")
-                lb.Items.Add("Lion")
-                lb.Items.Add("Mirana")
-                lb.Items.Add("Morphling")
-                lb.Items.Add("Naga Siren")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Nyx Assassin")
-                lb.Items.Add("Night Stalker")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Pudge")
-                lb.Items.Add("Queen of Pain")
-                lb.Items.Add("Riki")
-                lb.Items.Add("Rubick")
-                lb.Items.Add("Sand King")
-                lb.Items.Add("Skywrath Mage")
-                lb.Items.Add("Slark")
-                lb.Items.Add("Spirit Breaker")
-                lb.Items.Add("Storm Spirit")
-                lb.Items.Add("Sven")
-                lb.Items.Add("Elder Titan")
-                lb.Items.Add("Tidehunter")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Tiny")
-                lb.Items.Add("Tusk")
-                lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Weaver")
-                lb.Items.Add("Witch Doctor")
-                lb.Items.Add("Zeus")
-            Case 7
-                'Initiator
-                lb.Items.Add("Axe")
-                lb.Items.Add("Brewmaster")
-                lb.Items.Add("Clockwerk")
-                lb.Items.Add("Earthshaker")
-                lb.Items.Add("Earth Spirit")
-                lb.Items.Add("Enigma")
-                lb.Items.Add("Magnus")
-                lb.Items.Add("Naga Siren")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Puck")
-                lb.Items.Add("Pudge")
-                lb.Items.Add("Sand King")
-                lb.Items.Add("Slardar")
-                lb.Items.Add("Tidehunter")
-                lb.Items.Add("Tiny")
-                lb.Items.Add("Treant Protector")
-            Case 8
-                'Pusher
-                lb.Items.Add("Broodmother")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Death Prophet")
-                lb.Items.Add("Enchantress")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Keeper of the Light")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Leshrac")
-                lb.Items.Add("Lone Druid")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Meepo")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Phantom Lancer")
-                lb.Items.Add("Pit Lord")
-                lb.Items.Add("Pugna")
-                lb.Items.Add("Shadow Shaman")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Venomancer")
-            Case 9
-                'Jungler
-                lb.Items.Add("Axe")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Enigma")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Ursa")
-            Case 10
-                'Tank
-                lb.Items.Add("Brewmaster")
-                lb.Items.Add("Centaur Warrunner")
-                lb.Items.Add("Death Prophet")
-                lb.Items.Add("Undying")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Skeleton King")
-            Case Else
-                'All
-                lb.Items.Add("Abaddon")
-                lb.Items.Add("Abyssal Underlord")
-                lb.Items.Add("Alchemist")
-                lb.Items.Add("Ancient Apparition")
-                lb.Items.Add("Anti-Mage")
-                lb.Items.Add("Arc Warden")
-                lb.Items.Add("Axe")
-                lb.Items.Add("Bane")
-                lb.Items.Add("Batrider")
-                lb.Items.Add("Beastmaster")
-                lb.Items.Add("Bloodseeker")
-                lb.Items.Add("Bounty Hunter")
-                lb.Items.Add("Brewmaster")
-                lb.Items.Add("Bristleback")
-                lb.Items.Add("Broodmother")
-                lb.Items.Add("Centaur Warrunner")
-                lb.Items.Add("Chaos Knight")
-                lb.Items.Add("Chen")
-                lb.Items.Add("Clinkz")
-                lb.Items.Add("Clockwerk")
-                lb.Items.Add("Crystal Maiden")
-                lb.Items.Add("Dark Seer")
-                lb.Items.Add("Dazzle")
-                lb.Items.Add("Death Prophet")
-                lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom")
-                lb.Items.Add("Dragon Knight")
-                lb.Items.Add("Drow Ranger")
-                lb.Items.Add("Earth Spirit")
-                lb.Items.Add("Earthshaker")
-                lb.Items.Add("Elder Titan")
-                lb.Items.Add("Ember Spirit")
-                lb.Items.Add("Enchantress")
-                lb.Items.Add("Enigma")
-                lb.Items.Add("Faceless Void")
-                lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Gyrocopter")
-                lb.Items.Add("Huskar")
-                lb.Items.Add("Invoker")
-                lb.Items.Add("Io")
-                lb.Items.Add("Jakiro")
-                lb.Items.Add("Juggernaut")
-                lb.Items.Add("Keeper of the Light")
-                lb.Items.Add("Kunkka")
-                lb.Items.Add("Legion Commander")
-                lb.Items.Add("Leshrac")
-                lb.Items.Add("Lich")
-                lb.Items.Add("Lifestealer")
-                lb.Items.Add("Lina")
-                lb.Items.Add("Lion")
-                lb.Items.Add("Lone Druid")
-                lb.Items.Add("Luna")
-                lb.Items.Add("Lycan")
-                lb.Items.Add("Magnus")
-                lb.Items.Add("Medusa")
-                lb.Items.Add("Meepo")
-                lb.Items.Add("Mirana")
-                lb.Items.Add("Morphling")
-                lb.Items.Add("Naga Siren")
-                lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrophos")
-                lb.Items.Add("Night Stalker")
-                lb.Items.Add("Nyx Assassin")
-                lb.Items.Add("Ogre Magi")
-                lb.Items.Add("Omniknight")
-                lb.Items.Add("Oracle")
-                lb.Items.Add("Outworld Devourer")
-                lb.Items.Add("Phantom Assassin")
-                lb.Items.Add("Phantom Lancer")
-                lb.Items.Add("Phoenix")
-                lb.Items.Add("Puck")
-                lb.Items.Add("Pudge")
-                lb.Items.Add("Pugna")
-                lb.Items.Add("Queen of Pain")
-                lb.Items.Add("Razor")
-                lb.Items.Add("Riki")
-                lb.Items.Add("Rubick")
-                lb.Items.Add("Sand King")
-                lb.Items.Add("Shadow Demon")
-                lb.Items.Add("Shadow Fiend")
-                lb.Items.Add("Shadow Shaman")
-                lb.Items.Add("Silencer")
-                lb.Items.Add("Skeleton King")
-                lb.Items.Add("Skywrath Mage")
-                lb.Items.Add("Slardar")
-                lb.Items.Add("Slark")
-                lb.Items.Add("Sniper")
-                lb.Items.Add("Terrorblade")
-                lb.Items.Add("Spectre")
-                lb.Items.Add("Spirit Breaker")
-                lb.Items.Add("Storm Spirit")
-                lb.Items.Add("Sven")
-                lb.Items.Add("Templar Assassin")
-                lb.Items.Add("Tidehunter")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Tinker")
-                lb.Items.Add("Tiny")
-                lb.Items.Add("Treant Protector")
-                lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Tusk")
-                lb.Items.Add("Undying")
-                lb.Items.Add("Ursa")
-                lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Venomancer")
-                lb.Items.Add("Viper")
-                lb.Items.Add("Visage")
-                lb.Items.Add("Warlock")
-                lb.Items.Add("Weaver")
-                lb.Items.Add("Windranger")
-                lb.Items.Add("Winter Wyvern")
-                lb.Items.Add("Witch Doctor")
-                lb.Items.Add("Zeus")
-        End Select
+            .Items.Add("Abaddon")
+            .Items.Add("Abyssal Underlord")
+            .Items.Add("Alchemist")
+            .Items.Add("Ancient Apparition")
+            .Items.Add("Anti-Mage")
+            .Items.Add("Arc Warden")
+            .Items.Add("Axe")
+            .Items.Add("Bane")
+            .Items.Add("Batrider")
+            .Items.Add("Beastmaster")
+            .Items.Add("Bloodseeker")
+            .Items.Add("Bounty Hunter")
+            .Items.Add("Brewmaster")
+            .Items.Add("Bristleback")
+            .Items.Add("Broodmother")
+            .Items.Add("Centaur Warrunner")
+            .Items.Add("Chaos Knight")
+            .Items.Add("Chen")
+            .Items.Add("Clinkz")
+            .Items.Add("Clockwerk")
+            .Items.Add("Crystal Maiden")
+            .Items.Add("Dark Seer")
+            .Items.Add("Dazzle")
+            .Items.Add("Death Prophet")
+            .Items.Add("Disruptor")
+            .Items.Add("Doom")
+            .Items.Add("Dragon Knight")
+            .Items.Add("Drow Ranger")
+            .Items.Add("Earth Spirit")
+            .Items.Add("Earthshaker")
+            .Items.Add("Elder Titan")
+            .Items.Add("Ember Spirit")
+            .Items.Add("Enchantress")
+            .Items.Add("Enigma")
+            .Items.Add("Faceless Void")
+            .Items.Add("Goblin Techies")
+            .Items.Add("Gyrocopter")
+            .Items.Add("Huskar")
+            .Items.Add("Invoker")
+            .Items.Add("Io")
+            .Items.Add("Jakiro")
+            .Items.Add("Juggernaut")
+            .Items.Add("Keeper of the Light")
+            .Items.Add("Kunkka")
+            .Items.Add("Legion Commander")
+            .Items.Add("Leshrac")
+            .Items.Add("Lich")
+            .Items.Add("Lifestealer")
+            .Items.Add("Lina")
+            .Items.Add("Lion")
+            .Items.Add("Lone Druid")
+            .Items.Add("Luna")
+            .Items.Add("Lycan")
+            .Items.Add("Magnus")
+            .Items.Add("Medusa")
+            .Items.Add("Meepo")
+            .Items.Add("Mirana")
+            .Items.Add("Morphling")
+            .Items.Add("Naga Siren")
+            .Items.Add("Nature's Prophet")
+            .Items.Add("Necrophos")
+            .Items.Add("Night Stalker")
+            .Items.Add("Nyx Assassin")
+            .Items.Add("Ogre Magi")
+            .Items.Add("Omniknight")
+            .Items.Add("Oracle")
+            .Items.Add("Outworld Devourer")
+            .Items.Add("Phantom Assassin")
+            .Items.Add("Phantom Lancer")
+            .Items.Add("Phoenix")
+            .Items.Add("Puck")
+            .Items.Add("Pudge")
+            .Items.Add("Pugna")
+            .Items.Add("Queen of Pain")
+            .Items.Add("Razor")
+            .Items.Add("Riki")
+            .Items.Add("Rubick")
+            .Items.Add("Sand King")
+            .Items.Add("Shadow Demon")
+            .Items.Add("Shadow Fiend")
+            .Items.Add("Shadow Shaman")
+            .Items.Add("Silencer")
+            .Items.Add("Skeleton King")
+            .Items.Add("Skywrath Mage")
+            .Items.Add("Slardar")
+            .Items.Add("Slark")
+            .Items.Add("Sniper")
+            .Items.Add("Terrorblade")
+            .Items.Add("Spectre")
+            .Items.Add("Spirit Breaker")
+            .Items.Add("Storm Spirit")
+            .Items.Add("Sven")
+            .Items.Add("Templar Assassin")
+            .Items.Add("Tidehunter")
+            .Items.Add("Timbersaw")
+            .Items.Add("Tinker")
+            .Items.Add("Tiny")
+            .Items.Add("Treant Protector")
+            .Items.Add("Troll Warlord")
+            .Items.Add("Tusk")
+            .Items.Add("Undying")
+            .Items.Add("Ursa")
+            .Items.Add("Vengeful Spirit")
+            .Items.Add("Venomancer")
+            .Items.Add("Viper")
+            .Items.Add("Visage")
+            .Items.Add("Warlock")
+            .Items.Add("Weaver")
+            .Items.Add("Windranger")
+            .Items.Add("Winter Wyvern")
+            .Items.Add("Witch Doctor")
+            .Items.Add("Zeus")
+        End With
     End Sub
 
     'Delete all heros which are without an itembuild by valve
