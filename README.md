@@ -19,6 +19,8 @@ DotA 2 Recommended Items Customizer
 Version 1.5 (beta6):
 - Removed drag&drop
 - Reorganize the itemlist to match with the ingame store
+- Rename 'Boots of Elvenskin' to 'Band of Elvenskin'
+- TODO: translate the UI
 
 Version 1.5 (beta5):
 - Update Heroes

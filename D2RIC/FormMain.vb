@@ -180,6 +180,50 @@ Public Class FormMain
         End If
     End Sub
 
+    Private Sub ListViewConsumables_MouseEnter(sender As Object, e As EventArgs) Handles ListViewConsumables.MouseEnter
+        ListViewConsumables.Focus()
+    End Sub
+
+    Private Sub ListViewAttributes_MouseEnter(sender As Object, e As EventArgs) Handles ListViewAttributes.MouseEnter
+        ListViewAttributes.Focus()
+    End Sub
+
+    Private Sub ListViewArmaments_MouseEnter(sender As Object, e As EventArgs) Handles ListViewArmaments.MouseEnter
+        ListViewArmaments.Focus()
+    End Sub
+
+    Private Sub ListViewArcane_MouseEnter(sender As Object, e As EventArgs) Handles ListViewArcane.MouseEnter
+        ListViewArcane.Focus()
+    End Sub
+
+    Private Sub ListViewCommon_MouseEnter(sender As Object, e As EventArgs) Handles ListViewCommon.MouseEnter
+        ListViewCommon.Focus()
+    End Sub
+
+    Private Sub ListViewSupport_MouseEnter(sender As Object, e As EventArgs) Handles ListViewSupport.MouseEnter
+        ListViewSupport.Focus()
+    End Sub
+
+    Private Sub ListViewCaster_MouseEnter(sender As Object, e As EventArgs) Handles ListViewCaster.MouseEnter
+        ListViewCaster.Focus()
+    End Sub
+
+    Private Sub ListViewWeapons_MouseEnter(sender As Object, e As EventArgs) Handles ListViewWeapons.MouseEnter
+        ListViewWeapons.Focus()
+    End Sub
+
+    Private Sub ListViewArmor_MouseEnter(sender As Object, e As EventArgs) Handles ListViewArmor.MouseEnter
+        ListViewArmor.Focus()
+    End Sub
+
+    Private Sub ListViewArtifacts_MouseEnter(sender As Object, e As EventArgs) Handles ListViewArtifacts.MouseEnter
+        ListViewArtifacts.Focus()
+    End Sub
+
+    Private Sub ListViewSecretShop_MouseEnter(sender As Object, e As EventArgs) Handles ListViewSecretShop.MouseEnter
+        ListViewSecretShop.Focus()
+    End Sub
+
     Private Sub addItem(source As ListView)
         If active_itembox.Name = "ListViewItems0" Then
             active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
@@ -490,7 +534,7 @@ Public Class FormMain
                 rename_item_name = "Boots of Speed"
                 Return rename_item_name
             Case item_name2 Like "*item_boots_of_elves"
-                rename_item_name = "Boots of Elvenskin"
+                rename_item_name = "Band of Elvenskin"
                 Return rename_item_name
             Case item_name2 Like "*item_bottle"
                 rename_item_name = "Bottle"
@@ -971,7 +1015,7 @@ Public Class FormMain
                 Return "item_bloodstone"
             Case "Boots of Speed"
                 Return "item_boots"
-            Case "Boots of Elvenskin"
+            Case "Band of Elvenskin"
                 Return "item_boots_of_elves"
             Case "Bottle"
                 Return "item_bottle"
@@ -1331,7 +1375,7 @@ Public Class FormMain
                 Return 12
             Case "Bloodstone"
                 Return 13
-            Case "Boots of Elvenskin"
+            Case "Band of Elvenskin"
                 Return 14
             Case "Boots of Speed"
                 Return 15

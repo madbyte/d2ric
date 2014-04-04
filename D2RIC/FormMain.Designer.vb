@@ -26,6 +26,18 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ListViewSecretShop = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
@@ -79,18 +91,6 @@ Partial Class FormMain
         Me.ButtonDeleteBackup = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -161,6 +161,66 @@ Partial Class FormMain
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label19
+        '
+        resources.ApplyResources(Me.Label19, "Label19")
+        Me.Label19.Name = "Label19"
+        '
+        'Label18
+        '
+        resources.ApplyResources(Me.Label18, "Label18")
+        Me.Label18.Name = "Label18"
+        '
+        'Label17
+        '
+        resources.ApplyResources(Me.Label17, "Label17")
+        Me.Label17.Name = "Label17"
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.Name = "Label13"
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.Name = "Label12"
+        '
+        'Label11
+        '
+        resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.Name = "Label11"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.Name = "Label10"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.Name = "Label8"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.Name = "Label6"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
         'CheckBox1
         '
         resources.ApplyResources(Me.CheckBox1, "CheckBox1")
@@ -177,7 +237,6 @@ Partial Class FormMain
         Me.ListViewSecretShop.ShowGroups = False
         Me.ListViewSecretShop.ShowItemToolTips = True
         Me.ListViewSecretShop.SmallImageList = Me.ImageList1
-        Me.ListViewSecretShop.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewSecretShop.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewSecretShop.UseCompatibleStateImageBehavior = False
         Me.ListViewSecretShop.View = System.Windows.Forms.View.Tile
@@ -333,7 +392,6 @@ Partial Class FormMain
         Me.ListViewArcane.ShowGroups = False
         Me.ListViewArcane.ShowItemToolTips = True
         Me.ListViewArcane.SmallImageList = Me.ImageList1
-        Me.ListViewArcane.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewArcane.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewArcane.UseCompatibleStateImageBehavior = False
         Me.ListViewArcane.View = System.Windows.Forms.View.Tile
@@ -348,7 +406,6 @@ Partial Class FormMain
         Me.ListViewArmaments.ShowGroups = False
         Me.ListViewArmaments.ShowItemToolTips = True
         Me.ListViewArmaments.SmallImageList = Me.ImageList1
-        Me.ListViewArmaments.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewArmaments.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewArmaments.UseCompatibleStateImageBehavior = False
         Me.ListViewArmaments.View = System.Windows.Forms.View.Tile
@@ -363,7 +420,6 @@ Partial Class FormMain
         Me.ListViewCommon.ShowGroups = False
         Me.ListViewCommon.ShowItemToolTips = True
         Me.ListViewCommon.SmallImageList = Me.ImageList1
-        Me.ListViewCommon.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewCommon.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewCommon.UseCompatibleStateImageBehavior = False
         Me.ListViewCommon.View = System.Windows.Forms.View.Tile
@@ -378,7 +434,6 @@ Partial Class FormMain
         Me.ListViewArtifacts.ShowGroups = False
         Me.ListViewArtifacts.ShowItemToolTips = True
         Me.ListViewArtifacts.SmallImageList = Me.ImageList1
-        Me.ListViewArtifacts.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewArtifacts.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewArtifacts.UseCompatibleStateImageBehavior = False
         Me.ListViewArtifacts.View = System.Windows.Forms.View.Tile
@@ -393,7 +448,6 @@ Partial Class FormMain
         Me.ListViewAttributes.ShowGroups = False
         Me.ListViewAttributes.ShowItemToolTips = True
         Me.ListViewAttributes.SmallImageList = Me.ImageList1
-        Me.ListViewAttributes.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewAttributes.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewAttributes.UseCompatibleStateImageBehavior = False
         Me.ListViewAttributes.View = System.Windows.Forms.View.Tile
@@ -408,7 +462,6 @@ Partial Class FormMain
         Me.ListViewArmor.ShowGroups = False
         Me.ListViewArmor.ShowItemToolTips = True
         Me.ListViewArmor.SmallImageList = Me.ImageList1
-        Me.ListViewArmor.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewArmor.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewArmor.UseCompatibleStateImageBehavior = False
         Me.ListViewArmor.View = System.Windows.Forms.View.Tile
@@ -423,7 +476,6 @@ Partial Class FormMain
         Me.ListViewSupport.ShowGroups = False
         Me.ListViewSupport.ShowItemToolTips = True
         Me.ListViewSupport.SmallImageList = Me.ImageList1
-        Me.ListViewSupport.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewSupport.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewSupport.UseCompatibleStateImageBehavior = False
         Me.ListViewSupport.View = System.Windows.Forms.View.Tile
@@ -438,7 +490,6 @@ Partial Class FormMain
         Me.ListViewConsumables.ShowGroups = False
         Me.ListViewConsumables.ShowItemToolTips = True
         Me.ListViewConsumables.SmallImageList = Me.ImageList1
-        Me.ListViewConsumables.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewConsumables.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewConsumables.UseCompatibleStateImageBehavior = False
         Me.ListViewConsumables.View = System.Windows.Forms.View.Tile
@@ -453,7 +504,6 @@ Partial Class FormMain
         Me.ListViewCaster.ShowGroups = False
         Me.ListViewCaster.ShowItemToolTips = True
         Me.ListViewCaster.SmallImageList = Me.ImageList1
-        Me.ListViewCaster.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewCaster.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewCaster.UseCompatibleStateImageBehavior = False
         Me.ListViewCaster.View = System.Windows.Forms.View.Tile
@@ -587,7 +637,6 @@ Partial Class FormMain
         Me.ListViewWeapons.ShowGroups = False
         Me.ListViewWeapons.ShowItemToolTips = True
         Me.ListViewWeapons.SmallImageList = Me.ImageList1
-        Me.ListViewWeapons.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListViewWeapons.TileSize = New System.Drawing.Size(44, 34)
         Me.ListViewWeapons.UseCompatibleStateImageBehavior = False
         Me.ListViewWeapons.View = System.Windows.Forms.View.Tile
@@ -756,66 +805,6 @@ Partial Class FormMain
         resources.ApplyResources(Me.LabelWait, "LabelWait")
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
         Me.LabelWait.Name = "LabelWait"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.Name = "Label4"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.Name = "Label5"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.Name = "Label6"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Name = "Label10"
-        '
-        'Label11
-        '
-        resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.Name = "Label11"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Name = "Label12"
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.Name = "Label13"
-        '
-        'Label17
-        '
-        resources.ApplyResources(Me.Label17, "Label17")
-        Me.Label17.Name = "Label17"
-        '
-        'Label18
-        '
-        resources.ApplyResources(Me.Label18, "Label18")
-        Me.Label18.Name = "Label18"
-        '
-        'Label19
-        '
-        resources.ApplyResources(Me.Label19, "Label19")
-        Me.Label19.Name = "Label19"
         '
         'FormMain
         '
