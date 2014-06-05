@@ -16,6 +16,11 @@ DotA 2 Recommended Items Customizer
 
 (old files can be found here https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old)
 
+Version 1.5.2:
+- Translate the UI
+- Enabled language selection
+- Update Mjollnir price
+
 Version 1.5 (beta6):
 - Removed drag&drop
 - Reorganize the itemlist to match with the ingame store
