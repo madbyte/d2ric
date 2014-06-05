@@ -117,22 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>811, 226</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Cambiar Itembuild</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 23</value>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Importar Itembuild</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Reiniciar filtro</value>
+  <data name="TabPage4.Text" xml:space="preserve">
+    <value>Exportar Itembuild</value>
+  </data>
+  <data name="TabPage5.Text" xml:space="preserve">
+    <value>Opciones D2RIC</value>
   </data>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        JQ4AAk1TRnQBSQFMAgEBiAEAAWwBAQFsAQEBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
+        JQ4AAk1TRnQBSQFMAgEBiAEAAcABAgHAAQIBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
         AwABGgEEAgABAQEAARgFAAHAAbABB/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wCJAAEFAQcBBAEFAQcBBAEGAQcBBAEGAQgBBAEGAQcBBAEFAQYBBAEGAQcBAwIG
@@ -15585,170 +15587,21 @@
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBbAAs=
 </value>
   </data>
-  <data name="Label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>583, 231</value>
-  </data>
-  <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
-  </data>
-  <data name="Label22.Text" xml:space="preserve">
-    <value>Filtrado de Tienda:</value>
-  </data>
-  <data name="ComboBox2.Items" xml:space="preserve">
-    <value>Todo</value>
-  </data>
-  <data name="ComboBox2.Items1" xml:space="preserve">
-    <value>Arcano</value>
-  </data>
-  <data name="ComboBox2.Items2" xml:space="preserve">
-    <value>Armamento</value>
-  </data>
-  <data name="ComboBox2.Items3" xml:space="preserve">
-    <value>Armadura</value>
-  </data>
-  <data name="ComboBox2.Items4" xml:space="preserve">
-    <value>Artefactos</value>
-  </data>
-  <data name="ComboBox2.Items5" xml:space="preserve">
-    <value>Atributos</value>
-  </data>
-  <data name="ComboBox2.Items7" xml:space="preserve">
-    <value>Común</value>
-  </data>
-  <data name="ComboBox2.Items8" xml:space="preserve">
-    <value>Consumibles</value>
-  </data>
-  <data name="ComboBox2.Items9" xml:space="preserve">
-    <value>Tienda secreta</value>
-  </data>
-  <data name="ComboBox2.Items10" xml:space="preserve">
-    <value>Tienda de costado</value>
-  </data>
-  <data name="ComboBox2.Items12" xml:space="preserve">
-    <value>Armas</value>
-  </data>
-  <data name="ComboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>684, 228</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
     <value>Costo:</value>
   </data>
-  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 13</value>
-  </data>
-  <data name="Label13.Text" xml:space="preserve">
-    <value>Filtrado de Ítems:</value>
-  </data>
-  <data name="ComboBox1.Items1" xml:space="preserve">
-    <value>Agilidad</value>
-  </data>
-  <data name="ComboBox1.Items2" xml:space="preserve">
-    <value>Todos los atributos</value>
-  </data>
-  <data name="ComboBox1.Items3" xml:space="preserve">
-    <value>Armadura</value>
-  </data>
-  <data name="ComboBox1.Items4" xml:space="preserve">
-    <value>Velocidad de Ataque</value>
-  </data>
-  <data name="ComboBox1.Items6" xml:space="preserve">
-    <value>Daño</value>
-  </data>
-  <data name="ComboBox1.Items7" xml:space="preserve">
-    <value>Evasión</value>
-  </data>
-  <data name="ComboBox1.Items9" xml:space="preserve">
-    <value>Regeneración de Vida por segundo</value>
-  </data>
-  <data name="ComboBox1.Items10" xml:space="preserve">
-    <value>Inteligencia</value>
-  </data>
-  <data name="ComboBox1.Items11" xml:space="preserve">
-    <value>Robo de vida</value>
-  </data>
-  <data name="ComboBox1.Items12" xml:space="preserve">
-    <value>Resistencia mágica</value>
-  </data>
-  <data name="ComboBox1.Items13" xml:space="preserve">
-    <value>Maná</value>
-  </data>
-  <data name="ComboBox1.Items14" xml:space="preserve">
-    <value>Regeneración de Maná</value>
-  </data>
-  <data name="ComboBox1.Items15" xml:space="preserve">
-    <value>Velocidad de movimiento</value>
-  </data>
-  <data name="ComboBox1.Items16" xml:space="preserve">
-    <value>Receta</value>
-  </data>
-  <data name="ComboBox1.Items17" xml:space="preserve">
-    <value>Fuerza</value>
-  </data>
-  <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>455, 228</value>
-  </data>
-  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 231</value>
-  </data>
-  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 13</value>
-  </data>
-  <data name="Label11.Text" xml:space="preserve">
-    <value>Búsqueda de Ítems:</value>
-  </data>
-  <data name="TextBoxItemsearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 228</value>
-  </data>
-  <data name="ButtonDefaultItembuild.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 653</value>
-  </data>
   <data name="ButtonDefaultItembuild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 23</value>
+    <value>125, 23</value>
   </data>
   <data name="ButtonDefaultItembuild.Text" xml:space="preserve">
     <value>Itembuild por defecto</value>
   </data>
-  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 17</value>
-  </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Mostrar sólo implementados</value>
-  </data>
-  <data name="Label24.Text" xml:space="preserve">
-    <value>Puedes borrar items con click derecho en la imagen.</value>
-  </data>
-  <data name="ComboBox3.Items" xml:space="preserve">
-    <value>Todos</value>
-  </data>
-  <data name="ComboBox3.Items1" xml:space="preserve">
-    <value>Fuerza</value>
-  </data>
-  <data name="ComboBox3.Items2" xml:space="preserve">
-    <value>Agilidad</value>
-  </data>
-  <data name="ComboBox3.Items3" xml:space="preserve">
-    <value>Inteligencia</value>
-  </data>
-  <data name="ComboBox3.Items10" xml:space="preserve">
-    <value>Tanque</value>
-  </data>
-  <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 22</value>
-  </data>
-  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
-  </data>
-  <data name="Label12.Text" xml:space="preserve">
-    <value>Organizar Héroes:</value>
-  </data>
   <data name="Label0.Text" xml:space="preserve">
     <value>Héroes</value>
-  </data>
-  <data name="ButtonOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 653</value>
   </data>
   <data name="ButtonOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -15771,15 +15624,6 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Ningún héroe seleccionado!</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 15</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Ítems al inicio</value>
-  </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>Cambiar Itembuild</value>
-  </data>
   <data name="ButtonOpenTextfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 23</value>
   </data>
@@ -15789,11 +15633,8 @@
   <data name="ButtonImport.Text" xml:space="preserve">
     <value>Importar</value>
   </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Importar Itembuild</value>
-  </data>
   <data name="ButtonSaveTextfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 23</value>
+    <value>164, 23</value>
   </data>
   <data name="ButtonSaveTextfile.Text" xml:space="preserve">
     <value>Guardar como archivo de texto</value>
@@ -15801,23 +15642,8 @@
   <data name="ButtonCopy.Text" xml:space="preserve">
     <value>Copiar</value>
   </data>
-  <data name="TabPage4.Text" xml:space="preserve">
-    <value>Exportar Itembuild</value>
-  </data>
-  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
-  </data>
-  <data name="Label10.Text" xml:space="preserve">
-    <value>Cliente</value>
-  </data>
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 19</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Buscar Actualizaciones al inicio</value>
-  </data>
   <data name="ButtonOpenBackupFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
+    <value>139, 23</value>
   </data>
   <data name="ButtonOpenBackupFolder.Text" xml:space="preserve">
     <value>Abrir carpeta de respaldos</value>
@@ -15828,20 +15654,11 @@
   <data name="Label9.Text" xml:space="preserve">
     <value>Respaldar</value>
   </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 15</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Ruta de Steam</value>
-  </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 24</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Opciones</value>
-  </data>
-  <data name="ButtonChangeSteam.Text" xml:space="preserve">
-    <value>Buscar</value>
   </data>
   <data name="ButtonBackup.Text" xml:space="preserve">
     <value>Respaldar</value>
@@ -15849,14 +15666,11 @@
   <data name="ButtonDeleteBackup.Text" xml:space="preserve">
     <value>Borrar respaldos</value>
   </data>
-  <data name="TabPage5.Text" xml:space="preserve">
-    <value>Opciones D2RIC</value>
-  </data>
   <data name="ButtonUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>773, 4</value>
+    <value>1061, 4</value>
   </data>
   <data name="ButtonUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 23</value>
+    <value>128, 23</value>
   </data>
   <data name="ButtonUpdate.Text" xml:space="preserve">
     <value>Busca actualizaciones</value>

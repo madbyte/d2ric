@@ -12,7 +12,7 @@ Public Class ImportClass
             IO.File.WriteAllText(File, FormMain.TextBox2.Text)
             If IO.File.Exists(File) Then
                 Dim ItemName As String
-                Dim ItemList As Object = FormMain.ListView2
+                Dim ItemList As Object = FormMain.ListViewItems0
                 Dim Index As Integer = 0
                 Dim price As Object = FormMain.Label15
                 Dim savePrice As Boolean = True
@@ -44,27 +44,27 @@ Public Class ImportClass
                                 FormMain.Itemslot1.Text = Itembuild.GetLabel(OldLine)
                             Case 3
                                 FormMain.Itemslot2.Text = Itembuild.GetLabel(OldLine)
-                                ItemList = FormMain.ListView3
+                                ItemList = FormMain.ListViewItems1
                                 Index = 0
                                 savePrice = False
                             Case 4
                                 FormMain.Itemslot3.Text = Itembuild.GetLabel(OldLine)
-                                ItemList = FormMain.ListView4
+                                ItemList = FormMain.ListViewItems2
                                 Index = 0
                                 savePrice = False
                             Case 5
                                 FormMain.Itemslot4.Text = Itembuild.GetLabel(OldLine)
-                                ItemList = FormMain.ListView5
+                                ItemList = FormMain.ListViewItems3
                                 Index = 0
                                 savePrice = False
                             Case 6
                                 FormMain.Itemslot5.Text = Itembuild.GetLabel(OldLine)
-                                ItemList = FormMain.ListView6
+                                ItemList = FormMain.ListViewItems4
                                 Index = 0
                                 savePrice = False
                             Case 7
                                 FormMain.Itemslot6.Text = Itembuild.GetLabel(OldLine)
-                                ItemList = FormMain.ListView7
+                                ItemList = FormMain.ListViewItems5
                                 Index = 0
                                 savePrice = False
                             Case Else

@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("DotA 2 Recommended Items Customizer")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("D2RIC")> 
-<Assembly: AssemblyCopyright("Copyright © maddy  2013")> 
+<Assembly: AssemblyCopyright("Copyright © maddy  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)> 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.2")> 
-<Assembly: AssemblyFileVersion("1.5.1.3")> 
+<Assembly: AssemblyVersion("1.0.0.3")> 
+<Assembly: AssemblyFileVersion("1.5.2.0")> 

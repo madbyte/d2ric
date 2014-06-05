@@ -117,22 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>793, 226</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Changer l' itembuild</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 23</value>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Importer itembuild</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Annuler les filtres</value>
+  <data name="TabPage4.Text" xml:space="preserve">
+    <value>Exporter Itembuild</value>
   </data>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        JQ4AAk1TRnQBSQFMAgEBiAEAAVABAQFQAQEBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
+        JQ4AAk1TRnQBSQFMAgEBiAEAAaQBAgGkAQIBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
         AwABGgEEAgABAQEAARgFAAHAAbABB/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wCJAAEFAQcBBAEFAQcBBAEGAQcBBAEGAQgBBAEGAQcBBAEFAQYBBAEGAQcBAwIG
@@ -15585,144 +15584,15 @@
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBbAAs=
 </value>
   </data>
-  <data name="Label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 231</value>
-  </data>
-  <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
-  </data>
-  <data name="Label22.Text" xml:space="preserve">
-    <value>Filtrer shop:</value>
-  </data>
-  <data name="ComboBox2.Items" xml:space="preserve">
-    <value>Tout</value>
-  </data>
-  <data name="ComboBox2.Items2" xml:space="preserve">
-    <value>Armements</value>
-  </data>
-  <data name="ComboBox2.Items3" xml:space="preserve">
-    <value>Armure</value>
-  </data>
-  <data name="ComboBox2.Items4" xml:space="preserve">
-    <value>Artefacts</value>
-  </data>
-  <data name="ComboBox2.Items5" xml:space="preserve">
-    <value>Attributs</value>
-  </data>
-  <data name="ComboBox2.Items7" xml:space="preserve">
-    <value>Commun</value>
-  </data>
-  <data name="ComboBox2.Items8" xml:space="preserve">
-    <value>Consommables</value>
-  </data>
-  <data name="ComboBox2.Items9" xml:space="preserve">
-    <value>Shop Secret</value>
-  </data>
-  <data name="ComboBox2.Items10" xml:space="preserve">
-    <value>Shop latéral</value>
-  </data>
-  <data name="ComboBox2.Items12" xml:space="preserve">
-    <value>Armes</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
     <value>Coût:</value>
   </data>
-  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 231</value>
-  </data>
-  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="Label13.Text" xml:space="preserve">
-    <value>Filtrer Items:</value>
-  </data>
-  <data name="ComboBox1.Items1" xml:space="preserve">
-    <value>Agilité</value>
-  </data>
-  <data name="ComboBox1.Items2" xml:space="preserve">
-    <value>Tout les attributs</value>
-  </data>
-  <data name="ComboBox1.Items3" xml:space="preserve">
-    <value>Armure</value>
-  </data>
-  <data name="ComboBox1.Items4" xml:space="preserve">
-    <value>Vitesse d'attaque</value>
-  </data>
-  <data name="ComboBox1.Items9" xml:space="preserve">
-    <value>Régen HP/sec</value>
-  </data>
-  <data name="ComboBox1.Items11" xml:space="preserve">
-    <value>Vol de vie</value>
-  </data>
-  <data name="ComboBox1.Items12" xml:space="preserve">
-    <value>Résistance magique</value>
-  </data>
-  <data name="ComboBox1.Items14" xml:space="preserve">
-    <value>Régen mana</value>
-  </data>
-  <data name="ComboBox1.Items15" xml:space="preserve">
-    <value>Vitesse de déplacement</value>
-  </data>
-  <data name="ComboBox1.Items16" xml:space="preserve">
-    <value>Recette</value>
-  </data>
-  <data name="ComboBox1.Items17" xml:space="preserve">
-    <value>Force</value>
-  </data>
-  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 231</value>
-  </data>
-  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
-  </data>
-  <data name="Label11.Text" xml:space="preserve">
-    <value>Recherche d'item:</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ButtonDefaultItembuild.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="ButtonDefaultItembuild.Text" xml:space="preserve">
     <value>Par défaut</value>
-  </data>
-  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 17</value>
-  </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Cacher les héros qui ne sont pas encore disponible</value>
-  </data>
-  <data name="Label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 13</value>
-  </data>
-  <data name="Label24.Text" xml:space="preserve">
-    <value>Clic droit sur l'image pour le supprimer.</value>
-  </data>
-  <data name="ComboBox3.Items" xml:space="preserve">
-    <value>Tout</value>
-  </data>
-  <data name="ComboBox3.Items1" xml:space="preserve">
-    <value>Force</value>
-  </data>
-  <data name="ComboBox3.Items2" xml:space="preserve">
-    <value>Agilité</value>
-  </data>
-  <data name="ComboBox3.Items7" xml:space="preserve">
-    <value>initiateur</value>
-  </data>
-  <data name="ComboBox3.Items9" xml:space="preserve">
-    <value>Jungleur</value>
-  </data>
-  <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 22</value>
-  </data>
-  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 13</value>
-  </data>
-  <data name="Label12.Text" xml:space="preserve">
-    <value>Type de héros:</value>
   </data>
   <data name="Label0.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -15731,13 +15601,13 @@
     <value>Héros</value>
   </data>
   <data name="ButtonOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
+    <value>146, 23</value>
   </data>
   <data name="ButtonOpenFolder.Text" xml:space="preserve">
     <value>Ouvrir le dossier Itembuilds</value>
   </data>
   <data name="ButtonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 23</value>
+    <value>82, 23</value>
   </data>
   <data name="ButtonSave.Text" xml:space="preserve">
     <value>Sauvegarder</value>
@@ -15754,35 +15624,8 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Sélectionner un Héros!</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 15</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Items de départ</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 15</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Début de jeu</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 15</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Items de base</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 15</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Item de luxe</value>
-  </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>Changer l' itembuild</value>
-  </data>
   <data name="ButtonOpenTextfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 23</value>
+    <value>120, 23</value>
   </data>
   <data name="ButtonOpenTextfile.Text" xml:space="preserve">
     <value>Recherche manuelle</value>
@@ -15790,11 +15633,8 @@
   <data name="ButtonImport.Text" xml:space="preserve">
     <value>Importer</value>
   </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Importer itembuild</value>
-  </data>
   <data name="ButtonSaveTextfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="ButtonSaveTextfile.Text" xml:space="preserve">
     <value>Enregister fichier texte</value>
@@ -15802,68 +15642,50 @@
   <data name="ButtonCopy.Text" xml:space="preserve">
     <value>Copier</value>
   </data>
-  <data name="TabPage4.Text" xml:space="preserve">
-    <value>Exporter Itembuild</value>
-  </data>
   <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
     <value>Langue</value>
   </data>
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 19</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Recherche de mise à jour au lancement</value>
-  </data>
   <data name="ButtonOpenBackupFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 23</value>
+    <value>174, 23</value>
   </data>
   <data name="ButtonOpenBackupFolder.Text" xml:space="preserve">
     <value>Ouvrir le dossier de sauvegarde</value>
   </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 15</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Chemin du dossier Steam</value>
-  </data>
-  <data name="ButtonChangeSteam.Text" xml:space="preserve">
-    <value>Recherche</value>
-  </data>
   <data name="ButtonBackup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 23</value>
+    <value>84, 23</value>
   </data>
   <data name="ButtonBackup.Text" xml:space="preserve">
     <value>Sauvergarder</value>
   </data>
   <data name="ButtonDeleteBackup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 274</value>
+    <value>121, 174</value>
   </data>
   <data name="ButtonDeleteBackup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 23</value>
+    <value>126, 23</value>
   </data>
   <data name="ButtonDeleteBackup.Text" xml:space="preserve">
     <value>Supprimer sauvegarde</value>
   </data>
   <data name="ButtonUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>759, 4</value>
+    <value>1045, 4</value>
   </data>
   <data name="ButtonUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>144, 23</value>
   </data>
   <data name="ButtonUpdate.Text" xml:space="preserve">
     <value>rechercher une mise à jour</value>
   </data>
   <data name="LabelWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 1</value>
+    <value>600, 1</value>
   </data>
   <data name="LabelWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>373, 26</value>
+    <value>401, 26</value>
   </data>
   <data name="LabelWait.Text" xml:space="preserve">
-    <value>recherche de mise à jour en cours</value>
+    <value>recherche de mise à jour en cours ...</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
