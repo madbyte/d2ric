@@ -1796,7 +1796,7 @@ Public Class ItembuildClass
             Case "Mithril Hammer"
                 Return 1600
             Case "Mjollnir"
-                Return 5300
+                Return 5600
             Case "Monkey King Bar"
                 Return 5400
             Case "Morbid Mask"
@@ -1986,7 +1986,7 @@ Public Class ItembuildClass
             Case "Desolator (Recipe)"
                 Return 900
             Case "Mjollnir (Recipe)"
-                Return 600
+                Return 900
             Case "Satanic (Recipe)"
                 Return 1100
             Case "Yasha (Recipe)"
