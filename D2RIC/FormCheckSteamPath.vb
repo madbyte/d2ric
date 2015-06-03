@@ -72,12 +72,14 @@ Public Class FormCheckSteamPath
 
         ' Get registery key
         Dim dota2Key = Registry.LocalMachine.OpenSubKey("SOFTWARE\" + If(Is64Bit, "Wow6432Node\", "") + "Microsoft\Windows\CurrentVersion\Uninstall\Steam App 570")
-        If Not String.IsNullOrEmpty(dota2Key.ToString) Then
-            ' Get installation directory of Dota2
-            Dim dotaKeyValue = dota2Key.GetValue("InstallLocation")
-            If Not String.IsNullOrEmpty(dotaKeyValue.ToString) Then
-                Dota2Path = dotaKeyValue.ToString()
-                Return
+        If dota2Key IsNot Nothing Then
+            If Not String.IsNullOrEmpty(dota2Key.ToString) Then
+                ' Get installation directory of Dota2
+                Dim dotaKeyValue = dota2Key.GetValue("InstallLocation")
+                If Not String.IsNullOrEmpty(dotaKeyValue.ToString) Then
+                    Dota2Path = dotaKeyValue.ToString()
+                    Return
+                End If
             End If
         End If
         Dota2Path = "Error!"

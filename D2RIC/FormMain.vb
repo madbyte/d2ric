@@ -806,7 +806,7 @@ Public Class FormMain
             Case item_name2 Like "*item_ward_sentry"
                 rename_item_name = "Sentry Ward"
                 Return rename_item_name
-            Case item_name2 Like "*item_sheepstick"
+            Case item_name2 Like "*item_sheep"
                 rename_item_name = "Scythe of Vyse"
                 Return rename_item_name
             Case item_name2 Like "*item_shivas_guard"
@@ -976,6 +976,36 @@ Public Class FormMain
                 Return "Maelstrom (Recipe)"
             Case item_name2 Like "*item_shadow_amulet"
                 Return "Shadow Amulet"
+            Case item_name2 Like "*item_silver_edge"
+                rename_item_name = "Silver Edge"
+                Return rename_item_name
+            Case item_name2 Like "*item_glimmer_cape"
+                rename_item_name = "Glimmer Cape"
+                Return rename_item_name
+            Case item_name2 Like "*item_octarine_core"
+                rename_item_name = "Octarine Core"
+                Return rename_item_name
+            Case item_name2 Like "*item_guardian_greaves"
+                rename_item_name = "Guardian Greaves"
+                Return rename_item_name
+            Case item_name2 Like "*item_solar_crest"
+                rename_item_name = "Solar Crest"
+                Return rename_item_name
+            Case item_name2 Like "*item_travel_boots_2"
+                rename_item_name = "Travel Boots 2"
+                Return rename_item_name
+            Case item_name2 Like "*item_lotus_orb"
+                rename_item_name = "Lotus Orb"
+                Return rename_item_name
+            Case item_name2 Like "*item_crimson_guard"
+                rename_item_name = "Crimson Guard"
+                Return rename_item_name
+            Case item_name2 Like "*item_moon_shard"
+                rename_item_name = "Moon Shard"
+                Return rename_item_name
+            Case item_name2 Like "*item_enchanted_mango"
+                rename_item_name = "Mango"
+                Return rename_item_name
             Case Else
                 rename_item_name = "Error!"
                 Return rename_item_name
@@ -1198,7 +1228,7 @@ Public Class FormMain
             Case "Sentry Ward"
                 Return "item_ward_sentry"
             Case "Scythe of Vyse"
-                Return "item_sheepstick"
+                Return "item_sheep"
             Case "Shiva's Guard"
                 Return "item_shivas_guard"
             Case "Eye of Skadi"
@@ -1339,6 +1369,26 @@ Public Class FormMain
                 Return "item_recipe_maelstrom"
             Case "Shadow Amulet"
                 Return "item_shadow_amulet"
+            Case "Silver Edge"
+                Return "item_silver_edge"
+            Case "Glimmer Cape"
+                Return "item_glimmer_cape"
+            Case "Octarine Core"
+                Return "item_octarine_core"
+            Case "Guardian Greaves"
+                Return "item_guardian_greaves"
+            Case "Solar Crest"
+                Return "item_solar_crest"
+            Case "Travel Boots 2"
+                Return "item_travel_boots_2"
+            Case "Lotus Orb"
+                Return "item_lotus_orb"
+            Case "Crimson Guard"
+                Return "item_crimson_guard"
+            Case "Moon Shard"
+                Return "item_moon_shard"
+            Case "Mango"
+                Return "item_enchanted_mango"
             Case Else
                 Return "Error! Itemname: " + item_name
         End Select

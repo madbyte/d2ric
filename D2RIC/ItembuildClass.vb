@@ -22,6 +22,7 @@ Public Class ItembuildClass
             .Clear()
             ' Create items and add them to ListView.
             .Items.Add(New ListViewItem(New String() {"Clarity", "Consumables"}, 24))
+            .Items.Add(New ListViewItem(New String() {"Mango", "Consumables"}, 134))
             .Items.Add(New ListViewItem(New String() {"Tango", "Consumables"}, 122))
             .Items.Add(New ListViewItem(New String() {"Healing Salve", "Consumables"}, 54))
             .Items.Add(New ListViewItem(New String() {"Smoke of Deceit", "Consumables"}, 116))
@@ -53,7 +54,6 @@ Public Class ItembuildClass
             .Items.Add(New ListViewItem(New String() {"Ogre Club", "Attributes"}, 83))
             .Items.Add(New ListViewItem(New String() {"Blade of Alacrity", "Attributes"}, 10))
             .Items.Add(New ListViewItem(New String() {"Staff of Wizardry", "Attributes"}, 119))
-            .Items.Add(New ListViewItem(New String() {"Ultimate Orb", "Attributes"}, 125))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -65,16 +65,16 @@ Public Class ItembuildClass
             .Clear()
             ' Create items and add them to ListView.
             .Items.Add(New ListViewItem(New String() {"Ring of Protection", "Armaments"}, 101))
-            .Items.Add(New ListViewItem(New String() {"Quelling Blade", "Armaments"}, 94))
             .Items.Add(New ListViewItem(New String() {"Stout Shield", "Armaments"}, 120))
+            .Items.Add(New ListViewItem(New String() {"Quelling Blade", "Armaments"}, 94))
+            .Items.Add(New ListViewItem(New String() {"Orb of Venom", "Armaments"}, 84))
             .Items.Add(New ListViewItem(New String() {"Blades of Attack", "Armaments"}, 11))
             .Items.Add(New ListViewItem(New String() {"Chainmail", "Armaments"}, 22))
+            .Items.Add(New ListViewItem(New String() {"Quarterstaff", "Armaments"}, 93))
             .Items.Add(New ListViewItem(New String() {"Helm of Iron Will", "Armaments"}, 57))
             .Items.Add(New ListViewItem(New String() {"Broadsword", "Armaments"}, 19))
-            .Items.Add(New ListViewItem(New String() {"Quarterstaff", "Armaments"}, 93))
             .Items.Add(New ListViewItem(New String() {"Claymore", "Armaments"}, 25))
             .Items.Add(New ListViewItem(New String() {"Javelin", "Armaments"}, 62))
-            .Items.Add(New ListViewItem(New String() {"Platemail", "Armaments"}, 89))
             .Items.Add(New ListViewItem(New String() {"Mithril Hammer", "Armaments"}, 72))
 
             'Add Tooltips to Listview
@@ -92,12 +92,13 @@ Public Class ItembuildClass
             .Items.Add(New ListViewItem(New String() {"Boots of Speed", "Arcane"}, 15))
             .Items.Add(New ListViewItem(New String() {"Gloves of Haste", "Arcane"}, 51))
             .Items.Add(New ListViewItem(New String() {"Cloak", "Arcane"}, 26))
+            .Items.Add(New ListViewItem(New String() {"Ring of Health", "Arcane"}, 100))
+            .Items.Add(New ListViewItem(New String() {"Void Stone", "Arcane"}, 131))
             .Items.Add(New ListViewItem(New String() {"Gem of True Sight", "Arcane"}, 49))
             .Items.Add(New ListViewItem(New String() {"Morbid Mask", "Arcane"}, 75))
-            .Items.Add(New ListViewItem(New String() {"Ghost Scepter", "Arcane"}, 50))
-            .Items.Add(New ListViewItem(New String() {"Talisman of Evasion", "Arcane"}, 121))
-            .Items.Add(New ListViewItem(New String() {"Blink Dagger", "Arcane"}, 12))
             .Items.Add(New ListViewItem(New String() {"Shadow Amulet", "Arcane"}, 135))
+            .Items.Add(New ListViewItem(New String() {"Ghost Scepter", "Arcane"}, 50))
+            .Items.Add(New ListViewItem(New String() {"Blink Dagger", "Arcane"}, 12))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -108,23 +109,23 @@ Public Class ItembuildClass
         With FormMain.ListViewCommon
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Wraith Band", "Common"}, 132))
+            .Items.Add(New ListViewItem(New String() {"Magic Wand", "Common"}, 66))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Wraith Band (Recipe)", "Common"}, 134))
+                .Items.Add(New ListViewItem(New String() {"Magic Wand (Recipe)", "Common"}, 134))
             End If
             .Items.Add(New ListViewItem(New String() {"Null Talisman", "Common"}, 80))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Null Talisman (Recipe)", "Common"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Magic Wand", "Common"}, 66))
+            .Items.Add(New ListViewItem(New String() {"Wraith Band", "Common"}, 132))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Magic Wand (Recipe)", "Common"}, 134))
+                .Items.Add(New ListViewItem(New String() {"Wraith Band (Recipe)", "Common"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Poor Man's Shield", "Common"}, 91))
             .Items.Add(New ListViewItem(New String() {"Bracer", "Common"}, 18))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Bracer (Recipe)", "Common"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Poor Man's Shield", "Common"}, 91))
             .Items.Add(New ListViewItem(New String() {"Soul Ring", "Common"}, 118))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Soul Ring (Recipe)", "Common"}, 134))
@@ -141,6 +142,8 @@ Public Class ItembuildClass
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Boots of Travel (Recipe)", "Common"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Boots of Travel 2", "Common"}, 134))
+            .Items.Add(New ListViewItem(New String() {"Moon Shard", "Common"}, 134))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -164,8 +167,8 @@ Public Class ItembuildClass
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Urn of Shadows (Recipe)", "Support"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Ring of Aquila", "Support"}, 98))
             .Items.Add(New ListViewItem(New String() {"Tranquil Boots", "Support"}, 124))
+            .Items.Add(New ListViewItem(New String() {"Ring of Aquila", "Support"}, 98))
             .Items.Add(New ListViewItem(New String() {"Medallion of Courage", "Support"}, 70))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Medallion of Courage (Recipe)", "Support"}, 134))
@@ -175,18 +178,19 @@ Public Class ItembuildClass
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Drum of Endurance (Recipe)", "Support"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Vladmir's Offering", "Support"}, 130))
-            If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support"}, 134))
-            End If
             .Items.Add(New ListViewItem(New String() {"Mekansm", "Support"}, 71))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Mekansm (Recipe)", "Support"}, 134))
+            End If
+            .Items.Add(New ListViewItem(New String() {"Vladmir's Offering", "Support"}, 130))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support"}, 134))
             End If
             .Items.Add(New ListViewItem(New String() {"Pipe of Insight", "Support"}, 88))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Pipe of Insight (Recipe)", "Support"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Guardian Greaves", "Support"}, 134))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -197,19 +201,20 @@ Public Class ItembuildClass
         With FormMain.ListViewCaster
             .Clear()
             ' Create items and add them to ListView.
+            .Items.Add(New ListViewItem(New String() {"Glimmer Cape", "Caster"}, 134))
             .Items.Add(New ListViewItem(New String() {"Force Staff", "Caster"}, 47))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Force Staff (Recipe)", "Caster"}, 134))
+            End If
+            .Items.Add(New ListViewItem(New String() {"Veil of Discord", "Caster"}, 128))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster"}, 134))
             End If
             .Items.Add(New ListViewItem(New String() {"Necronomicon 1", "Caster"}, 77))
             .Items.Add(New ListViewItem(New String() {"Necronomicon 2", "Caster"}, 78))
             .Items.Add(New ListViewItem(New String() {"Necronomicon 3", "Caster"}, 79))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Necronomicon (Recipe)", "Caster"}, 134))
-            End If
-            .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity", "Caster"}, 44))
-            If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster"}, 134))
             End If
             .Items.Add(New ListViewItem(New String() {"Dagon 1", "Caster"}, 29))
             .Items.Add(New ListViewItem(New String() {"Dagon 2", "Caster"}, 30))
@@ -219,21 +224,23 @@ Public Class ItembuildClass
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Dagon (Recipe)", "Caster"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Veil of Discord", "Caster"}, 128))
+            .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity", "Caster"}, 44))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster"}, 134))
+                .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Solar Crest", "Caster"}, 134))
             .Items.Add(New ListViewItem(New String() {"Rod of Atos", "Caster"}, 104))
-            .Items.Add(New ListViewItem(New String() {"Aghanim's Scepter", "Caster"}, 1))
             .Items.Add(New ListViewItem(New String() {"Orchid Malevolence", "Caster"}, 85))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Orchid Malevolence (Recipe)", "Caster"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Aghanim's Scepter", "Caster"}, 1))
             .Items.Add(New ListViewItem(New String() {"Refresher Orb", "Caster"}, 97))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Refresher Orb (Recipe)", "Caster"}, 134))
             End If
             .Items.Add(New ListViewItem(New String() {"Scythe of Vyse", "Caster"}, 110))
+            .Items.Add(New ListViewItem(New String() {"Octarine Core", "Caster"}, 134))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -252,13 +259,14 @@ Public Class ItembuildClass
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Armlet (Recipe)", "Weapons"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Shadow Blade", "Weapons"}, 112))
             .Items.Add(New ListViewItem(New String() {"Skull Basher", "Weapons"}, 114))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Shadow Blade", "Weapons"}, 112))
             .Items.Add(New ListViewItem(New String() {"Battle Fury", "Weapons"}, 6))
             .Items.Add(New ListViewItem(New String() {"Ethereal Blade", "Weapons"}, 43))
+            .Items.Add(New ListViewItem(New String() {"Silver Edge", "Weapons"}, 134))
             .Items.Add(New ListViewItem(New String() {"Radiance", "Weapons"}, 95))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Radiance (Recipe)", "Weapons"}, 134))
@@ -282,22 +290,24 @@ Public Class ItembuildClass
             .Clear()
             ' Create items and add them to ListView.
             .Items.Add(New ListViewItem(New String() {"Hood of Defiance", "Armor"}, 59))
-            .Items.Add(New ListViewItem(New String() {"Blade Mail", "Armor"}, 9))
             .Items.Add(New ListViewItem(New String() {"Vanguard", "Armor"}, 127))
+            .Items.Add(New ListViewItem(New String() {"Blade Mail", "Armor"}, 9))
             .Items.Add(New ListViewItem(New String() {"Soul Booster", "Armor"}, 117))
+            .Items.Add(New ListViewItem(New String() {"Crimson Guard", "Armor"}, 134))
             .Items.Add(New ListViewItem(New String() {"Black King Bar", "Armor"}, 8))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Lotus Orb", "Armor"}, 134))
             .Items.Add(New ListViewItem(New String() {"Shiva's Guard", "Armor"}, 113))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Bloodstone", "Armor"}, 13))
             .Items.Add(New ListViewItem(New String() {"Manta Style", "Armor"}, 67))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Manta Style (Recipe)", "Armor"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Bloodstone", "Armor"}, 13))
             .Items.Add(New ListViewItem(New String() {"Linken's Sphere", "Armor"}, 63))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor"}, 134))
@@ -320,11 +330,11 @@ Public Class ItembuildClass
         With FormMain.ListViewArtifacts
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Helm of the Dominator", "Artifacts"}, 58))
             .Items.Add(New ListViewItem(New String() {"Mask of Madness", "Artifacts"}, 69))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact"}, 134))
             End If
+            .Items.Add(New ListViewItem(New String() {"Helm of the Dominator", "Artifacts"}, 58))
             .Items.Add(New ListViewItem(New String() {"Sange", "Artifacts"}, 107))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Sange (Recipe)", "Artifact"}, 134))
@@ -348,11 +358,11 @@ Public Class ItembuildClass
             End If
             .Items.Add(New ListViewItem(New String() {"Heaven's Halberd", "Artifacts"}, 56))
             .Items.Add(New ListViewItem(New String() {"Sange and Yasha", "Artifacts"}, 108))
+            .Items.Add(New ListViewItem(New String() {"Eye of Skadi", "Artifacts"}, 45))
             .Items.Add(New ListViewItem(New String() {"Mjollnir", "Artifacts"}, 73))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact"}, 134))
             End If
-            .Items.Add(New ListViewItem(New String() {"Eye of Skadi", "Artifacts"}, 45))
             .Items.Add(New ListViewItem(New String() {"Satanic", "Artifacts"}, 109))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(New ListViewItem(New String() {"Satanic (Recipe)", "Artifact"}, 134))
@@ -367,18 +377,18 @@ Public Class ItembuildClass
         With FormMain.ListViewSecretShop
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Demon Edge", "Secret Shop"}, 34))
-            .Items.Add(New ListViewItem(New String() {"Eaglesong", "Secret Shop"}, 41))
-            .Items.Add(New ListViewItem(New String() {"Reaver", "Secret Shop"}, 96))
-            .Items.Add(New ListViewItem(New String() {"Sacred Relic", "Secret Shop"}, 105))
-            .Items.Add(New ListViewItem(New String() {"Hyperstone", "Secret Shop"}, 60))
-            .Items.Add(New ListViewItem(New String() {"Ring of Health", "Secret Shop"}, 100))
-            .Items.Add(New ListViewItem(New String() {"Void Stone", "Secret Shop"}, 131))
-            .Items.Add(New ListViewItem(New String() {"Mystic Staff", "Secret Shop"}, 76))
             .Items.Add(New ListViewItem(New String() {"Energy Booster", "Secret Shop"}, 42))
-            .Items.Add(New ListViewItem(New String() {"Point Booster", "Secret Shop"}, 90))
             .Items.Add(New ListViewItem(New String() {"Vitality Booster", "Secret Shop"}, 129))
-            .Items.Add(New ListViewItem(New String() {"Orb of Venom", "Secret Shop"}, 84))
+            .Items.Add(New ListViewItem(New String() {"Point Booster", "Secret Shop"}, 90))
+            .Items.Add(New ListViewItem(New String() {"Platemail", "Secret Shop"}, 89))
+            .Items.Add(New ListViewItem(New String() {"Talisman of Evasion", "Secret Shop"}, 121))
+            .Items.Add(New ListViewItem(New String() {"Hyperstone", "Secret Shop"}, 60))
+            .Items.Add(New ListViewItem(New String() {"Ultimate Orb", "Secret Shop"}, 125))
+            .Items.Add(New ListViewItem(New String() {"Demon Edge", "Secret Shop"}, 34))
+            .Items.Add(New ListViewItem(New String() {"Mystic Staff", "Secret Shop"}, 76))
+            .Items.Add(New ListViewItem(New String() {"Reaver", "Secret Shop"}, 96))
+            .Items.Add(New ListViewItem(New String() {"Eaglesong", "Secret Shop"}, 41))
+            .Items.Add(New ListViewItem(New String() {"Sacred Relic", "Secret Shop"}, 105))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -976,9 +986,11 @@ Public Class ItembuildClass
                 hero = "Phoenix"
             Case hero Like "npc_dota_hero_terrorblade"
                 hero = "Terrorblade"
+            Case hero Like "npc_dota_hero_techies"
+                hero = "Techies"
+            Case hero Like "npc_dota_hero_winter_wyvern"
+                hero = "Winter Wyvern"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case hero Like "npc_dota_hero_goblin_techies"
-                hero = "Goblin Techies"
             Case hero Like "npc_dota_hero_abyssal_underlord"
                 hero = "Abyssal Underlord"
             Case Else
@@ -996,6 +1008,8 @@ Public Class ItembuildClass
                 Selected_Hero = "antimage"
             Case "Bounty Hunter"
                 Selected_Hero = "bounty_hunter"
+            Case "Centaur Warrunner"
+                Selected_Hero = "centaur"
             Case "Chaos Knight"
                 Selected_Hero = "chaos_knight"
             Case "Clockwerk"
@@ -1012,28 +1026,42 @@ Public Class ItembuildClass
                 Selected_Hero = "dragon_knight"
             Case "Drow Ranger"
                 Selected_Hero = "drow_ranger"
+            Case "Earth Spirit"
+                Selected_Hero = "earth_spirit"
+            Case "Elder Titan"
+                Selected_Hero = "elder_titan"
+            Case "Ember Spirit"
+                Selected_Hero = "ember_spirit"
             Case "Faceless Void"
                 Selected_Hero = "faceless_void"
+            Case "Io"
+                Selected_Hero = "wisp"
             Case "Keeper of the Light"
                 Selected_Hero = "keeper_of_the_light"
-            Case "Templar Assassin"
-                Selected_Hero = "templar_assassin"
+            Case "Legion Commander"
+                Selected_Hero = "legion_commander"
             Case "Lifestealer"
                 Selected_Hero = "life_stealer"
             Case "Lone Druid"
                 Selected_Hero = "lone_druid"
-            Case "Phantom Assassin"
-                Selected_Hero = "phantom_assassin"
-            Case "Nyx Assassin"
-                Selected_Hero = "nyx_assassin"
+            Case "Magnus"
+                Selected_Hero = "magnataur"
+            Case "Naga Siren"
+                Selected_Hero = "naga_siren"
             Case "Nature's Prophet"
                 Selected_Hero = "furion"
+            Case "Necrophos"
+                Selected_Hero = "necrolyte"
             Case "Night Stalker"
                 Selected_Hero = "night_stalker"
+            Case "Nyx Assassin"
+                Selected_Hero = "nyx_assassin"
             Case "Ogre Magi"
                 Selected_Hero = "ogre_magi"
             Case "Outworld Devourer"
                 Selected_Hero = "obsidian_destroyer"
+            Case "Phantom Assassin"
+                Selected_Hero = "phantom_assassin"
             Case "Phantom Lancer"
                 Selected_Hero = "phantom_lancer"
             Case "Queen of Pain"
@@ -1048,47 +1076,33 @@ Public Class ItembuildClass
                 Selected_Hero = "shadow_shaman"
             Case "Skeleton King"
                 Selected_Hero = "skeleton_king"
+            Case "Skywrath Mage"
+                Selected_Hero = "skywrath_mage"
             Case "Spirit Breaker"
                 Selected_Hero = "spirit_breaker"
             Case "Storm Spirit"
                 Selected_Hero = "storm_spirit"
+            Case "Techies"
+                Selected_Hero = "techies"
+            Case "Templar Assassin"
+                Selected_Hero = "templar_assassin"
+            Case "Timbersaw"
+                Selected_Hero = "shredder"
             Case "Treant Protector"
                 Selected_Hero = "treant"
+            Case "Troll Warlord"
+                Selected_Hero = "troll_warlord"
             Case "Vengeful Spirit"
                 Selected_Hero = "vengefulspirit"
+            Case "Windranger"
+                Selected_Hero = "windrunner"
+            Case "Winter Wyvern"
+                Selected_Hero = "winter_wyvern"
             Case "Witch Doctor"
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
-            Case "Centaur Warrunner"
-                Selected_Hero = "centaur"
-            Case "Troll Warlord"
-                Selected_Hero = "troll_warlord"
-            Case "Naga Siren"
-                Selected_Hero = "naga_siren"
-            Case "Magnus"
-                Selected_Hero = "magnataur"
-            Case "Timbersaw"
-                Selected_Hero = "shredder"
-            Case "Earth Spirit"
-                Selected_Hero = "earth_spirit"
-            Case "Elder Titan"
-                Selected_Hero = "elder_titan"
-            Case "Ember Spirit"
-                Selected_Hero = "ember_spirit"
-            Case "Legion Commander"
-                Selected_Hero = "legion_commander"
-            Case "Skywrath Mage"
-                Selected_Hero = "skywrath_mage"
-            Case "Io"
-                Selected_Hero = "wisp"
-            Case "Necrophos"
-                Selected_Hero = "necrolyte"
-            Case "Windranger"
-                Selected_Hero = "windrunner"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case "Goblin Techies"
-                Selected_Hero = "goblin_techies"
             Case "Abyssal Underlord"
                 Selected_Hero = "abyssal_underlord"
             Case Else
@@ -1141,7 +1155,6 @@ Public Class ItembuildClass
             .Items.Add("Enchantress")
             .Items.Add("Enigma")
             .Items.Add("Faceless Void")
-            .Items.Add("Goblin Techies")
             .Items.Add("Gyrocopter")
             .Items.Add("Huskar")
             .Items.Add("Invoker")
@@ -1193,12 +1206,13 @@ Public Class ItembuildClass
             .Items.Add("Slardar")
             .Items.Add("Slark")
             .Items.Add("Sniper")
-            .Items.Add("Terrorblade")
             .Items.Add("Spectre")
             .Items.Add("Spirit Breaker")
             .Items.Add("Storm Spirit")
             .Items.Add("Sven")
+            .Items.Add("Techies")
             .Items.Add("Templar Assassin")
+            .Items.Add("Terrorblade")
             .Items.Add("Tidehunter")
             .Items.Add("Timbersaw")
             .Items.Add("Tinker")
@@ -1226,9 +1240,6 @@ Public Class ItembuildClass
         With FormMain.ListBox1
             .Items.Remove("Abyssal Underlord")
             .Items.Remove("Arc Warden")
-            .Items.Remove("Goblin Techies")
-            .Items.Remove("Oracle")
-            .Items.Remove("Winter Wyvern")
         End With
     End Sub
 
@@ -1477,7 +1488,7 @@ Public Class ItembuildClass
                 tooltip = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Observer Ward"
-                tooltip = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
+                tooltip = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "1 Charges" + vbNewLine + "shares inventory slot with Sentry Ward"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ogre Club"
                 tooltip = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
@@ -1531,7 +1542,7 @@ Public Class ItembuildClass
                 tooltip = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Protection"
-                tooltip = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
+                tooltip = "Ring of Protection" + vbNewLine + vbNewLine + "+3 Armor"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Regen"
                 tooltip = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
@@ -1558,7 +1569,7 @@ Public Class ItembuildClass
                 tooltip = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sentry Ward"
-                tooltip = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "2 Charges"
+                tooltip = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "1 Charges" + vbNewLine + "shares inventory slot with Observer Ward"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Shadow Blade"
                 tooltip = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
@@ -1649,20 +1660,23 @@ Public Class ItembuildClass
     'Return the price of each item
     Public Function GetPrice(ByVal itemname As String) As Integer
         Select Case itemname
+            'Items (abc-sorted)
             Case "Abyssal Blade"
                 Return 6750
             Case "Aghanim's Scepter"
                 Return 4200
             Case "Animal Courier"
-                Return 150
+                Return 120
             Case "Arcane Boots"
-                Return 1450
+                Return 1350
             Case "Armlet"
-                Return 2600
+                Return 2370
             Case "Assault Cuirass"
                 Return 5250
+            Case "Band of Elvenskin"
+                Return 450
             Case "Battle Fury"
-                Return 4350
+                Return 4575
             Case "Belt of Strength"
                 Return 450
             Case "Black King Bar"
@@ -1672,19 +1686,19 @@ Public Class ItembuildClass
             Case "Blade of Alacrity"
                 Return 1000
             Case "Blades of Attack"
-                Return 450
+                Return 420
             Case "Blink Dagger"
-                Return 2150
+                Return 2250
             Case "Bloodstone"
-                Return 5050
-            Case "Band of Elvenskin"
-                Return 450
+                Return 4900
             Case "Boots of Speed"
                 Return 450
             Case "Boots of Travel"
                 Return 2450
+            Case "Boots of Travel 2"
+                Return 4450
             Case "Bottle"
-                Return 650
+                Return 700
             Case "Bracer"
                 Return 525
             Case "Broadsword"
@@ -1692,21 +1706,23 @@ Public Class ItembuildClass
             Case "Buckler"
                 Return 800
             Case "Butterfly"
-                Return 6000
+                Return 5875
             Case "Chainmail"
                 Return 550
             Case "Circlet"
-                Return 185
+                Return 165
             Case "Clarity"
                 Return 50
             Case "Claymore"
                 Return 1400
             Case "Cloak"
                 Return 550
+            Case "Crimson Guard"
+                Return 3800
             Case "Crystalys"
-                Return 2150
+                Return 2120
             Case "Daedalus"
-                Return 5550
+                Return 5520
             Case "Dagon 1"
                 Return 2720
             Case "Dagon 2"
@@ -1720,11 +1736,11 @@ Public Class ItembuildClass
             Case "Demon Edge"
                 Return 2400
             Case "Desolator"
-                Return 4100
+                Return 3500
             Case "Diffusal Blade 1"
-                Return 3300
+                Return 3150
             Case "Diffusal Blade 2"
-                Return 3300 + 850
+                Return 3150 + 700
             Case "Divine Rapier"
                 Return 6200
             Case "Drum of Endurance"
@@ -1732,17 +1748,17 @@ Public Class ItembuildClass
             Case "Dust of Appearance"
                 Return 180
             Case "Eaglesong"
-                Return 3300
+                Return 3200
             Case "Energy Booster"
-                Return 1000
+                Return 900
             Case "Ethereal Blade"
-                Return 4900
+                Return 4700
             Case "Eul's Scepter of Divinity"
-                Return 2700
+                Return 2850
             Case "Eye of Skadi"
                 Return 5675
             Case "Flying Courier"
-                Return 370
+                Return 220
             Case "Force Staff"
                 Return 2250
             Case "Gauntlets of Strength"
@@ -1750,15 +1766,19 @@ Public Class ItembuildClass
             Case "Gem of True Sight"
                 Return 900
             Case "Ghost Scepter"
-                Return 1600
+                Return 1500
+            Case "Glimmer Cape"
+                Return 1950
             Case "Gloves of Haste"
                 Return 500
+            Case "Guardian Greaves"
+                Return 5300
             Case "Hand of Midas"
                 Return 2050
             Case "Headdress"
                 Return 600
             Case "Healing Salve"
-                Return 115
+                Return 110
             Case "Heart of Tarrasque"
                 Return 5500
             Case "Heaven's Halberd"
@@ -1777,28 +1797,34 @@ Public Class ItembuildClass
                 Return 1500
             Case "Linken's Sphere"
                 Return 5175
+            Case "Lotus Orb"
+                Return 4050
             Case "Maelstrom"
-                Return 2700
+                Return 2800
             Case "Magic Stick"
                 Return 200
             Case "Magic Wand"
-                Return 500
+                Return 465
+            Case "Mango"
+                Return 150
             Case "Manta Style"
-                Return 5050
+                Return 4950
             Case "Mantle of Intelligence"
                 Return 150
             Case "Mask of Madness"
-                Return 1900
+                Return 1800
             Case "Medallion of Courage"
-                Return 1075
+                Return 1200
             Case "Mekansm"
                 Return 2300
             Case "Mithril Hammer"
                 Return 1600
             Case "Mjollnir"
-                Return 5600
+                Return 5700
             Case "Monkey King Bar"
                 Return 5400
+            Case "Moon Shard"
+                Return 4300
             Case "Morbid Mask"
                 Return 900
             Case "Mystic Staff"
@@ -1812,47 +1838,49 @@ Public Class ItembuildClass
             Case "Null Talisman"
                 Return 470
             Case "Oblivion Staff"
-                Return 1675
+                Return 1650
             Case "Observer Ward"
-                Return 150
+                Return 75
+            Case "Octarine Core"
+                Return 5900
             Case "Ogre Club"
                 Return 1000
             Case "Orb of Venom"
                 Return 275
             Case "Orchid Malevolence"
-                Return 4125
+                Return 4075
             Case "Perseverance"
                 Return 1750
             Case "Phase Boots"
-                Return 1350
+                Return 1290
             Case "Pipe of Insight"
-                Return 3625
+                Return 3525
             Case "Platemail"
                 Return 1400
             Case "Point Booster"
                 Return 1200
             Case "Poor Man's Shield"
-                Return 550
+                Return 500
             Case "Power Treads"
                 Return 1400
             Case "Quarterstaff"
-                Return 900
+                Return 875
             Case "Quelling Blade"
                 Return 225
             Case "Radiance"
-                Return 5150
-            Case "Reaver"
-                Return 3200
-            Case "Refresher Orb"
                 Return 5225
+            Case "Reaver"
+                Return 3000
+            Case "Refresher Orb"
+                Return 5300
             Case "Ring of Aquila"
-                Return 985
+                Return 1010
             Case "Ring of Basilius"
-                Return 500
+                Return 525
             Case "Ring of Health"
                 Return 875
             Case "Ring of Protection"
-                Return 175
+                Return 200
             Case "Ring of Regen"
                 Return 350
             Case "Robe of the Magi"
@@ -1868,139 +1896,144 @@ Public Class ItembuildClass
             Case "Sange and Yasha"
                 Return 4100
             Case "Satanic"
-                Return 6150
+                Return 5950
             Case "Scythe of Vyse"
                 Return 5675
             Case "Sentry Ward"
                 Return 200
+            Case "Shadow Amulet"
+                Return 1400
             Case "Shadow Blade"
-                Return 3000
+                Return 2800
             Case "Shiva's Guard"
                 Return 4700
+            Case "Silver Edge"
+                Return 5200
             Case "Skull Basher"
                 Return 2950
             Case "Slippers of Agility"
                 Return 150
             Case "Smoke of Deceit"
                 Return 100
+            Case "Solar Crest"
+                Return 3000
             Case "Soul Booster"
-                Return 3300
+                Return 3200
             Case "Soul Ring"
                 Return 800
             Case "Staff of Wizardry"
                 Return 1000
             Case "Stout Shield"
-                Return 250
+                Return 200
             Case "Talisman of Evasion"
                 Return 1800
             Case "Tango"
                 Return 125
             Case "Town Portal Scroll"
-                Return 135
+                Return 100
             Case "Tranquil Boots"
-                Return 975
+                Return 1000
             Case "Ultimate Orb"
                 Return 2100
             Case "Urn of Shadows"
                 Return 875
             Case "Vanguard"
-                Return 2225
+                Return 2175
             Case "Veil of Discord"
-                Return 2670
+                Return 2520
             Case "Vitality Booster"
                 Return 1100
             Case "Vladmir's Offering"
-                Return 2050
+                Return 2325
             Case "Void Stone"
                 Return 875
             Case "Wraith Band"
                 Return 485
             Case "Yasha"
                 Return 2050
-            Case "Wraith Band (Recipe)"
-                Return 150
-            Case "Bracer (Recipe)"
-                Return 190
-            Case "Null Talisman (Recipe)"
-                Return 135
-            Case "Magic Wand (Recipe)"
-                Return 150
-            Case "Hand of Midas (Recipe)"
-                Return 1550
-            Case "Soul Ring (Recipe)"
-                Return 125
-            Case "Boots of Travel (Recipe)"
-                Return 2000
-            Case "Headdress (Recipe)"
-                Return 200
-            Case "Buckler (Recipe)"
-                Return 200
-            Case "Urn of Shadows (Recipe)"
-                Return 250
-            Case "Mekansm (Recipe)"
-                Return 900
-            Case "Medallion of Courage (Recipe)"
-                Return 200
-            Case "Vladmir's Offering (Recipe)"
-                Return 300
-            Case "Pipe of Insight (Recipe)"
-                Return 900
-            Case "Drum of Endurance (Recipe)"
-                Return 875
-            Case "Necronomicon (Recipe)"
-                Return 1250
-            Case "Eul's Scepter of Divinity (Recipe)"
-                Return 500
-            Case "Dagon (Recipe)"
-                Return 1250
-            Case "Veil of Discord (Recipe)"
-                Return 1250
-            Case "Orchid Malevolence (Recipe)"
-                Return 775
-            Case "Refresher Orb (Recipe)"
-                Return 1800
-            Case "Force Staff (Recipe)"
-                Return 900
+                'Recipe (abc-sorted)
             Case "Armlet (Recipe)"
                 Return 700
+            Case "Assault Cuirass (Recipe)"
+                Return 1300
+            Case "Black King Bar (Recipe)"
+                Return 1375
+            Case "Boots of Travel (Recipe)"
+                Return 2000
+            Case "Bracer (Recipe)"
+                Return 190
+            Case "Buckler (Recipe)"
+                Return 200
             Case "Crystalys (Recipe)"
                 Return 500
             Case "Daedalus (Recipe)"
                 Return 1000
-            Case "Skull Basher (Recipe)"
-                Return 1000
-            Case "Radiance (Recipe)"
-                Return 1350
-            Case "Black King Bar (Recipe)"
-                Return 1375
-            Case "Assault Cuirass (Recipe)"
-                Return 1300
-            Case "Manta Style (Recipe)"
+            Case "Dagon (Recipe)"
+                Return 1250
+            Case "Desolator (Recipe)"
                 Return 900
-            Case "Shiva's Guard (Recipe)"
-                Return 600
-            Case "Linken's Sphere (Recipe)"
-                Return 1325
+            Case "Diffusal Blade (Recipe)"
+                Return 850
+            Case "Drum of Endurance (Recipe)"
+                Return 875
+            Case "Eul's Scepter of Divinity (Recipe)"
+                Return 500
+            Case "Force Staff (Recipe)"
+                Return 900
+            Case "Hand of Midas (Recipe)"
+                Return 1550
+            Case "Headdress (Recipe)"
+                Return 200
             Case "Heart of Tarrasque (Recipe)"
                 Return 1200
-            Case "Desolator (Recipe)"
+            Case "Linken's Sphere (Recipe)"
+                Return 1325
+            Case "Maelstrom (Recipe)"
+                Return 600
+            Case "Magic Wand (Recipe)"
+                Return 150
+            Case "Manta Style (Recipe)"
+                Return 900
+            Case "Mask of Madness (Recipe)"
+                Return 1000
+            Case "Medallion of Courage (Recipe)"
+                Return 200
+            Case "Mekansm (Recipe)"
                 Return 900
             Case "Mjollnir (Recipe)"
                 Return 900
-            Case "Satanic (Recipe)"
-                Return 1100
-            Case "Yasha (Recipe)"
-                Return 600
-            Case "Diffusal Blade (Recipe)"
-                Return 850
+            Case "Necronomicon (Recipe)"
+                Return 1250
+            Case "Null Talisman (Recipe)"
+                Return 135
+            Case "Orchid Malevolence (Recipe)"
+                Return 775
+            Case "Pipe of Insight (Recipe)"
+                Return 900
+            Case "Radiance (Recipe)"
+                Return 1350
+            Case "Refresher Orb (Recipe)"
+                Return 1800
             Case "Sange (Recipe)"
                 Return 600
-            Case "Mask of Madness (Recipe)"
-                Return 1000
-            Case "Maelstrom (Recipe)"
+            Case "Satanic (Recipe)"
+                Return 1100
+            Case "Shiva's Guard (Recipe)"
                 Return 600
-            Case "Shadow Amulet"
-                Return 1600
+            Case "Skull Basher (Recipe)"
+                Return 1000
+            Case "Soul Ring (Recipe)"
+                Return 125
+            Case "Urn of Shadows (Recipe)"
+                Return 250
+            Case "Veil of Discord (Recipe)"
+                Return 1250
+            Case "Vladmir's Offering (Recipe)"
+                Return 300
+            Case "Wraith Band (Recipe)"
+                Return 150
+            Case "Yasha (Recipe)"
+                Return 600
             Case Else
                 Return 0
         End Select
