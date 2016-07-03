@@ -30,7 +30,7 @@ Public Class FormCheckSteamPath
             End If
         Else
             IsDotaAvailble()
-            Check(Dota2Path + "\dota\itembuilds")
+            Check(Dota2Path + "\game\dota\itembuilds")
         End If
     End Sub
 
@@ -41,7 +41,7 @@ Public Class FormCheckSteamPath
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim path As String
         Dota2Path = TextBox1.Text
-        path = Dota2Path + "\dota\itembuilds"
+        path = Dota2Path + "\game\dota\itembuilds"
         Check(path)
     End Sub
 

@@ -133,7 +133,7 @@
     <value>Error while reading.</value>
   </data>
   <data name="checkPath" xml:space="preserve">
-    <value>Please check your Steam path!!!</value>
+    <value>Please check your DotA 2 path!!!</value>
   </data>
   <data name="chooseAHero" xml:space="preserve">
     <value>Please choose a hero first.</value>

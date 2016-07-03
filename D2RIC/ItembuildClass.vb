@@ -12,7 +12,6 @@ Public Class ItembuildClass
         FormMain.ButtonSave.Enabled = False
 
         ChangeHeroList()
-        ClearNotImplemented()
     End Sub
 
     'Intitialize the ListView with all items
@@ -780,6 +779,8 @@ Public Class ItembuildClass
                 hero = "Ancient Apparition"
             Case hero Like "npc_dota_hero_antimage"
                 hero = "Anti-Mage"
+            Case hero Like "npc_dota_hero_arc_warden"
+                hero = "Arc Warden"
             Case hero Like "npc_dota_hero_axe"
                 hero = "Axe"
             Case hero Like "npc_dota_hero_bane"
@@ -991,8 +992,8 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_winter_wyvern"
                 hero = "Winter Wyvern"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case hero Like "npc_dota_hero_abyssal_underlord"
-                hero = "Abyssal Underlord"
+            Case hero Like "npc_dota_hero_underlord"
+                hero = "Underlord"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -1006,6 +1007,8 @@ Public Class ItembuildClass
                 Selected_Hero = "ancient_apparition"
             Case "Anti-Mage"
                 Selected_Hero = "antimage"
+            Case "Arc Warden"
+                Selected_Hero = "arc_warden"
             Case "Bounty Hunter"
                 Selected_Hero = "bounty_hunter"
             Case "Centaur Warrunner"
@@ -1102,9 +1105,6 @@ Public Class ItembuildClass
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
-                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case "Abyssal Underlord"
-                Selected_Hero = "abyssal_underlord"
             Case Else
                 Selected_Hero = hero
         End Select
@@ -1121,7 +1121,6 @@ Public Class ItembuildClass
             Next
 
             .Items.Add("Abaddon")
-            .Items.Add("Abyssal Underlord")
             .Items.Add("Alchemist")
             .Items.Add("Ancient Apparition")
             .Items.Add("Anti-Mage")
@@ -1220,6 +1219,7 @@ Public Class ItembuildClass
             .Items.Add("Treant Protector")
             .Items.Add("Troll Warlord")
             .Items.Add("Tusk")
+            .Items.Add("Underlord")
             .Items.Add("Undying")
             .Items.Add("Ursa")
             .Items.Add("Vengeful Spirit")
@@ -1232,14 +1232,6 @@ Public Class ItembuildClass
             .Items.Add("Winter Wyvern")
             .Items.Add("Witch Doctor")
             .Items.Add("Zeus")
-        End With
-    End Sub
-
-    'Delete all heros which are without an itembuild by valve
-    Public Sub ClearNotImplemented()
-        With FormMain.ListBox1
-            .Items.Remove("Abyssal Underlord")
-            .Items.Remove("Arc Warden")
         End With
     End Sub
 

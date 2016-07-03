@@ -133,7 +133,7 @@
     <value>Fehler beim Lesen.</value>
   </data>
   <data name="checkPath" xml:space="preserve">
-    <value>Bitte überprüfe den Pfad zu deinem Steam Verzeichnis!!!</value>
+    <value>Bitte überprüfe den Pfad zu deinem DotA 2 Verzeichnis!!!</value>
   </data>
   <data name="chooseAHero" xml:space="preserve">
     <value>Bitte wähle zuerst einen Helden.</value>
