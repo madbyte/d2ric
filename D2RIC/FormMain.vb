@@ -225,16 +225,13 @@ Public Class FormMain
     End Sub
 
     Private Sub addItem(source As ListView)
+        active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
+        active_itembox.Items(active_itembox.Items.Count - 1).SubItems(1).Text = active_itembox.Items(active_itembox.Items.Count - 1).Text
+        Unsaved = True
         If active_itembox.Name = "ListViewItems0" Then
-            active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
-            active_itembox.Items(active_itembox.Items.Count - 1).SubItems(1).Text = active_itembox.Items(active_itembox.Items.Count - 1).Text
             Label15.Text = GetStartCosts()
             CheckCosts(CInt(Label15.Text))
-        Else
-            active_itembox.Items.Add(source.SelectedItems.Item(0).Clone)
-            active_itembox.Items(active_itembox.Items.Count - 1).SubItems(1).Text = active_itembox.Items(active_itembox.Items.Count - 1).Text
         End If
-        Unsaved = True
     End Sub
 
 #Region "Updater"
@@ -393,10 +390,10 @@ Public Class FormMain
             Loop
             If Progress.Value = 1000 Then
                 If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/update.exe") Then
-                    Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
-                    Me.Close()
                     Timer3.Stop()
                     Timer3.Enabled = False
+                    Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
+                    Me.Close()
                     Exit Sub
                 Else
                     downloadupdate(url, bool_showUI)
@@ -404,10 +401,10 @@ Public Class FormMain
             End If
         Catch ex As Exception
             If ex.Message.Contains("not") Then
-                Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
-                Me.Close()
                 Timer3.Stop()
                 Timer3.Enabled = False
+                Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
+                Me.Close()
             End If
         End Try
     End Sub
@@ -1004,7 +1001,7 @@ Public Class FormMain
                 rename_item_name = "Moon Shard"
                 Return rename_item_name
             Case item_name2 Like "*item_enchanted_mango"
-                rename_item_name = "Mango"
+                rename_item_name = "Enchanted Mango"
                 Return rename_item_name
             Case Else
                 rename_item_name = "Error!"
@@ -1387,7 +1384,7 @@ Public Class FormMain
                 Return "item_crimson_guard"
             Case "Moon Shard"
                 Return "item_moon_shard"
-            Case "Mango"
+            Case "Enchanted Mango"
                 Return "item_enchanted_mango"
             Case Else
                 Return "Error! Itemname: " + item_name
@@ -1667,6 +1664,48 @@ Public Class FormMain
                 Return 133
             Case "Shadow Amulet"
                 Return 135
+            Case "Boots of Travel 2"
+                Return 136
+            Case "Crimson Guard"
+                Return 137
+            Case "Enchanted Mango"
+                Return 138
+            Case "Faerie Fire"
+                Return 139
+            Case "Glimmer Cape"
+                Return 140
+            Case "Guardian Greaves"
+                Return 141
+            Case "Lotus Orb"
+                Return 142
+            Case "Moon Shard"
+                Return 143
+            Case "Octarine Core"
+                Return 144
+            Case "Silver Edge"
+                Return 145
+            Case "Solar Crest"
+                Return 146
+            Case "Aether Lens"
+                Return 147
+            Case "Blight Stone"
+                Return 148
+            Case "Bloodthorn"
+                Return 149
+            Case "Dragon Lance"
+                Return 150
+            Case "Echo Sabre"
+                Return 151
+            Case "Hurricane Pike"
+                Return 152
+            Case "Infused Raindrop"
+                Return 153
+            Case "Iron Talon"
+                Return 154
+            Case "Tome of Knowledge"
+                Return 155
+            Case "Wind Lace"
+                Return 156
             Case Else
                 Return 134
         End Select

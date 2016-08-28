@@ -21,7 +21,10 @@ Public Class FormCheckSteamPath
 
     Private Sub FormCheckSteamPath_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If (My.Settings.dota2path <> "") Then
-            TextBox1.Text = Microsoft.VisualBasic.Left(My.Settings.dota2path, My.Settings.dota2path.IndexOf("\SteamApps"))
+            If My.Settings.dota2path.IndexOf("\SteamApps") > 0 Then
+                TextBox1.Text = Microsoft.VisualBasic.Left(My.Settings.dota2path, My.Settings.dota2path.IndexOf("\SteamApps"))
+            End If
+
             If My.Computer.FileSystem.DirectoryExists(My.Settings.dota2path) Then
                 FormMain.Visible = True
                 Me.Close()

@@ -20,18 +20,20 @@ Public Class ItembuildClass
         With FormMain.ListViewConsumables
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Clarity", "Consumables"}, 24))
-            .Items.Add(New ListViewItem(New String() {"Mango", "Consumables"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Tango", "Consumables"}, 122))
-            .Items.Add(New ListViewItem(New String() {"Healing Salve", "Consumables"}, 54))
-            .Items.Add(New ListViewItem(New String() {"Smoke of Deceit", "Consumables"}, 116))
-            .Items.Add(New ListViewItem(New String() {"Town Portal Scroll", "Consumables"}, 123))
-            .Items.Add(New ListViewItem(New String() {"Dust of Appearance", "Consumables"}, 40))
-            .Items.Add(New ListViewItem(New String() {"Animal Courier", "Consumables"}, 2))
-            .Items.Add(New ListViewItem(New String() {"Flying Courier", "Consumables"}, 46))
-            .Items.Add(New ListViewItem(New String() {"Observer Ward", "Consumables"}, 82))
-            .Items.Add(New ListViewItem(New String() {"Sentry Ward", "Consumables"}, 111))
-            .Items.Add(New ListViewItem(New String() {"Bottle", "Consumables"}, 17))
+            .Items.Add(createListViewItem("Clarity", "Consumables"))
+            .Items.Add(createListViewItem("Faerie Fire", "Consumables"))
+            .Items.Add(createListViewItem("Enchanted Mango", "Consumables"))
+            .Items.Add(createListViewItem("Tango", "Consumables"))
+            .Items.Add(createListViewItem("Healing Salve", "Consumables"))
+            .Items.Add(createListViewItem("Smoke of Deceit", "Consumables"))
+            .Items.Add(createListViewItem("Town Portal Scroll", "Consumables"))
+            .Items.Add(createListViewItem("Dust of Appearance", "Consumables"))
+            .Items.Add(createListViewItem("Animal Courier", "Consumables"))
+            .Items.Add(createListViewItem("Flying Courier", "Consumables"))
+            .Items.Add(createListViewItem("Observer Ward", "Consumables"))
+            .Items.Add(createListViewItem("Sentry Ward", "Consumables"))
+            .Items.Add(createListViewItem("Tome of Knowledge", "Consumables"))
+            .Items.Add(createListViewItem("Bottle", "Consumables"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -42,17 +44,17 @@ Public Class ItembuildClass
         With FormMain.ListViewAttributes
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Iron Branch", "Attributes"}, 61))
-            .Items.Add(New ListViewItem(New String() {"Gauntlets of Strength", "Attributes"}, 48))
-            .Items.Add(New ListViewItem(New String() {"Slippers of Agility", "Attributes"}, 115))
-            .Items.Add(New ListViewItem(New String() {"Mantle of Intelligence", "Attributes"}, 68))
-            .Items.Add(New ListViewItem(New String() {"Circlet", "Attributes"}, 23))
-            .Items.Add(New ListViewItem(New String() {"Belt of Strength", "Attributes"}, 7))
-            .Items.Add(New ListViewItem(New String() {"Band of Elvenskin", "Attributes"}, 14))
-            .Items.Add(New ListViewItem(New String() {"Robe of the Magi", "Attributes"}, 103))
-            .Items.Add(New ListViewItem(New String() {"Ogre Club", "Attributes"}, 83))
-            .Items.Add(New ListViewItem(New String() {"Blade of Alacrity", "Attributes"}, 10))
-            .Items.Add(New ListViewItem(New String() {"Staff of Wizardry", "Attributes"}, 119))
+            .Items.Add(createListViewItem("Iron Branch", "Attributes"))
+            .Items.Add(createListViewItem("Gauntlets of Strength", "Attributes"))
+            .Items.Add(createListViewItem("Slippers of Agility", "Attributes"))
+            .Items.Add(createListViewItem("Mantle of Intelligence", "Attributes"))
+            .Items.Add(createListViewItem("Circlet", "Attributes"))
+            .Items.Add(createListViewItem("Belt of Strength", "Attributes"))
+            .Items.Add(createListViewItem("Band of Elvenskin", "Attributes"))
+            .Items.Add(createListViewItem("Robe of the Magi", "Attributes"))
+            .Items.Add(createListViewItem("Ogre Club", "Attributes"))
+            .Items.Add(createListViewItem("Blade of Alacrity", "Attributes"))
+            .Items.Add(createListViewItem("Staff of Wizardry", "Attributes"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -63,18 +65,20 @@ Public Class ItembuildClass
         With FormMain.ListViewArmaments
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Ring of Protection", "Armaments"}, 101))
-            .Items.Add(New ListViewItem(New String() {"Stout Shield", "Armaments"}, 120))
-            .Items.Add(New ListViewItem(New String() {"Quelling Blade", "Armaments"}, 94))
-            .Items.Add(New ListViewItem(New String() {"Orb of Venom", "Armaments"}, 84))
-            .Items.Add(New ListViewItem(New String() {"Blades of Attack", "Armaments"}, 11))
-            .Items.Add(New ListViewItem(New String() {"Chainmail", "Armaments"}, 22))
-            .Items.Add(New ListViewItem(New String() {"Quarterstaff", "Armaments"}, 93))
-            .Items.Add(New ListViewItem(New String() {"Helm of Iron Will", "Armaments"}, 57))
-            .Items.Add(New ListViewItem(New String() {"Broadsword", "Armaments"}, 19))
-            .Items.Add(New ListViewItem(New String() {"Claymore", "Armaments"}, 25))
-            .Items.Add(New ListViewItem(New String() {"Javelin", "Armaments"}, 62))
-            .Items.Add(New ListViewItem(New String() {"Mithril Hammer", "Armaments"}, 72))
+            .Items.Add(createListViewItem("Ring of Protection", "Armaments"))
+            .Items.Add(createListViewItem("Stout Shield", "Armaments"))
+            .Items.Add(createListViewItem("Quelling Blade", "Armaments"))
+            .Items.Add(createListViewItem("Infused Raindrop", "Armaments"))
+            .Items.Add(createListViewItem("Blight Stone", "Armaments"))
+            .Items.Add(createListViewItem("Orb of Venom", "Armaments"))
+            .Items.Add(createListViewItem("Blades of Attack", "Armaments"))
+            .Items.Add(createListViewItem("Chainmail", "Armaments"))
+            .Items.Add(createListViewItem("Quarterstaff", "Armaments"))
+            .Items.Add(createListViewItem("Helm of Iron Will", "Armaments"))
+            .Items.Add(createListViewItem("Broadsword", "Armaments"))
+            .Items.Add(createListViewItem("Claymore", "Armaments"))
+            .Items.Add(createListViewItem("Javelin", "Armaments"))
+            .Items.Add(createListViewItem("Mithril Hammer", "Armaments"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -85,19 +89,20 @@ Public Class ItembuildClass
         With FormMain.ListViewArcane
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Magic Stick", "Arcane"}, 65))
-            .Items.Add(New ListViewItem(New String() {"Sage's Mask", "Arcane"}, 106))
-            .Items.Add(New ListViewItem(New String() {"Ring of Regen", "Arcane"}, 102))
-            .Items.Add(New ListViewItem(New String() {"Boots of Speed", "Arcane"}, 15))
-            .Items.Add(New ListViewItem(New String() {"Gloves of Haste", "Arcane"}, 51))
-            .Items.Add(New ListViewItem(New String() {"Cloak", "Arcane"}, 26))
-            .Items.Add(New ListViewItem(New String() {"Ring of Health", "Arcane"}, 100))
-            .Items.Add(New ListViewItem(New String() {"Void Stone", "Arcane"}, 131))
-            .Items.Add(New ListViewItem(New String() {"Gem of True Sight", "Arcane"}, 49))
-            .Items.Add(New ListViewItem(New String() {"Morbid Mask", "Arcane"}, 75))
-            .Items.Add(New ListViewItem(New String() {"Shadow Amulet", "Arcane"}, 135))
-            .Items.Add(New ListViewItem(New String() {"Ghost Scepter", "Arcane"}, 50))
-            .Items.Add(New ListViewItem(New String() {"Blink Dagger", "Arcane"}, 12))
+            .Items.Add(createListViewItem("Wind Lace", "Arcane"))
+            .Items.Add(createListViewItem("Magic Stick", "Arcane"))
+            .Items.Add(createListViewItem("Sage's Mask", "Arcane"))
+            .Items.Add(createListViewItem("Ring of Regen", "Arcane"))
+            .Items.Add(createListViewItem("Boots of Speed", "Arcane"))
+            .Items.Add(createListViewItem("Gloves of Haste", "Arcane"))
+            .Items.Add(createListViewItem("Cloak", "Arcane"))
+            .Items.Add(createListViewItem("Ring of Health", "Arcane"))
+            .Items.Add(createListViewItem("Void Stone", "Arcane"))
+            .Items.Add(createListViewItem("Gem of True Sight", "Arcane"))
+            .Items.Add(createListViewItem("Morbid Mask", "Arcane"))
+            .Items.Add(createListViewItem("Shadow Amulet", "Arcane"))
+            .Items.Add(createListViewItem("Ghost Scepter", "Arcane"))
+            .Items.Add(createListViewItem("Blink Dagger", "Arcane"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -108,41 +113,41 @@ Public Class ItembuildClass
         With FormMain.ListViewCommon
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Magic Wand", "Common"}, 66))
+            .Items.Add(createListViewItem("Magic Wand", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Magic Wand (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Magic Wand (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Null Talisman", "Common"}, 80))
+            .Items.Add(createListViewItem("Null Talisman", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Null Talisman (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Null Talisman (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Wraith Band", "Common"}, 132))
+            .Items.Add(createListViewItem("Wraith Band", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Wraith Band (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Wraith Band (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Poor Man's Shield", "Common"}, 91))
-            .Items.Add(New ListViewItem(New String() {"Bracer", "Common"}, 18))
+            .Items.Add(createListViewItem("Poor Man's Shield", "Common"))
+            .Items.Add(createListViewItem("Bracer", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Bracer (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Bracer (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Soul Ring", "Common"}, 118))
+            .Items.Add(createListViewItem("Soul Ring", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Soul Ring (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Soul Ring (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Phase Boots", "Common"}, 87))
-            .Items.Add(New ListViewItem(New String() {"Power Treads", "Common"}, 92))
-            .Items.Add(New ListViewItem(New String() {"Oblivion Staff", "Common"}, 81))
-            .Items.Add(New ListViewItem(New String() {"Perseverance", "Common"}, 86))
-            .Items.Add(New ListViewItem(New String() {"Hand of Midas", "Common"}, 52))
+            .Items.Add(createListViewItem("Phase Boots", "Common"))
+            .Items.Add(createListViewItem("Power Treads", "Common"))
+            .Items.Add(createListViewItem("Oblivion Staff", "Common"))
+            .Items.Add(createListViewItem("Perseverance", "Common"))
+            .Items.Add(createListViewItem("Hand of Midas", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Hand of Midas (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Hand of Midas (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Boots of Travel", "Common"}, 16))
+            .Items.Add(createListViewItem("Boots of Travel", "Common"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Boots of Travel (Recipe)", "Common"}, 134))
+                .Items.Add(createListViewItem("Boots of Travel (Recipe)", "Common"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Boots of Travel 2", "Common"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Moon Shard", "Common"}, 134))
+            .Items.Add(createListViewItem("Boots of Travel 2", "Common"))
+            .Items.Add(createListViewItem("Moon Shard", "Common"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -153,43 +158,47 @@ Public Class ItembuildClass
         With FormMain.ListViewSupport
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Ring of Basilius", "Support"}, 99))
-            .Items.Add(New ListViewItem(New String() {"Headdress", "Support"}, 53))
+            .Items.Add(createListViewItem("Ring of Basilius", "Support"))
+            .Items.Add(createListViewItem("Iron Talon", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Headdress (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Iron Talon (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Buckler", "Support"}, 20))
+            .Items.Add(createListViewItem("Headdress", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Buckler (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Headdress (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Urn of Shadows", "Support"}, 126))
+            .Items.Add(createListViewItem("Buckler", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Urn of Shadows (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Buckler (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Tranquil Boots", "Support"}, 124))
-            .Items.Add(New ListViewItem(New String() {"Ring of Aquila", "Support"}, 98))
-            .Items.Add(New ListViewItem(New String() {"Medallion of Courage", "Support"}, 70))
+            .Items.Add(createListViewItem("Urn of Shadows", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Medallion of Courage (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Urn of Shadows (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Arcane Boots", "Support"}, 3))
-            .Items.Add(New ListViewItem(New String() {"Drum of Endurance", "Support"}, 39))
+            .Items.Add(createListViewItem("Tranquil Boots", "Support"))
+            .Items.Add(createListViewItem("Ring of Aquila", "Support"))
+            .Items.Add(createListViewItem("Medallion of Courage", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Drum of Endurance (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Medallion of Courage (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Mekansm", "Support"}, 71))
+            .Items.Add(createListViewItem("Arcane Boots", "Support"))
+            .Items.Add(createListViewItem("Drum of Endurance", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Mekansm (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Drum of Endurance (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Vladmir's Offering", "Support"}, 130))
+            .Items.Add(createListViewItem("Mekansm", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Mekansm (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Pipe of Insight", "Support"}, 88))
+            .Items.Add(createListViewItem("Vladmir's Offering", "Support"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Pipe of Insight (Recipe)", "Support"}, 134))
+                .Items.Add(createListViewItem("Vladmir's Offering (Recipe)", "Support"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Guardian Greaves", "Support"}, 134))
+            .Items.Add(createListViewItem("Pipe of Insight", "Support"))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(createListViewItem("Pipe of Insight (Recipe)", "Support"))
+            End If
+            .Items.Add(createListViewItem("Guardian Greaves", "Support"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -200,46 +209,50 @@ Public Class ItembuildClass
         With FormMain.ListViewCaster
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Glimmer Cape", "Caster"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Force Staff", "Caster"}, 47))
+            .Items.Add(createListViewItem("Glimmer Cape", "Caster"))
+            .Items.Add(createListViewItem("Force Staff", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Force Staff (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Force Staff (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Veil of Discord", "Caster"}, 128))
+            .Items.Add(createListViewItem("Veil of Discord", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Veil of Discord (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Necronomicon 1", "Caster"}, 77))
-            .Items.Add(New ListViewItem(New String() {"Necronomicon 2", "Caster"}, 78))
-            .Items.Add(New ListViewItem(New String() {"Necronomicon 3", "Caster"}, 79))
+            .Items.Add(createListViewItem("Aether Lens", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Necronomicon (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Aether Lens (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Dagon 1", "Caster"}, 29))
-            .Items.Add(New ListViewItem(New String() {"Dagon 2", "Caster"}, 30))
-            .Items.Add(New ListViewItem(New String() {"Dagon 3", "Caster"}, 31))
-            .Items.Add(New ListViewItem(New String() {"Dagon 4", "Caster"}, 32))
-            .Items.Add(New ListViewItem(New String() {"Dagon 5", "Caster"}, 33))
+            .Items.Add(createListViewItem("Necronomicon 1", "Caster"))
+            .Items.Add(createListViewItem("Necronomicon 2", "Caster"))
+            .Items.Add(createListViewItem("Necronomicon 3", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Dagon (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Necronomicon (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity", "Caster"}, 44))
+            .Items.Add(createListViewItem("Dagon 1", "Caster"))
+            .Items.Add(createListViewItem("Dagon 2", "Caster"))
+            .Items.Add(createListViewItem("Dagon 3", "Caster"))
+            .Items.Add(createListViewItem("Dagon 4", "Caster"))
+            .Items.Add(createListViewItem("Dagon 5", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Dagon (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Solar Crest", "Caster"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Rod of Atos", "Caster"}, 104))
-            .Items.Add(New ListViewItem(New String() {"Orchid Malevolence", "Caster"}, 85))
+            .Items.Add(createListViewItem("Eul's Scepter of Divinity", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Orchid Malevolence (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Eul's Scepter of Divinity (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Aghanim's Scepter", "Caster"}, 1))
-            .Items.Add(New ListViewItem(New String() {"Refresher Orb", "Caster"}, 97))
+            .Items.Add(createListViewItem("Solar Crest", "Caster"))
+            .Items.Add(createListViewItem("Rod of Atos", "Caster"))
+            .Items.Add(createListViewItem("Orchid Malevolence", "Caster"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Refresher Orb (Recipe)", "Caster"}, 134))
+                .Items.Add(createListViewItem("Orchid Malevolence (Recipe)", "Caster"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Scythe of Vyse", "Caster"}, 110))
-            .Items.Add(New ListViewItem(New String() {"Octarine Core", "Caster"}, 134))
+            .Items.Add(createListViewItem("Aghanim's Scepter", "Caster"))
+            .Items.Add(createListViewItem("Refresher Orb", "Caster"))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(createListViewItem("Refresher Orb (Recipe)", "Caster"))
+            End If
+            .Items.Add(createListViewItem("Scythe of Vyse", "Caster"))
+            .Items.Add(createListViewItem("Octarine Core", "Caster"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -250,34 +263,38 @@ Public Class ItembuildClass
         With FormMain.ListViewWeapons
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Crystalys", "Weapons"}, 27))
+            .Items.Add(createListViewItem("Crystalys", "Weapons"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Crystalys (Recipe)", "Weapons"}, 134))
+                .Items.Add(createListViewItem("Crystalys (Recipe)", "Weapons"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Armlet", "Weapons"}, 4))
+            .Items.Add(createListViewItem("Armlet", "Weapons"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Armlet (Recipe)", "Weapons"}, 134))
+                .Items.Add(createListViewItem("Armlet (Recipe)", "Weapons"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Shadow Blade", "Weapons"}, 112))
-            .Items.Add(New ListViewItem(New String() {"Skull Basher", "Weapons"}, 114))
+            .Items.Add(createListViewItem("Shadow Blade", "Weapons"))
+            .Items.Add(createListViewItem("Skull Basher", "Weapons"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons"}, 134))
+                .Items.Add(createListViewItem("Skull Basher (Recipe)", "Weapons"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Battle Fury", "Weapons"}, 6))
-            .Items.Add(New ListViewItem(New String() {"Ethereal Blade", "Weapons"}, 43))
-            .Items.Add(New ListViewItem(New String() {"Silver Edge", "Weapons"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Radiance", "Weapons"}, 95))
+            .Items.Add(createListViewItem("Battle Fury", "Weapons"))
+            .Items.Add(createListViewItem("Ethereal Blade", "Weapons"))
+            .Items.Add(createListViewItem("Silver Edge", "Weapons"))
+            .Items.Add(createListViewItem("Radiance", "Weapons"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Radiance (Recipe)", "Weapons"}, 134))
+                .Items.Add(createListViewItem("Radiance (Recipe)", "Weapons"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Monkey King Bar", "Weapons"}, 74))
-            .Items.Add(New ListViewItem(New String() {"Daedalus", "Weapons"}, 28))
+            .Items.Add(createListViewItem("Monkey King Bar", "Weapons"))
+            .Items.Add(createListViewItem("Daedalus", "Weapons"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Daedalus (Recipe)", "Weapons"}, 134))
+                .Items.Add(createListViewItem("Daedalus (Recipe)", "Weapons"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Butterfly", "Weapons"}, 21))
-            .Items.Add(New ListViewItem(New String() {"Divine Rapier", "Weapons"}, 38))
-            .Items.Add(New ListViewItem(New String() {"Abyssal Blade", "Weapons"}, 0))
+            .Items.Add(createListViewItem("Butterfly", "Weapons"))
+            .Items.Add(createListViewItem("Divine Rapier", "Weapons"))
+            .Items.Add(createListViewItem("Abyssal Blade", "Weapons"))
+            .Items.Add(createListViewItem("Bloodthorn", "Weapons"))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(createListViewItem("Bloodthorn (Recipe)", "Weapons"))
+            End If
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -288,36 +305,40 @@ Public Class ItembuildClass
         With FormMain.ListViewArmor
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Hood of Defiance", "Armor"}, 59))
-            .Items.Add(New ListViewItem(New String() {"Vanguard", "Armor"}, 127))
-            .Items.Add(New ListViewItem(New String() {"Blade Mail", "Armor"}, 9))
-            .Items.Add(New ListViewItem(New String() {"Soul Booster", "Armor"}, 117))
-            .Items.Add(New ListViewItem(New String() {"Crimson Guard", "Armor"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Black King Bar", "Armor"}, 8))
+            .Items.Add(createListViewItem("Hood of Defiance", "Armor"))
+            .Items.Add(createListViewItem("Vanguard", "Armor"))
+            .Items.Add(createListViewItem("Blade Mail", "Armor"))
+            .Items.Add(createListViewItem("Soul Booster", "Armor"))
+            .Items.Add(createListViewItem("Crimson Guard", "Armor"))
+            .Items.Add(createListViewItem("Black King Bar", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Black King Bar (Recipe)", "Armor"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Lotus Orb", "Armor"}, 134))
-            .Items.Add(New ListViewItem(New String() {"Shiva's Guard", "Armor"}, 113))
+            .Items.Add(createListViewItem("Lotus Orb", "Armor"))
+            .Items.Add(createListViewItem("Shiva's Guard", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Shiva's Guard (Recipe)", "Armor"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Bloodstone", "Armor"}, 13))
-            .Items.Add(New ListViewItem(New String() {"Manta Style", "Armor"}, 67))
+            .Items.Add(createListViewItem("Bloodstone", "Armor"))
+            .Items.Add(createListViewItem("Manta Style", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Manta Style (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Manta Style (Recipe)", "Armor"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Linken's Sphere", "Armor"}, 63))
+            .Items.Add(createListViewItem("Linken's Sphere", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Linken's Sphere (Recipe)", "Armor"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Assault Cuirass", "Armor"}, 5))
+            .Items.Add(createListViewItem("Hurricane Pike", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Hurricane Pike (Recipe)", "Armor"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Heart of Tarrasque", "Armor"}, 55))
+            .Items.Add(createListViewItem("Assault Cuirass", "Armor"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor"}, 134))
+                .Items.Add(createListViewItem("Assault Cuirass (Recipe)", "Armor"))
+            End If
+            .Items.Add(createListViewItem("Heart of Tarrasque", "Armor"))
+            If FormMain.CheckBox1.Checked Then
+                .Items.Add(createListViewItem("Heart of Tarrasque (Recipe)", "Armor"))
             End If
 
             'Add Tooltips to Listview
@@ -329,42 +350,44 @@ Public Class ItembuildClass
         With FormMain.ListViewArtifacts
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Mask of Madness", "Artifacts"}, 69))
+            .Items.Add(createListViewItem("Mask of Madness", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Mask of Madness (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Helm of the Dominator", "Artifacts"}, 58))
-            .Items.Add(New ListViewItem(New String() {"Sange", "Artifacts"}, 107))
+            .Items.Add(createListViewItem("Helm of the Dominator", "Artifacts"))
+            .Items.Add(createListViewItem("Dragon Lance", "Artifacts"))
+            .Items.Add(createListViewItem("Sange", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Sange (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Sange (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Yasha", "Artifacts"}, 133))
+            .Items.Add(createListViewItem("Yasha", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Yasha (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Yasha (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Maelstrom", "Artifacts"}, 64))
+            .Items.Add(createListViewItem("Echo Sabre", "Artifacts"))
+            .Items.Add(createListViewItem("Maelstrom", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Maelstrom (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Diffusal Blade 1", "Artifacts"}, 36))
-            .Items.Add(New ListViewItem(New String() {"Diffusal Blade 2", "Artifacts"}, 37))
+            .Items.Add(createListViewItem("Diffusal Blade 1", "Artifacts"))
+            .Items.Add(createListViewItem("Diffusal Blade 2", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Diffusal Blade (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Desolator", "Artifacts"}, 35))
+            .Items.Add(createListViewItem("Desolator", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Desolator (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Desolator (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Heaven's Halberd", "Artifacts"}, 56))
-            .Items.Add(New ListViewItem(New String() {"Sange and Yasha", "Artifacts"}, 108))
-            .Items.Add(New ListViewItem(New String() {"Eye of Skadi", "Artifacts"}, 45))
-            .Items.Add(New ListViewItem(New String() {"Mjollnir", "Artifacts"}, 73))
+            .Items.Add(createListViewItem("Heaven's Halberd", "Artifacts"))
+            .Items.Add(createListViewItem("Sange and Yasha", "Artifacts"))
+            .Items.Add(createListViewItem("Eye of Skadi", "Artifacts"))
+            .Items.Add(createListViewItem("Mjollnir", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Mjollnir (Recipe)", "Artifacts"))
             End If
-            .Items.Add(New ListViewItem(New String() {"Satanic", "Artifacts"}, 109))
+            .Items.Add(createListViewItem("Satanic", "Artifacts"))
             If FormMain.CheckBox1.Checked Then
-                .Items.Add(New ListViewItem(New String() {"Satanic (Recipe)", "Artifact"}, 134))
+                .Items.Add(createListViewItem("Satanic (Recipe)", "Artifacts"))
             End If
 
             'Add Tooltips to Listview
@@ -376,18 +399,18 @@ Public Class ItembuildClass
         With FormMain.ListViewSecretShop
             .Clear()
             ' Create items and add them to ListView.
-            .Items.Add(New ListViewItem(New String() {"Energy Booster", "Secret Shop"}, 42))
-            .Items.Add(New ListViewItem(New String() {"Vitality Booster", "Secret Shop"}, 129))
-            .Items.Add(New ListViewItem(New String() {"Point Booster", "Secret Shop"}, 90))
-            .Items.Add(New ListViewItem(New String() {"Platemail", "Secret Shop"}, 89))
-            .Items.Add(New ListViewItem(New String() {"Talisman of Evasion", "Secret Shop"}, 121))
-            .Items.Add(New ListViewItem(New String() {"Hyperstone", "Secret Shop"}, 60))
-            .Items.Add(New ListViewItem(New String() {"Ultimate Orb", "Secret Shop"}, 125))
-            .Items.Add(New ListViewItem(New String() {"Demon Edge", "Secret Shop"}, 34))
-            .Items.Add(New ListViewItem(New String() {"Mystic Staff", "Secret Shop"}, 76))
-            .Items.Add(New ListViewItem(New String() {"Reaver", "Secret Shop"}, 96))
-            .Items.Add(New ListViewItem(New String() {"Eaglesong", "Secret Shop"}, 41))
-            .Items.Add(New ListViewItem(New String() {"Sacred Relic", "Secret Shop"}, 105))
+            .Items.Add(createListViewItem("Energy Booster", "Secret Shop"))
+            .Items.Add(createListViewItem("Vitality Booster", "Secret Shop"))
+            .Items.Add(createListViewItem("Point Booster", "Secret Shop"))
+            .Items.Add(createListViewItem("Platemail", "Secret Shop"))
+            .Items.Add(createListViewItem("Talisman of Evasion", "Secret Shop"))
+            .Items.Add(createListViewItem("Hyperstone", "Secret Shop"))
+            .Items.Add(createListViewItem("Ultimate Orb", "Secret Shop"))
+            .Items.Add(createListViewItem("Demon Edge", "Secret Shop"))
+            .Items.Add(createListViewItem("Mystic Staff", "Secret Shop"))
+            .Items.Add(createListViewItem("Reaver", "Secret Shop"))
+            .Items.Add(createListViewItem("Eaglesong", "Secret Shop"))
+            .Items.Add(createListViewItem("Sacred Relic", "Secret Shop"))
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -429,6 +452,11 @@ Public Class ItembuildClass
             MessageBox.Show(LocRM.GetString("chooseAHero"))
         End If
     End Sub
+
+    'Returns a new ListViewItem for an ItemList
+    Public Function createListViewItem(ByVal itemName, ShopName) As ListViewItem
+        Return New ListViewItem(New String() {itemName, ShopName}, FormMain.GetPicture(itemName))
+    End Function
 
     'Return the Standard Valve label if found
     Public Function GetLabel(ByVal Label) As String
@@ -925,6 +953,8 @@ Public Class ItembuildClass
                 hero = "Tiny"
             Case hero Like "npc_dota_hero_treant"
                 hero = "Treant Protector"
+            Case hero Like "npc_dota_hero_abyssal_underlord"
+                hero = "Underlord"
             Case hero Like "npc_dota_hero_ursa"
                 hero = "Ursa"
             Case hero Like "npc_dota_hero_vengefulspirit"
@@ -991,9 +1021,6 @@ Public Class ItembuildClass
                 hero = "Techies"
             Case hero Like "npc_dota_hero_winter_wyvern"
                 hero = "Winter Wyvern"
-                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case hero Like "npc_dota_hero_underlord"
-                hero = "Underlord"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -1095,6 +1122,8 @@ Public Class ItembuildClass
                 Selected_Hero = "treant"
             Case "Troll Warlord"
                 Selected_Hero = "troll_warlord"
+            Case "Underlord"
+                Selected_Hero = "abyssal_underlord"
             Case "Vengeful Spirit"
                 Selected_Hero = "vengefulspirit"
             Case "Windranger"
@@ -1686,9 +1715,9 @@ Public Class ItembuildClass
             Case "Boots of Speed"
                 Return 450
             Case "Boots of Travel"
-                Return 2450
+                Return GetPrice("Boots of Speed") + GetPrice("Boots of Travel (Recipe)")
             Case "Boots of Travel 2"
-                Return 4450
+                Return GetPrice("Boots of Travel") + GetPrice("Boots of Travel (Recipe)")
             Case "Bottle"
                 Return 700
             Case "Bracer"
@@ -1718,13 +1747,13 @@ Public Class ItembuildClass
             Case "Dagon 1"
                 Return 2720
             Case "Dagon 2"
-                Return 2720 + 1250
+                Return GetPrice("Dagon 1") + GetPrice("Dagon (Recipe)")
             Case "Dagon 3"
-                Return 2720 + 1250 + 1250
+                Return GetPrice("Dagon 2") + GetPrice("Dagon (Recipe)")
             Case "Dagon 4"
-                Return 2720 + 1250 + 1250 + 1250
+                Return GetPrice("Dagon 3") + GetPrice("Dagon (Recipe)")
             Case "Dagon 5"
-                Return 2720 + 1250 + 1250 + 1250 + 1250
+                Return GetPrice("Dagon 4") + GetPrice("Dagon (Recipe)")
             Case "Demon Edge"
                 Return 2400
             Case "Desolator"
@@ -1797,7 +1826,7 @@ Public Class ItembuildClass
                 Return 200
             Case "Magic Wand"
                 Return 465
-            Case "Mango"
+            Case "Enchanted Mango"
                 Return 150
             Case "Manta Style"
                 Return 4950
