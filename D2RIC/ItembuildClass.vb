@@ -454,12 +454,12 @@ Public Class ItembuildClass
     End Sub
 
     'Returns a new ListViewItem for an ItemList
-    Public Function createListViewItem(ByVal itemName, ShopName) As ListViewItem
+    Public Function createListViewItem(ByVal itemName As String, ShopName As String) As ListViewItem
         Return New ListViewItem(New String() {itemName, ShopName}, FormMain.GetPicture(itemName))
     End Function
 
     'Return the Standard Valve label if found
-    Public Function GetLabel(ByVal Label) As String
+    Public Function GetLabel(ByVal Label As String) As String
         Label = Replace(Label, """", "")
         Label = Replace(Label, " ", "")
         Label = Replace(Label, vbTab, "")

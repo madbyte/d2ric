@@ -487,526 +487,427 @@ Public Class FormMain
         Select Case True
             Case item_name2 Like "*item_blink"
                 rename_item_name = "Blink Dagger"
-                Return rename_item_name
             Case item_name2 Like "*item_blades_of_attack"
                 rename_item_name = "Blades of Attack"
-                Return rename_item_name
             Case item_name2 Like "*item_basher"
                 rename_item_name = "Skull Basher"
-                Return rename_item_name
             Case item_name2 Like "*item_tango"
                 rename_item_name = "Tango"
-                Return rename_item_name
             Case item_name2 Like "*item_ancient_janggo"
                 rename_item_name = "Drum of Endurance"
-                Return rename_item_name
             Case item_name2 Like "*item_arcane_boots"
                 rename_item_name = "Arcane Boots"
-                Return rename_item_name
             Case item_name2 Like "*item_armlet"
                 rename_item_name = "Armlet"
-                Return rename_item_name
             Case item_name2 Like "*item_assault"
                 rename_item_name = "Assault Cuirass"
-                Return rename_item_name
+            Case item_name2 Like "*item_assault_cuirass"
+                rename_item_name = "Assault Cuirass"
             Case item_name2 Like "*item_bfury"
                 rename_item_name = "Battle Fury"
-                Return rename_item_name
             Case item_name2 Like "*item_belt_of_strength"
                 rename_item_name = "Belt of Strength"
-                Return rename_item_name
             Case item_name2 Like "*item_black_king_bar"
                 rename_item_name = "Black King Bar"
-                Return rename_item_name
             Case item_name2 Like "*item_blade_mail"
                 rename_item_name = "Blade Mail"
-                Return rename_item_name
             Case item_name2 Like "*item_blade_of_alacrity"
                 rename_item_name = "Blade of Alacrity"
-                Return rename_item_name
             Case item_name2 Like "*item_bloodstone"
                 rename_item_name = "Bloodstone"
-                Return rename_item_name
             Case item_name2 Like "*item_boots"
                 rename_item_name = "Boots of Speed"
-                Return rename_item_name
+            Case item_name2 Like "*item_boots_of_speed"
+                rename_item_name = "Boots of Speed"
             Case item_name2 Like "*item_boots_of_elves"
                 rename_item_name = "Band of Elvenskin"
-                Return rename_item_name
             Case item_name2 Like "*item_bottle"
                 rename_item_name = "Bottle"
-                Return rename_item_name
             Case item_name2 Like "*item_bracer"
                 rename_item_name = "Bracer"
-                Return rename_item_name
             Case item_name2 Like "*item_branches"
                 rename_item_name = "Iron Branch"
-                Return rename_item_name
+            Case item_name2 Like "*item_branch"
+                rename_item_name = "Iron Branch"
             Case item_name2 Like "*item_broadsword"
                 rename_item_name = "Broadsword"
-                Return rename_item_name
             Case item_name2 Like "*item_buckler"
                 rename_item_name = "Buckler"
-                Return rename_item_name
             Case item_name2 Like "*item_butterfly"
                 rename_item_name = "Butterfly"
-                Return rename_item_name
             Case item_name2 Like "*item_chainmail"
                 rename_item_name = "Chainmail"
-                Return rename_item_name
             Case item_name2 Like "*item_circlet"
                 rename_item_name = "Circlet"
-                Return rename_item_name
+            Case item_name2 Like "*item_circlet_of_nobility"
+                rename_item_name = "Circlet"
             Case item_name2 Like "*item_clarity"
                 rename_item_name = "Clarity"
-                Return rename_item_name
             Case item_name2 Like "*item_claymore"
                 rename_item_name = "Claymore"
-                Return rename_item_name
             Case item_name2 Like "*item_cloak"
                 rename_item_name = "Cloak"
-                Return rename_item_name
             Case item_name2 Like "*item_courier"
                 rename_item_name = "Animal Courier"
-                Return rename_item_name
             Case item_name2 Like "*item_cyclone"
                 rename_item_name = "Eul's Scepter of Divinity"
-                Return rename_item_name
             Case item_name2 Like "*item_dagon"
                 rename_item_name = "Dagon 1"
-                Return rename_item_name
             Case item_name2 Like "*item_dagon_2"
                 rename_item_name = "Dagon 2"
-                Return rename_item_name
             Case item_name2 Like "*item_dagon_3"
                 rename_item_name = "Dagon 3"
-                Return rename_item_name
             Case item_name2 Like "*item_dagon_4"
                 rename_item_name = "Dagon 4"
-                Return rename_item_name
             Case item_name2 Like "*item_dagon_5"
                 rename_item_name = "Dagon 5"
-                Return rename_item_name
             Case item_name2 Like "*item_demon_edge"
                 rename_item_name = "Demon Edge"
-                Return rename_item_name
             Case item_name2 Like "*item_desolator"
                 rename_item_name = "Desolator"
-                Return rename_item_name
+            Case item_name2 Like "*item_desolater"
+                rename_item_name = "Desolator"
             Case item_name2 Like "*item_diffusal_blade"
                 rename_item_name = "Diffusal Blade 1"
-                Return rename_item_name
             Case item_name2 Like "*item_diffusal_blade_2"
                 rename_item_name = "Diffusal Blade 2"
-                Return rename_item_name
             Case item_name2 Like "*item_dust"
                 rename_item_name = "Dust of Appearance"
-                Return rename_item_name
             Case item_name2 Like "*item_eagle"
                 rename_item_name = "Eaglesong"
-                Return rename_item_name
             Case item_name2 Like "*item_energy_booster"
                 rename_item_name = "Energy Booster"
-                Return rename_item_name
             Case item_name2 Like "*item_ethereal_blade"
                 rename_item_name = "Ethereal Blade"
-                Return rename_item_name
             Case item_name2 Like "*item_flask"
                 rename_item_name = "Healing Salve"
-                Return rename_item_name
             Case item_name2 Like "*item_flying_courier"
                 rename_item_name = "Flying Courier"
-                Return rename_item_name
             Case item_name2 Like "*item_force_staff"
                 rename_item_name = "Force Staff"
-                Return rename_item_name
             Case item_name2 Like "*item_gauntlets"
                 rename_item_name = "Gauntlets of Strength"
-                Return rename_item_name
+            Case item_name2 Like "*item_gauntlet"
+                rename_item_name = "Gauntlets of Strength"
             Case item_name2 Like "*item_gem"
                 rename_item_name = "Gem of True Sight"
-                Return rename_item_name
             Case item_name2 Like "*item_ghost"
                 rename_item_name = "Ghost Scepter"
-                Return rename_item_name
             Case item_name2 Like "*item_gloves"
                 rename_item_name = "Gloves of Haste"
-                Return rename_item_name
             Case item_name2 Like "*item_greater_crit"
                 rename_item_name = "Daedalus"
-                Return rename_item_name
             Case item_name2 Like "*item_hand_of_midas"
                 rename_item_name = "Hand of Midas"
-                Return rename_item_name
             Case item_name2 Like "*item_headdress"
                 rename_item_name = "Headdress"
-                Return rename_item_name
             Case item_name2 Like "*item_heart"
                 rename_item_name = "Heart of Tarrasque"
-                Return rename_item_name
             Case item_name2 Like "*item_helm_of_iron_will"
                 rename_item_name = "Helm of Iron Will"
-                Return rename_item_name
             Case item_name2 Like "*item_helm_of_the_dominator"
                 rename_item_name = "Helm of the Dominator"
-                Return rename_item_name
             Case item_name2 Like "*item_hood_of_defiance"
                 rename_item_name = "Hood of Defiance"
-                Return rename_item_name
             Case item_name2 Like "*item_hyperstone"
                 rename_item_name = "Hyperstone"
-                Return rename_item_name
             Case item_name2 Like "*item_invis_sword"
                 rename_item_name = "Shadow Blade"
-                Return rename_item_name
             Case item_name2 Like "*item_javelin"
                 rename_item_name = "Javelin"
-                Return rename_item_name
             Case item_name2 Like "*item_lesser_crit"
                 rename_item_name = "Crystalys"
-                Return rename_item_name
             Case item_name2 Like "*item_lifesteal"
                 rename_item_name = "Morbid Mask"
-                Return rename_item_name
             Case item_name2 Like "*item_maelstrom"
                 rename_item_name = "Maelstrom"
-                Return rename_item_name
             Case item_name2 Like "*item_magic_stick"
                 rename_item_name = "Magic Stick"
-                Return rename_item_name
             Case item_name2 Like "*item_magic_wand"
                 rename_item_name = "Magic Wand"
-                Return rename_item_name
             Case item_name2 Like "*item_manta"
                 rename_item_name = "Manta Style"
-                Return rename_item_name
             Case item_name2 Like "*item_mantle"
                 rename_item_name = "Mantle of Intelligence"
-                Return rename_item_name
             Case item_name2 Like "*item_mask_of_madness"
                 rename_item_name = "Mask of Madness"
-                Return rename_item_name
             Case item_name2 Like "*item_medallion_of_courage"
                 rename_item_name = "Medallion of Courage"
-                Return rename_item_name
             Case item_name2 Like "*item_mekansm"
                 rename_item_name = "Mekansm"
-                Return rename_item_name
             Case item_name2 Like "*item_mithril_hammer"
                 rename_item_name = "Mithril Hammer"
-                Return rename_item_name
             Case item_name2 Like "*item_mjollnir"
                 rename_item_name = "Mjollnir"
-                Return rename_item_name
             Case item_name2 Like "*item_monkey_king_bar"
                 rename_item_name = "Monkey King Bar"
-                Return rename_item_name
             Case item_name2 Like "*item_mystic_staff"
                 rename_item_name = "Mystic Staff"
-                Return rename_item_name
             Case item_name2 Like "*item_necronomicon"
                 rename_item_name = "Necronomicon 1"
-                Return rename_item_name
             Case item_name2 Like "*item_necronomicon_2"
                 rename_item_name = "Necronomicon 2"
-                Return rename_item_name
             Case item_name2 Like "*item_necronomicon_3"
                 rename_item_name = "Necronomicon 3"
-                Return rename_item_name
             Case item_name2 Like "*item_null_talisman"
                 rename_item_name = "Null Talisman"
-                Return rename_item_name
             Case item_name2 Like "*item_oblivion_staff"
                 rename_item_name = "Oblivion Staff"
-                Return rename_item_name
             Case item_name2 Like "*item_ward_observer"
                 rename_item_name = "Observer Ward"
-                Return rename_item_name
             Case item_name2 Like "*item_ogre_axe"
                 rename_item_name = "Ogre Club"
-                Return rename_item_name
             Case item_name2 Like "*item_orb_of_venom"
                 rename_item_name = "Orb of Venom"
-                Return rename_item_name
             Case item_name2 Like "*item_orchid"
                 rename_item_name = "Orchid Malevolence"
-                Return rename_item_name
             Case item_name2 Like "*item_pers"
                 rename_item_name = "Perseverance"
-                Return rename_item_name
             Case item_name2 Like "*item_phase_boots"
                 rename_item_name = "Phase Boots"
-                Return rename_item_name
             Case item_name2 Like "*item_pipe"
                 rename_item_name = "Pipe of Insight"
-                Return rename_item_name
             Case item_name2 Like "*item_platemail"
                 rename_item_name = "Platemail"
-                Return rename_item_name
             Case item_name2 Like "*item_point_booster"
                 rename_item_name = "Point Booster"
-                Return rename_item_name
             Case item_name2 Like "*item_poor_mans_shield"
                 rename_item_name = "Poor Man's Shield"
-                Return rename_item_name
             Case item_name2 Like "*item_power_treads"
                 rename_item_name = "Power Treads"
-                Return rename_item_name
             Case item_name2 Like "*item_quarterstaff"
                 rename_item_name = "Quarterstaff"
-                Return rename_item_name
             Case item_name2 Like "*item_quelling_blade"
                 rename_item_name = "Quelling Blade"
-                Return rename_item_name
             Case item_name2 Like "*item_radiance"
                 rename_item_name = "Radiance"
-                Return rename_item_name
             Case item_name2 Like "*item_rapier"
                 rename_item_name = "Divine Rapier"
-                Return rename_item_name
             Case item_name2 Like "*item_reaver"
                 rename_item_name = "Reaver"
-                Return rename_item_name
             Case item_name2 Like "*item_refresher"
                 rename_item_name = "Refresher Orb"
-                Return rename_item_name
             Case item_name2 Like "*item_ring_of_basilius"
                 rename_item_name = "Ring of Basilius"
-                Return rename_item_name
             Case item_name2 Like "*item_ring_of_health"
                 rename_item_name = "Ring of Health"
-                Return rename_item_name
             Case item_name2 Like "*item_ring_of_protection"
                 rename_item_name = "Ring of Protection"
-                Return rename_item_name
             Case item_name2 Like "*item_ring_of_regen"
                 rename_item_name = "Ring of Regen"
-                Return rename_item_name
             Case item_name2 Like "*item_robe"
                 rename_item_name = "Robe of the Magi"
-                Return rename_item_name
             Case item_name2 Like "*item_relic"
                 rename_item_name = "Sacred Relic"
-                Return rename_item_name
             Case item_name2 Like "*item_sange"
                 rename_item_name = "Sange"
-                Return rename_item_name
             Case item_name2 Like "*item_sange_and_yasha"
                 rename_item_name = "Sange and Yasha"
-                Return rename_item_name
             Case item_name2 Like "*item_satanic"
                 rename_item_name = "Satanic"
-                Return rename_item_name
             Case item_name2 Like "*item_ultimate_scepter"
                 rename_item_name = "Aghanim's Scepter"
-                Return rename_item_name
             Case item_name2 Like "*item_ward_sentry"
                 rename_item_name = "Sentry Ward"
-                Return rename_item_name
             Case item_name2 Like "*item_sheep"
                 rename_item_name = "Scythe of Vyse"
-                Return rename_item_name
+            Case item_name2 Like "*item_sheepstick"
+                rename_item_name = "Scythe of Vyse"
             Case item_name2 Like "*item_shivas_guard"
                 rename_item_name = "Shiva's Guard"
-                Return rename_item_name
+            Case item_name2 Like "*item_shivas"
+                rename_item_name = "Shiva's Guard"
             Case item_name2 Like "*item_skadi"
                 rename_item_name = "Eye of Skadi"
-                Return rename_item_name
             Case item_name2 Like "*item_slippers"
                 rename_item_name = "Slippers of Agility"
-                Return rename_item_name
             Case item_name2 Like "*item_smoke_of_deceit"
                 rename_item_name = "Smoke of Deceit"
-                Return rename_item_name
             Case item_name2 Like "*item_sobi_mask"
                 rename_item_name = "Sage's Mask"
-                Return rename_item_name
             Case item_name2 Like "*item_soul_booster"
                 rename_item_name = "Soul Booster"
-                Return rename_item_name
             Case item_name2 Like "*item_soul_ring"
                 rename_item_name = "Soul Ring"
-                Return rename_item_name
             Case item_name2 Like "*item_sphere"
                 rename_item_name = "Linken's Sphere"
-                Return rename_item_name
             Case item_name2 Like "*item_staff_of_wizardry"
                 rename_item_name = "Staff of Wizardry"
-                Return rename_item_name
             Case item_name2 Like "*item_stout_shield"
                 rename_item_name = "Stout Shield"
-                Return rename_item_name
             Case item_name2 Like "*item_talisman_of_evasion"
                 rename_item_name = "Talisman of Evasion"
-                Return rename_item_name
             Case item_name2 Like "*item_tpscroll"
                 rename_item_name = "Town Portal Scroll"
-                Return rename_item_name
             Case item_name2 Like "*item_travel_boots"
                 rename_item_name = "Boots of Travel"
-                Return rename_item_name
             Case item_name2 Like "*item_ultimate_orb"
                 rename_item_name = "Ultimate Orb"
-                Return rename_item_name
             Case item_name2 Like "*item_urn_of_shadows"
                 rename_item_name = "Urn of Shadows"
-                Return rename_item_name
             Case item_name2 Like "*item_vanguard"
                 rename_item_name = "Vanguard"
-                Return rename_item_name
             Case item_name2 Like "*item_veil_of_discord"
                 rename_item_name = "Veil of Discord"
-                Return rename_item_name
             Case item_name2 Like "*item_vitality_booster"
                 rename_item_name = "Vitality Booster"
-                Return rename_item_name
             Case item_name2 Like "*item_vladmir"
                 rename_item_name = "Vladmir's Offering"
-                Return rename_item_name
             Case item_name2 Like "*item_void_stone"
                 rename_item_name = "Void Stone"
-                Return rename_item_name
             Case item_name2 Like "*item_wraith_band"
                 rename_item_name = "Wraith Band"
-                Return rename_item_name
             Case item_name2 Like "*item_yasha"
                 rename_item_name = "Yasha"
-                Return rename_item_name
             Case item_name2 Like "*item_abyssal_blade"
                 rename_item_name = "Abyssal Blade"
-                Return rename_item_name
             Case item_name2 Like "*item_heavens_halberd"
                 rename_item_name = "Heaven's Halberd"
-                Return rename_item_name
             Case item_name2 Like "*item_ring_of_aquila"
                 rename_item_name = "Ring of Aquila"
-                Return rename_item_name
             Case item_name2 Like "*item_rod_of_atos"
                 rename_item_name = "Rod of Atos"
-                Return rename_item_name
             Case item_name2 Like "*item_tranquil_boots"
                 rename_item_name = "Tranquil Boots"
-                Return rename_item_name
             Case item_name2 Like "*item_recipe_wraith_band"
-                Return "Wraith Band (Recipe)"
+                rename_item_name = "Wraith Band (Recipe)"
             Case item_name2 Like "*item_recipe_bracer"
-                Return "Bracer (Recipe)"
+                rename_item_name = "Bracer (Recipe)"
             Case item_name2 Like "*item_recipe_null_talisman"
-                Return "Null Talisman (Recipe)"
+                rename_item_name = "Null Talisman (Recipe)"
             Case item_name2 Like "*item_recipe_magic_wand"
-                Return "Magic Wand (Recipe)"
+                rename_item_name = "Magic Wand (Recipe)"
             Case item_name2 Like "*item_recipe_hand_of_midas"
-                Return "Hand of Midas (Recipe)"
+                rename_item_name = "Hand of Midas (Recipe)"
             Case item_name2 Like "*item_recipe_soul_ring"
-                Return "Soul Ring (Recipe)"
+                rename_item_name = "Soul Ring (Recipe)"
             Case item_name2 Like "*item_recipe_travel_boots"
-                Return "Boots of Travel (Recipe)"
+                rename_item_name = "Boots of Travel (Recipe)"
             Case item_name2 Like "*item_recipe_headdress"
-                Return "Headdress (Recipe)"
+                rename_item_name = "Headdress (Recipe)"
             Case item_name2 Like "*item_recipe_buckler"
-                Return "Buckler (Recipe)"
+                rename_item_name = "Buckler (Recipe)"
             Case item_name2 Like "*item_recipe_urn_of_shadows"
-                Return "Urn of Shadows (Recipe)"
+                rename_item_name = "Urn of Shadows (Recipe)"
             Case item_name2 Like "*item_recipe_mekansm"
-                Return "Mekansm (Recipe)"
+                rename_item_name = "Mekansm (Recipe)"
             Case item_name2 Like "*item_recipe_medallion_of_courage"
-                Return "Medallion of Courage (Recipe)"
+                rename_item_name = "Medallion of Courage (Recipe)"
             Case item_name2 Like "*item_recipe_vladmir"
-                Return "Vladmir's Offering (Recipe)"
+                rename_item_name = "Vladmir's Offering (Recipe)"
             Case item_name2 Like "*item_recipe_pipe"
-                Return "Pipe of Insight (Recipe)"
+                rename_item_name = "Pipe of Insight (Recipe)"
             Case item_name2 Like "*item_recipe_ancient_janggo"
-                Return "Drum of Endurance (Recipe)"
+                rename_item_name = "Drum of Endurance (Recipe)"
             Case item_name2 Like "*item_recipe_necronomicon"
-                Return "Necronomicon (Recipe)"
+                rename_item_name = "Necronomicon (Recipe)"
             Case item_name2 Like "*item_recipe_cyclone"
-                Return "Eul's Scepter of Divinity (Recipe)"
+                rename_item_name = "Eul's Scepter of Divinity (Recipe)"
             Case item_name2 Like "*item_recipe_dagon"
-                Return "Dagon (Recipe)"
+                rename_item_name = "Dagon (Recipe)"
             Case item_name2 Like "*item_recipe_veil_of_discord"
-                Return "Veil of Discord (Recipe)"
+                rename_item_name = "Veil of Discord (Recipe)"
             Case item_name2 Like "*item_recipe_orchid"
-                Return "Orchid Malevolence (Recipe)"
+                rename_item_name = "Orchid Malevolence (Recipe)"
             Case item_name2 Like "*item_recipe_refresher"
-                Return "Refresher Orb (Recipe)"
+                rename_item_name = "Refresher Orb (Recipe)"
             Case item_name2 Like "*item_recipe_force_staff"
-                Return "Force Staff (Recipe)"
+                rename_item_name = "Force Staff (Recipe)"
             Case item_name2 Like "*item_recipe_armlet"
-                Return "Armlet (Recipe)"
+                rename_item_name = "Armlet (Recipe)"
             Case item_name2 Like "*item_recipe_lesser_crit"
-                Return "Crystalys (Recipe)"
+                rename_item_name = "Crystalys (Recipe)"
             Case item_name2 Like "*item_recipe_greater_crit"
-                Return "Daedalus (Recipe)"
+                rename_item_name = "Daedalus (Recipe)"
             Case item_name2 Like "*item_recipe_basher"
-                Return "Skull Basher (Recipe)"
+                rename_item_name = "Skull Basher (Recipe)"
             Case item_name2 Like "*item_recipe_invis_sword"
-                Return "Shadow Blade (Recipe)"
+                rename_item_name = "Shadow Blade (Recipe)"
             Case item_name2 Like "*item_recipe_radiance"
-                Return "Radiance (Recipe)"
+                rename_item_name = "Radiance (Recipe)"
             Case item_name2 Like "*item_recipe_black_king_bar"
-                Return "Black King Bar (Recipe)"
+                rename_item_name = "Black King Bar (Recipe)"
             Case item_name2 Like "*item_recipe_assault"
-                Return "Assault Cuirass (Recipe)"
+                rename_item_name = "Assault Cuirass (Recipe)"
             Case item_name2 Like "*item_recipe_manta"
-                Return "Manta Style (Recipe)"
+                rename_item_name = "Manta Style (Recipe)"
             Case item_name2 Like "*item_recipe_shivas_guard"
-                Return "Shiva's Guard (Recipe)"
+                rename_item_name = "Shiva's Guard (Recipe)"
             Case item_name2 Like "*item_recipe_sphere"
-                Return "Linken's Sphere (Recipe)"
+                rename_item_name = "Linken's Sphere (Recipe)"
             Case item_name2 Like "*item_recipe_heart"
-                Return "Heart of Tarrasque (Recipe)"
+                rename_item_name = "Heart of Tarrasque (Recipe)"
             Case item_name2 Like "*item_recipe_desolator"
-                Return "Desolator (Recipe)"
+                rename_item_name = "Desolator (Recipe)"
             Case item_name2 Like "*item_recipe_mjollnir"
-                Return "Mjollnir (Recipe)"
+                rename_item_name = "Mjollnir (Recipe)"
             Case item_name2 Like "*item_recipe_satanic"
-                Return "Satanic (Recipe)"
+                rename_item_name = "Satanic (Recipe)"
             Case item_name2 Like "*item_recipe_yasha"
-                Return "Yasha (Recipe)"
+                rename_item_name = "Yasha (Recipe)"
             Case item_name2 Like "*item_recipe_diffusal_blade"
-                Return "Diffusal Blade (Recipe)"
+                rename_item_name = "Diffusal Blade (Recipe)"
             Case item_name2 Like "*item_recipe_sange"
-                Return "Sange (Recipe)"
+                rename_item_name = "Sange (Recipe)"
             Case item_name2 Like "*item_recipe_mask_of_madness"
-                Return "Mask of Madness (Recipe)"
+                rename_item_name = "Mask of Madness (Recipe)"
             Case item_name2 Like "*item_recipe_maelstrom"
-                Return "Maelstrom (Recipe)"
+                rename_item_name = "Maelstrom (Recipe)"
             Case item_name2 Like "*item_shadow_amulet"
-                Return "Shadow Amulet"
+                rename_item_name = "Shadow Amulet"
             Case item_name2 Like "*item_silver_edge"
                 rename_item_name = "Silver Edge"
-                Return rename_item_name
             Case item_name2 Like "*item_glimmer_cape"
                 rename_item_name = "Glimmer Cape"
-                Return rename_item_name
             Case item_name2 Like "*item_octarine_core"
                 rename_item_name = "Octarine Core"
-                Return rename_item_name
             Case item_name2 Like "*item_guardian_greaves"
                 rename_item_name = "Guardian Greaves"
-                Return rename_item_name
             Case item_name2 Like "*item_solar_crest"
                 rename_item_name = "Solar Crest"
-                Return rename_item_name
             Case item_name2 Like "*item_travel_boots_2"
-                rename_item_name = "Travel Boots 2"
-                Return rename_item_name
+                rename_item_name = "Boots of Travel 2"
             Case item_name2 Like "*item_lotus_orb"
                 rename_item_name = "Lotus Orb"
-                Return rename_item_name
             Case item_name2 Like "*item_crimson_guard"
                 rename_item_name = "Crimson Guard"
-                Return rename_item_name
             Case item_name2 Like "*item_moon_shard"
                 rename_item_name = "Moon Shard"
-                Return rename_item_name
             Case item_name2 Like "*item_enchanted_mango"
                 rename_item_name = "Enchanted Mango"
-                Return rename_item_name
+            Case item_name2 Like "*item_faerie_fire"
+                rename_item_name = "Faerie Fire"
+            Case item_name2 Like "*item_aether_lens"
+                rename_item_name = "Aether Lens"
+            Case item_name2 Like "*item_blight_stone"
+                rename_item_name = "Blight Stone"
+            Case item_name2 Like "*item_bloodthorn"
+                rename_item_name = "Bloodthorn"
+            Case item_name2 Like "*item_dragon_lance"
+                rename_item_name = "Dragon Lance"
+            Case item_name2 Like "*item_echo_sabre"
+                rename_item_name = "Echo Sabre"
+            Case item_name2 Like "*item_hurricane_pike"
+                rename_item_name = "Hurricane Pike"
+            Case item_name2 Like "*item_infused_raindrop"
+                rename_item_name = "Infused Raindrop"
+            Case item_name2 Like "*item_iron_talon"
+                rename_item_name = "Iron Talon"
+            Case item_name2 Like "*item_tome_of_knowledge"
+                rename_item_name = "Tome of Knowledge"
+            Case item_name2 Like "*item_wind_lace"
+                rename_item_name = "Wind Lace"
+            Case item_name2 Like "*item_recipe_aether_lens"
+                rename_item_name = "Aether Lens (Recipe)"
+            Case item_name2 Like "*item_recipe_hurricane_pike"
+                rename_item_name = "Hurricane Pike (Recipe)"
+            Case item_name2 Like "*item_recipe_iron_talon"
+                rename_item_name = "Iron Talon (Recipe)"
             Case Else
-                rename_item_name = "Error!"
-                Return rename_item_name
+                rename_item_name = "Error! " + item_name
         End Select
+
+        Return rename_item_name
     End Function
 
     'Return the itemname for the itembuild file, needs the normal itemname
@@ -1386,6 +1287,34 @@ Public Class FormMain
                 Return "item_moon_shard"
             Case "Enchanted Mango"
                 Return "item_enchanted_mango"
+            Case "Faerie Fire"
+                Return "item_faerie_fire"
+            Case "Aether Lens"
+                Return "item_aether_lens"
+            Case "Blight Stone"
+                Return "item_blight_stone"
+            Case "Bloodthorn"
+                Return "item_bloodthorn"
+            Case "Dragon Lance"
+                Return "item_dragon_lance"
+            Case "Echo Sabre"
+                Return "item_echo_sabre"
+            Case "Hurricane Pike"
+                Return "item_hurricane_pike"
+            Case "Infused Raindrop"
+                Return "item_infused_raindrop"
+            Case "Iron Talon"
+                Return "item_iron_talon"
+            Case "Tome of Knowledge"
+                Return "item_tome_of_knowledge"
+            Case "Wind Lace"
+                Return "item_wind_lace"
+            Case "Aether Lens (Recipe)"
+                Return "item_recipe_aether_lens"
+            Case "Hurricane Pike (Recipe)"
+                Return "item_recipe_hurricane_pike"
+            Case "Iron Talon (Recipe)"
+                Return "item_recipe_iron_talon"
             Case Else
                 Return "Error! Itemname: " + item_name
         End Select
