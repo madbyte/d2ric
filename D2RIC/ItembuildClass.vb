@@ -1683,21 +1683,23 @@ Public Class ItembuildClass
         Select Case itemname
             'Items (abc-sorted)
             Case "Abyssal Blade"
-                Return 6750
+                Return 6400
+            Case "Aether Lens"
+                Return 2300
             Case "Aghanim's Scepter"
                 Return 4200
             Case "Animal Courier"
-                Return 120
+                Return 100
             Case "Arcane Boots"
-                Return 1350
+                Return 1300
             Case "Armlet"
-                Return 2370
+                Return 2320
             Case "Assault Cuirass"
                 Return 5250
             Case "Band of Elvenskin"
                 Return 450
             Case "Battle Fury"
-                Return 4575
+                Return 4500
             Case "Belt of Strength"
                 Return 450
             Case "Black King Bar"
@@ -1708,26 +1710,30 @@ Public Class ItembuildClass
                 Return 1000
             Case "Blades of Attack"
                 Return 420
+            Case "Blight Stone"
+                Return 300
             Case "Blink Dagger"
                 Return 2250
             Case "Bloodstone"
-                Return 4900
+                Return 4875
+            Case "Bloodthorn"
+                Return 7195
             Case "Boots of Speed"
-                Return 450
+                Return 400
             Case "Boots of Travel"
                 Return GetPrice("Boots of Speed") + GetPrice("Boots of Travel (Recipe)")
             Case "Boots of Travel 2"
                 Return GetPrice("Boots of Travel") + GetPrice("Boots of Travel (Recipe)")
             Case "Bottle"
-                Return 700
+                Return 660
             Case "Bracer"
-                Return 525
+                Return GetPrice("Circlet") + GetPrice("Gauntlets of Strength") + GetPrice("Bracer (Recipe)")
             Case "Broadsword"
                 Return 1200
             Case "Buckler"
                 Return 800
             Case "Butterfly"
-                Return 5875
+                Return 5775
             Case "Chainmail"
                 Return 550
             Case "Circlet"
@@ -1739,7 +1745,7 @@ Public Class ItembuildClass
             Case "Cloak"
                 Return 550
             Case "Crimson Guard"
-                Return 3800
+                Return 3550
             Case "Crystalys"
                 Return 2120
             Case "Daedalus"
@@ -1764,24 +1770,32 @@ Public Class ItembuildClass
                 Return 3150 + 700
             Case "Divine Rapier"
                 Return 6200
+            Case "Dragon Lance"
+                Return 1900
             Case "Drum of Endurance"
-                Return 1850
+                Return 1785
             Case "Dust of Appearance"
                 Return 180
             Case "Eaglesong"
                 Return 3200
+            Case "Echo Sabre"
+                Return 2650
+            Case "Enchanted Mango"
+                Return 125
             Case "Energy Booster"
                 Return 900
             Case "Ethereal Blade"
                 Return 4700
             Case "Eul's Scepter of Divinity"
-                Return 2850
+                Return 2735
             Case "Eye of Skadi"
                 Return 5675
+            Case "Faerie Fire"
+                Return 75
             Case "Flying Courier"
-                Return 220
+                Return 150
             Case "Force Staff"
-                Return 2250
+                Return 2225
             Case "Gauntlets of Strength"
                 Return 150
             Case "Gem of True Sight"
@@ -1789,45 +1803,47 @@ Public Class ItembuildClass
             Case "Ghost Scepter"
                 Return 1500
             Case "Glimmer Cape"
-                Return 1950
+                Return 1850
             Case "Gloves of Haste"
                 Return 500
             Case "Guardian Greaves"
-                Return 5300
+                Return 5275
             Case "Hand of Midas"
-                Return 2050
+                Return GetPrice("Gloves of Haste") + GetPrice("Hand of Midas (Recipe)")
             Case "Headdress"
-                Return 600
+                Return 575
             Case "Healing Salve"
                 Return 110
             Case "Heart of Tarrasque"
                 Return 5500
             Case "Heaven's Halberd"
-                Return 3850
+                Return 3750
             Case "Helm of Iron Will"
-                Return 950
+                Return 900
             Case "Helm of the Dominator"
-                Return 1850
+                Return 1800
             Case "Hood of Defiance"
-                Return 2125
+                Return 1725
+            Case "Hurricane Pike"
+                Return 4375
             Case "Hyperstone"
                 Return 2000
+            Case "Infused Raindrop"
+                Return 225
             Case "Iron Branch"
                 Return 50
             Case "Javelin"
                 Return 1500
             Case "Linken's Sphere"
-                Return 5175
+                Return 4800
             Case "Lotus Orb"
-                Return 4050
+                Return 4000
             Case "Maelstrom"
                 Return 2800
             Case "Magic Stick"
                 Return 200
             Case "Magic Wand"
-                Return 465
-            Case "Enchanted Mango"
-                Return 150
+                Return GetPrice("Magic Stick") + GetPrice("Iron Branch") + GetPrice("Iron Branch") + GetPrice("Circlet")
             Case "Manta Style"
                 Return 4950
             Case "Mantle of Intelligence"
@@ -1835,9 +1851,9 @@ Public Class ItembuildClass
             Case "Mask of Madness"
                 Return 1800
             Case "Medallion of Courage"
-                Return 1200
+                Return 1175
             Case "Mekansm"
-                Return 2300
+                Return 2275
             Case "Mithril Hammer"
                 Return 1600
             Case "Mjollnir"
@@ -1845,23 +1861,23 @@ Public Class ItembuildClass
             Case "Monkey King Bar"
                 Return 5400
             Case "Moon Shard"
-                Return 4300
+                Return GetPrice("Hyperstone") + GetPrice("Hyperstone")
             Case "Morbid Mask"
                 Return 900
             Case "Mystic Staff"
                 Return 2700
             Case "Necronomicon 1"
-                Return 2700
+                Return 2650
             Case "Necronomicon 2"
-                Return 2700 + 1250
+                Return GetPrice("Necronomicon 1") + 1250
             Case "Necronomicon 3"
-                Return 2700 + 1250 + 1250
+                Return GetPrice("Necronomicon 2") + 1250
             Case "Null Talisman"
-                Return 470
+                Return GetPrice("Circlet") + GetPrice("Mantle of Intelligence") + GetPrice("Null Talisman (Recipe)")
             Case "Oblivion Staff"
-                Return 1650
+                Return GetPrice("Quarterstaff") + GetPrice("Robe of the Magi") + GetPrice("Sage's Mask")
             Case "Observer Ward"
-                Return 75
+                Return 65
             Case "Octarine Core"
                 Return 5900
             Case "Ogre Club"
@@ -1871,39 +1887,39 @@ Public Class ItembuildClass
             Case "Orchid Malevolence"
                 Return 4075
             Case "Perseverance"
-                Return 1750
+                Return GetPrice("Ring of Health") + GetPrice("Void Stone")
             Case "Phase Boots"
-                Return 1290
+                Return GetPrice("Boots of Speed") + GetPrice("Blades of Attack") + GetPrice("Blades of Attack")
             Case "Pipe of Insight"
-                Return 3525
+                Return 3100
             Case "Platemail"
                 Return 1400
             Case "Point Booster"
                 Return 1200
             Case "Poor Man's Shield"
-                Return 500
+                Return GetPrice("Stout Shield") + GetPrice("Slippers of Agility") + GetPrice("Slippers of Agility")
             Case "Power Treads"
-                Return 1400
+                Return GetPrice("Boots of Speed") + GetPrice("Gloves of Haste") + GetPrice("Belt of Strength")
             Case "Quarterstaff"
                 Return 875
             Case "Quelling Blade"
-                Return 225
+                Return 200
             Case "Radiance"
-                Return 5225
+                Return 5150
             Case "Reaver"
                 Return 3000
             Case "Refresher Orb"
-                Return 5300
+                Return 5200
             Case "Ring of Aquila"
-                Return 1010
+                Return 985
             Case "Ring of Basilius"
-                Return 525
+                Return 500
             Case "Ring of Health"
-                Return 875
+                Return 850
             Case "Ring of Protection"
-                Return 200
+                Return 175
             Case "Ring of Regen"
-                Return 350
+                Return 325
             Case "Robe of the Magi"
                 Return 450
             Case "Rod of Atos"
@@ -1917,59 +1933,63 @@ Public Class ItembuildClass
             Case "Sange and Yasha"
                 Return 4100
             Case "Satanic"
-                Return 5950
+                Return 5900
             Case "Scythe of Vyse"
-                Return 5675
+                Return 5650
             Case "Sentry Ward"
                 Return 200
             Case "Shadow Amulet"
-                Return 1400
+                Return 1300
             Case "Shadow Blade"
-                Return 2800
+                Return 2700
             Case "Shiva's Guard"
                 Return 4700
             Case "Silver Edge"
-                Return 5200
+                Return 5100
             Case "Skull Basher"
-                Return 2950
+                Return 2700
             Case "Slippers of Agility"
                 Return 150
             Case "Smoke of Deceit"
-                Return 100
+                Return 50
             Case "Solar Crest"
-                Return 3000
+                Return 2875
             Case "Soul Booster"
                 Return 3200
             Case "Soul Ring"
-                Return 800
+                Return GetPrice("Ring of Regen") + GetPrice("Sage's Mask") + GetPrice("Soul Ring (Recipe)")
             Case "Staff of Wizardry"
                 Return 1000
             Case "Stout Shield"
                 Return 200
             Case "Talisman of Evasion"
-                Return 1800
+                Return 1700
             Case "Tango"
                 Return 125
+            Case "Tome of Knowledge"
+                Return 150
             Case "Town Portal Scroll"
-                Return 100
+                Return 50
             Case "Tranquil Boots"
-                Return 1000
+                Return 900
             Case "Ultimate Orb"
                 Return 2100
             Case "Urn of Shadows"
                 Return 875
             Case "Vanguard"
-                Return 2175
+                Return 2150
             Case "Veil of Discord"
-                Return 2520
+                Return 2240
             Case "Vitality Booster"
                 Return 1100
             Case "Vladmir's Offering"
-                Return 2325
+                Return 2275
             Case "Void Stone"
-                Return 875
+                Return 850
+            Case "Wind Lace"
+                Return 235
             Case "Wraith Band"
-                Return 485
+                Return GetPrice("Circlet") + GetPrice("Slippers of Agility") + GetPrice("Wraith Band (Recipe)")
             Case "Yasha"
                 Return 2050
                 'Recipe (abc-sorted)
@@ -1982,7 +2002,7 @@ Public Class ItembuildClass
             Case "Boots of Travel (Recipe)"
                 Return 2000
             Case "Bracer (Recipe)"
-                Return 190
+                Return 210
             Case "Buckler (Recipe)"
                 Return 200
             Case "Crystalys (Recipe)"
@@ -2026,7 +2046,7 @@ Public Class ItembuildClass
             Case "Necronomicon (Recipe)"
                 Return 1250
             Case "Null Talisman (Recipe)"
-                Return 135
+                Return 155
             Case "Orchid Malevolence (Recipe)"
                 Return 775
             Case "Pipe of Insight (Recipe)"
@@ -2052,7 +2072,7 @@ Public Class ItembuildClass
             Case "Vladmir's Offering (Recipe)"
                 Return 300
             Case "Wraith Band (Recipe)"
-                Return 150
+                Return 170
             Case "Yasha (Recipe)"
                 Return 600
             Case Else
