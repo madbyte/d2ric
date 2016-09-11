@@ -2,7 +2,11 @@ DotA 2 Recommended Items Customizer
 =====
 
 ###Download
-- https://dl.dropboxusercontent.com/u/15746440/D2RIC/release.exe
+- https://github.com/madbyte/d2ric/releases/latest
+
+*Old files can be found here*
+*- https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old*
+*- https://github.com/madbyte/d2ric/releases*
 
 ###--- TODO ---
 - Add the possibility to reorder items
@@ -14,7 +18,15 @@ DotA 2 Recommended Items Customizer
 
 ###--- CHANGELOG ---
 
-(old files can be found here https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old)
+Version 1.5.3:
+- The Path of the itembuild folder has changed
+- Add Arc Warden
+- Fix Underlord
+- Add images for new items
+- Add new items
+- Correct item prices
+- Correct tooltips
+- Disable wrong tooltips
 
 Version 1.5.2:
 - Translate the UI
