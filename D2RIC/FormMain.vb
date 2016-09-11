@@ -327,7 +327,7 @@ Public Class FormMain
                 Dim reader As New System.IO.StreamReader(My.Application.Info.DirectoryPath + "/version.dat")
                 Dim read As String = reader.ReadToEnd
                 reader.Close()
-                If read <> currentversion Then
+                If read > currentversion Then
                     MsgBox("A new version is available. " & vbCrLf & _
                      "You currently have version " & currentversion & "." & vbCrLf & _
                      "The latest version is " & read & "." & vbCrLf & vbCrLf & _
