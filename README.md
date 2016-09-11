@@ -4,9 +4,9 @@ DotA 2 Recommended Items Customizer
 ###Download
 - https://github.com/madbyte/d2ric/releases/latest
 
-*Old files can be found here*
-*- https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old*
-*- https://github.com/madbyte/d2ric/releases*
+*Old files can be found here:*
+*https://www.dropbox.com/sh/6ywam04l1fq6h5m/HYOIM2DMPP/D2RIC/old*
+*https://github.com/madbyte/d2ric/releases*
 
 ###--- TODO ---
 - Add the possibility to reorder items
