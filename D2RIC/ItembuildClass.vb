@@ -191,9 +191,9 @@ Public Class ItembuildClass
                 .Items.Add(createListViewItem("Mekansm (Recipe)", "Support"))
             End If
             .Items.Add(createListViewItem("Vladmir's Offering", "Support"))
-            If FormMain.CheckBox1.Checked Then
-                .Items.Add(createListViewItem("Vladmir's Offering (Recipe)", "Support"))
-            End If
+            'If FormMain.CheckBox1.Checked Then
+            '    .Items.Add(createListViewItem("Vladmir's Offering (Recipe)", "Support"))
+            'End If
             .Items.Add(createListViewItem("Pipe of Insight", "Support"))
             If FormMain.CheckBox1.Checked Then
                 .Items.Add(createListViewItem("Pipe of Insight (Recipe)", "Support"))
@@ -386,9 +386,9 @@ Public Class ItembuildClass
                 .Items.Add(createListViewItem("Mjollnir (Recipe)", "Artifacts"))
             End If
             .Items.Add(createListViewItem("Satanic", "Artifacts"))
-            If FormMain.CheckBox1.Checked Then
-                .Items.Add(createListViewItem("Satanic (Recipe)", "Artifacts"))
-            End If
+            'If FormMain.CheckBox1.Checked Then
+            '    .Items.Add(createListViewItem("Satanic (Recipe)", "Artifacts"))
+            'End If
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -479,6 +479,12 @@ Public Class ItembuildClass
                     Label = "Core Items (Secondary)"
                 Case "#DOTA_Item_Build_Luxury"
                     Label = "Luxury"
+                Case "#DOTA_Item_Build_Mid_Items"
+                    Label = "Mid Items"
+                Case "#DOTA_Item_Build_Late_Items"
+                    Label = "Late Items"
+                Case "#DOTA_Item_Build_Other_Items"
+                    Label = "Other Items"
                 Case Else
                     Label = Replace(Label, "_", " ")
             End Select
@@ -503,6 +509,12 @@ Public Class ItembuildClass
                 Slot = "#DOTA_Item_Build_Core_Items_Secondary"
             Case "Luxury"
                 Slot = "#DOTA_Item_Build_Luxury"
+            Case "Mid Items"
+                Slot = "#DOTA_Item_Build_Mid_Items"
+            Case "Late Items"
+                Slot = "#DOTA_Item_Build_Late_Items"
+            Case "Other Items"
+                Slot = "#DOTA_Item_Build_Other_Items"
             Case Else
                 Slot = Slot
         End Select
@@ -1685,7 +1697,7 @@ Public Class ItembuildClass
             Case "Abyssal Blade"
                 Return 6400
             Case "Aether Lens"
-                Return 2300
+                Return GetPrice("Energy Booster") + GetPrice("Ring of Health") + GetPrice("Aether Lens (Recipe)")
             Case "Aghanim's Scepter"
                 Return 4200
             Case "Animal Courier"
@@ -1781,7 +1793,7 @@ Public Class ItembuildClass
             Case "Echo Sabre"
                 Return 2650
             Case "Enchanted Mango"
-                Return 125
+                Return 110
             Case "Energy Booster"
                 Return 900
             Case "Ethereal Blade"
@@ -1821,7 +1833,7 @@ Public Class ItembuildClass
             Case "Helm of Iron Will"
                 Return 900
             Case "Helm of the Dominator"
-                Return 1800
+                Return GetPrice("Gloves of Haste") + GetPrice("Headdress") + GetPrice("Helm of the Dominator (Recipe)")
             Case "Hood of Defiance"
                 Return 1725
             Case "Hurricane Pike"
@@ -1849,7 +1861,7 @@ Public Class ItembuildClass
             Case "Mantle of Intelligence"
                 Return 150
             Case "Mask of Madness"
-                Return 1800
+                Return GetPrice("Morbid Mask") + GetPrice("Mask of Madness (Recipe)")
             Case "Medallion of Courage"
                 Return 1175
             Case "Mekansm"
@@ -1863,7 +1875,7 @@ Public Class ItembuildClass
             Case "Moon Shard"
                 Return GetPrice("Hyperstone") + GetPrice("Hyperstone")
             Case "Morbid Mask"
-                Return 900
+                Return 1200
             Case "Mystic Staff"
                 Return 2700
             Case "Necronomicon 1"
@@ -1933,7 +1945,7 @@ Public Class ItembuildClass
             Case "Sange and Yasha"
                 Return 4100
             Case "Satanic"
-                Return 5900
+                Return GetPrice("Reaver") + GetPrice("Morbid Mask") + GetPrice("Mithril Hammer")
             Case "Scythe of Vyse"
                 Return 5650
             Case "Sentry Ward"
@@ -1963,7 +1975,7 @@ Public Class ItembuildClass
             Case "Stout Shield"
                 Return 200
             Case "Talisman of Evasion"
-                Return 1700
+                Return 1450
             Case "Tango"
                 Return 125
             Case "Tome of Knowledge"
@@ -1983,11 +1995,11 @@ Public Class ItembuildClass
             Case "Vitality Booster"
                 Return 1100
             Case "Vladmir's Offering"
-                Return 2275
+                Return GetPrice("Morbid Mask") + GetPrice("Ring of Basilius") + GetPrice("Headdress")
             Case "Void Stone"
                 Return 850
             Case "Wind Lace"
-                Return 235
+                Return 250
             Case "Wraith Band"
                 Return GetPrice("Circlet") + GetPrice("Slippers of Agility") + GetPrice("Wraith Band (Recipe)")
             Case "Yasha"
@@ -1997,12 +2009,14 @@ Public Class ItembuildClass
                 Return 700
             Case "Assault Cuirass (Recipe)"
                 Return 1300
+            Case "Aether Lens (Recipe)"
+                Return 600
             Case "Black King Bar (Recipe)"
                 Return 1375
             Case "Boots of Travel (Recipe)"
                 Return 2000
             Case "Bracer (Recipe)"
-                Return 210
+                Return 190
             Case "Buckler (Recipe)"
                 Return 200
             Case "Crystalys (Recipe)"
@@ -2027,6 +2041,8 @@ Public Class ItembuildClass
                 Return 200
             Case "Heart of Tarrasque (Recipe)"
                 Return 1200
+            Case "Helm of the Dominator (Recipe)"
+                Return 725
             Case "Linken's Sphere (Recipe)"
                 Return 1325
             Case "Maelstrom (Recipe)"
@@ -2036,7 +2052,7 @@ Public Class ItembuildClass
             Case "Manta Style (Recipe)"
                 Return 900
             Case "Mask of Madness (Recipe)"
-                Return 1000
+                Return 700
             Case "Medallion of Courage (Recipe)"
                 Return 200
             Case "Mekansm (Recipe)"
@@ -2057,20 +2073,20 @@ Public Class ItembuildClass
                 Return 1800
             Case "Sange (Recipe)"
                 Return 600
-            Case "Satanic (Recipe)"
-                Return 1100
+                'Case "Satanic (Recipe)"
+                '    Return 1100
             Case "Shiva's Guard (Recipe)"
                 Return 600
             Case "Skull Basher (Recipe)"
                 Return 1000
             Case "Soul Ring (Recipe)"
-                Return 125
+                Return 150
             Case "Urn of Shadows (Recipe)"
                 Return 250
             Case "Veil of Discord (Recipe)"
                 Return 1250
-            Case "Vladmir's Offering (Recipe)"
-                Return 300
+                'Case "Vladmir's Offering (Recipe)"
+                '    Return 300
             Case "Wraith Band (Recipe)"
                 Return 170
             Case "Yasha (Recipe)"
